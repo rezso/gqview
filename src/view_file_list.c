@@ -535,9 +535,6 @@ static gint vflist_press_cb(GtkWidget *widget, GdkEventButton *bevent, gpointer 
 		store = gtk_tree_view_get_model(GTK_TREE_VIEW(widget));
 		gtk_tree_model_get_iter(store, &iter, tpath);
 		gtk_tree_model_get(store, &iter, FILE_COLUMN_POINTER, &fd, -1);
-#if 0
-		gtk_tree_view_set_cursor(GTK_TREE_VIEW(widget), tpath, NULL, FALSE);
-#endif
 		gtk_tree_path_free(tpath);
 		}
 
@@ -571,13 +568,6 @@ static gint vflist_press_cb(GtkWidget *widget, GdkEventButton *bevent, gpointer 
 		gtk_widget_grab_focus(widget);
 		return TRUE;
 		}
-
-#if 0
-	if (bevent->button == 1 && bevent->type == GDK_2BUTTON_PRESS)
-		{
-		if (vfl->layout) layout_image_full_screen_start(vfl->layout);
-		}
-#endif
 
 	return FALSE;
 }
@@ -764,26 +754,6 @@ void vflist_sort_set(ViewFileList *vfl, SortType type, gint ascend)
 	vfl->list = filelist_sort(vfl->list, vfl->sort_method, vfl->sort_ascend);
 
 	/* now reorder the treeview, maintaining current selection */
-
-#if 0
-	/* this is simpler, but much slower */
-	store = GTK_LIST_STORE(gtk_tree_view_get_model(GTK_TREE_VIEW(vfl->listview)));
-
-	work = g_list_last(vfl->list);
-	while (work)
-		{
-		FileData *fd;
-		GtkTreeIter iter;
-
-		fd = work->data;
-		if (vflist_find_row(vfl, fd, &iter) >= 0)
-			{
-			gtk_list_store_move_after(store, &iter, NULL);
-			}
-
-		work = work->prev;
-		}
-#endif
 
 	selection = gtk_tree_view_get_selection(GTK_TREE_VIEW(vfl->listview));
 

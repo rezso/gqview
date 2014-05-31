@@ -161,13 +161,14 @@ gqview_SOURCES = \
 	view_dir_list.h	\
 	view_dir_tree.c	\
 	view_dir_tree.h	\
+	view_dir_icons.c \
+	view_dir_icons.h \
 	view_file_list.c	\
 	view_file_list.h	\
 	view_file_icon.c	\
 	view_file_icon.h
 
-gqview_LDADD = $(GTK_LIBS) $(INTLLIBS) $(LCMS_LIBS)
+gqview_LDADD = $(GTK_LIBS) $(INTLLIBS) $(LCMS_LIBS) -lm
 
 EXTRA_DIST = \
 	$(extra_SLIK)
-

@@ -366,6 +366,13 @@ static void vdlist_pop_menu_tree_cb(GtkWidget *widget, gpointer data)
 	if (vdl->layout) layout_views_set(vdl->layout, TRUE, vdl->layout->icon_view);
 }
 
+static void vdlist_pop_menu_icons_cb(GtkWidget *widget, gpointer data)
+{
+    ViewDirList *vdl = data;
+
+    if (vdl->layout) layout_views_set(vdl->layout, ICON_STYLE, vdl->layout->icon_view);
+}
+
 static void vdlist_pop_menu_refresh_cb(GtkWidget *widget, gpointer data)
 {
 	ViewDirList *vdl = data;
@@ -420,6 +427,8 @@ static GtkWidget *vdlist_pop_menu(ViewDirList *vdl, FileData *fd)
 	menu_item_add_divider(menu);
 	menu_item_add_check(menu, _("View as _tree"), FALSE,
 			    G_CALLBACK(vdlist_pop_menu_tree_cb), vdl);
+	menu_item_add_check(menu,_("View as _icons"), FALSE,
+			    G_CALLBACK(vdlist_pop_menu_icons_cb), vdl);
 	menu_item_add_stock(menu, _("Re_fresh"), GTK_STOCK_REFRESH,
 			    G_CALLBACK(vdlist_pop_menu_refresh_cb), vdl);
 
@@ -560,34 +569,6 @@ static void vdlist_dnd_drop_receive(GtkWidget *widget,
 		vdl->drop_list = list;
 		}
 }
-
-#if 0
-static gint vdlist_get_row_visibility(ViewDirList *vdl, FileData *fd)
-{
-	GtkTreeModel *store;
-	GtkTreeViewColumn *column;
-	GtkTreePath *tpath;
-	GtkTreeIter iter;
-
-	GdkRectangle vrect;
-	GdkRectangle crect;
-
-	if (!fd || vdlist_find_row(vdl, fd, &iter) < 0) return 0;
-
-	column = gtk_tree_view_get_column(GTK_TREE_VIEW(vdl->listview), 0);
-	store = gtk_tree_view_get_model(GTK_TREE_VIEW(vdl->listview));
-	tpath = gtk_tree_model_get_path(store, &iter);
-
-	gtk_tree_view_get_visible_rect(GTK_TREE_VIEW(vdl->listview), &vrect);
-	gtk_tree_view_get_cell_area(GTK_TREE_VIEW(vdl->listview), tpath, column, &crect);
-printf("window: %d + %d; cell: %d + %d\n", vrect.y, vrect.height, crect.y, crect.height);
-	gtk_tree_path_free(tpath);
-
-	if (crect.y + crect.height < vrect.y) return -1;
-	if (crect.y > vrect.y + vrect.height) return 1;
-	return 0;
-}
-#endif
 
 static void vdlist_scroll_to_row(ViewDirList *vdl, FileData *fd, gfloat y_align)
 {
@@ -853,12 +834,12 @@ gint vdlist_set_path(ViewDirList *vdl, const gchar *path)
 		fd->name = "..";
 		vdl->list = g_list_prepend(vdl->list, fd);
 		}
-
+	/*
 	fd = g_new0(FileData, 1);
 	fd->path = g_strdup(vdl->path);
 	fd->name = ".";
 	vdl->list = g_list_prepend(vdl->list, fd);
-
+	*/
 	vdlist_populate(vdl);
 
 	if (old_path)
@@ -1140,7 +1121,7 @@ ViewDirList *vdlist_new(const gchar *path)
 	gtk_container_add(GTK_CONTAINER(vdl->widget), vdl->listview);
 	gtk_widget_show(vdl->listview);
 
-	vdl->pf = folder_icons_new();
+	vdl->pf = folder_icons_new(vdl->widget, GTK_ICON_SIZE_MENU);
 
 	vdlist_dnd_init(vdl);
 

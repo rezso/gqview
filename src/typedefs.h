@@ -41,6 +41,11 @@ typedef enum {
 	LAYOUT_BOTTOM = 1 << 3
 } LayoutLocation;
 
+typedef enum {
+	TREE_STYLE  = TRUE,
+	LIST_STYLE  = FALSE,
+	ICON_STYLE  = 3
+} FolderViewStyle;
 
 typedef enum {
 	IMAGE_STATE_NONE	= 0,
@@ -68,6 +73,7 @@ typedef struct _FileData FileData;
 typedef struct _LayoutWindow LayoutWindow;
 typedef struct _ViewDirList ViewDirList;
 typedef struct _ViewDirTree ViewDirTree;
+typedef struct _ViewDirIcons ViewDirIcons;
 typedef struct _ViewFileList ViewFileList;
 typedef struct _ViewFileIcon ViewFileIcon;
 
@@ -365,6 +371,7 @@ struct _LayoutWindow
 
 	ViewDirList *vdl;
 	ViewDirTree *vdt;
+	ViewDirIcons *vdi;
 	GtkWidget *dir_view;
 
 	gint tree_view;
@@ -477,6 +484,43 @@ struct _ViewDirTree
 	PixmapFolders *pf;
 
 	gint busy_ref;
+};
+
+struct _ViewDirIcons
+{
+	GtkWidget *widget;
+	GtkWidget *listview;
+
+	gchar *path;
+	GList *list;
+
+	FileData *click_fd;
+
+	FileData *drop_fd;
+	GList *drop_list;
+
+	gint drop_scroll_id;
+
+	/* thumbs */
+
+	gint thumbs_running;
+	GList *thumbs_list;
+	gint thumbs_count;
+	ThumbLoader *thumbs_loader;
+	FileData *thumbs_fd; 
+
+	/* func list */
+	void (*select_func)(ViewDirIcons *vdi, const gchar *path, gpointer data);
+	gpointer select_data;
+
+	void (*func_thumb_status)(ViewDirIcons *vdi, gdouble val, const gchar *text, gpointer data);
+	gpointer data_thumb_status;
+
+	LayoutWindow *layout;
+
+	GtkWidget *popup;
+
+	PixmapFolders *pf;
 };
 
 struct _ViewFileList

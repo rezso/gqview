@@ -203,7 +203,7 @@ void save_options(void)
 	write_char_option(f, "layout_order", layout_order);
 	fprintf(f,"\n");
 	write_bool_option(f, "layout_view_as_icons", layout_view_icons);
-	write_bool_option(f, "layout_view_as_tree", layout_view_tree);
+	write_int_option(f, "layout_view_as_tree", layout_view_tree);
 	write_bool_option(f, "show_icon_names", show_icon_names);
 	fprintf(f,"\n");
 
@@ -429,7 +429,7 @@ void load_options(void)
 			"layout_order", value, layout_order);
 		layout_view_icons = read_bool_option(f, option,
 			"layout_view_as_icons", value, layout_view_icons);
-		layout_view_tree = read_bool_option(f, option,
+		layout_view_tree = read_int_option(f, option,
 			"layout_view_as_tree", value, layout_view_tree);
 		show_icon_names = read_bool_option(f, option,
 			"show_icon_names", value, show_icon_names);

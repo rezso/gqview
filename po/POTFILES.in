@@ -33,5 +33,6 @@
 ./src/utilops.c
 ./src/view_dir_list.c
 ./src/view_dir_tree.c
+./src/view_dir_icons.c
 ./src/view_file_icon.c
 ./src/view_file_list.c

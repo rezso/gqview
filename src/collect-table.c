@@ -1131,9 +1131,6 @@ static gint collection_table_press_key_cb(GtkWidget *widget, GdkEventKey *event,
 
 	if (stop_signal)
 		{
-#if 0
-		g_signal_stop_emission_by_name(GTK_OBJECT(widget), "key_press_event");
-#endif
 		tip_unschedule(ct);
 		}
 
@@ -2252,9 +2249,6 @@ static void collection_table_cell_data_cb(GtkTreeViewColumn *tree_column, GtkCel
 
 	if (info && (info->flag_mask & SELECTION_PRELIGHT))
 		{
-#if 0
-		shift_color(&color_fg, -1, 0);
-#endif
 		shift_color(&color_bg, -1, 0);
 		}
 

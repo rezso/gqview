@@ -300,10 +300,6 @@ void thumb_loader_set_cache(ThumbLoader *tl, gint enable_cache, gint local, gint
 		}
 
 	tl->cache_enable = enable_cache;
-#if 0
-	tl->cache_local = local;
-	tl->cache_retry = retry_failed;
-#endif
 }
 
 
@@ -395,16 +391,6 @@ gint thumb_loader_start(ThumbLoader *tl, const gchar *path)
 	return TRUE;
 }
 
-#if 0
-gint thumb_loader_to_pixmap(ThumbLoader *tl, GdkPixmap **pixmap, GdkBitmap **mask)
-{
-	if (!tl || !tl->pixbuf) return -1;
-
-	gdk_pixbuf_render_pixmap_and_mask(tl->pixbuf, pixmap, mask, 128);
-
-	return thumb_loader_get_space(tl);
-}
-#endif
 
 GdkPixbuf *thumb_loader_get_pixbuf(ThumbLoader *tl, gint with_fallback)
 {
@@ -445,16 +431,6 @@ GdkPixbuf *thumb_loader_get_pixbuf(ThumbLoader *tl, gint with_fallback)
 	return pixbuf;
 }
 
-#if 0
-gint thumb_loader_get_space(ThumbLoader *tl)
-{
-	if (!tl) return 0;
-
-	if (tl->pixbuf) return (tl->max_w - gdk_pixbuf_get_width(tl->pixbuf));
-
-	return tl->max_w;
-}
-#endif
 
 ThumbLoader *thumb_loader_new(gint width, gint height)
 {
@@ -500,33 +476,6 @@ void thumb_loader_free(ThumbLoader *tl)
 	g_free(tl);
 }
 
-#if 0
-gint thumb_from_xpm_d(const char **data, gint max_w, gint max_h, GdkPixmap **pixmap, GdkBitmap **mask)
-{
-	GdkPixbuf *pixbuf;
-	gint w, h;
-
-	pixbuf = gdk_pixbuf_new_from_xpm_data(data);
-	w = gdk_pixbuf_get_width(pixbuf);
-	h = gdk_pixbuf_get_height(pixbuf);
-
-	if ((w > max_w || h > max_h) &&
-	    normalize_thumb(&w, &h, max_w, max_h))
-		{
-		/* scale */
-		GdkPixbuf *tmp;
-
-		tmp = pixbuf;
-		pixbuf = gdk_pixbuf_scale_simple(tmp, w, h, GDK_INTERP_NEAREST);
-		gdk_pixbuf_unref(tmp);
-		}
-
-	gdk_pixbuf_render_pixmap_and_mask(pixbuf, pixmap, mask, 128);
-	gdk_pixbuf_unref(pixbuf);
-
-	return w;
-}
-#endif
 
 /*
  *-----------------------------------------------------------------------------
@@ -654,6 +603,4 @@ static GdkPixbuf *get_xv_thumbnail(gchar *thumb_filename, gint max_w, gint max_h
 
 	return NULL;
 }
-
-
 

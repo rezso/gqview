@@ -1254,11 +1254,6 @@ ExifData *exif_read(const gchar *path, gint parse_color_profile)
 
 	if (exif) exif->items = g_list_reverse(exif->items);
 
-#if 0
-	exif_write_data_list(exif, stdout, TRUE);
-	exif_write_data_list(exif, stdout, FALSE);
-#endif
-
 	return exif;
 }
 

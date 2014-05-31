@@ -1002,12 +1002,6 @@ static void parse_command_line(int argc, char *argv[], gchar **path, gchar **fil
 				print_term(_("  -v, --version              print version info\n"));
 				print_term(_("  -h, --help                 show this message\n\n"));
 				
-#if 0
-				/* these options are not officially supported!
-				 * only for testing new features, no need to translate them */
-				print_term(  "  --alternate                use alternate similarity algorithm\n");
-#endif
-				
 				exit (0);
 				}
 			else if (!remote_do)

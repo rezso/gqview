@@ -484,13 +484,6 @@ static gdouble print_paper_size_convert_units(gdouble value, PaperUnits src, Pap
 static PaperUnits paper_unit_default(void)
 {
 	const char *result;
-#if 0
-	/* this is not used because it is not even slightly portable */
-	#include <langinfo.h>
-
-	result = nl_langinfo(_NL_MEASUREMENT_MEASUREMENT);
-	if (result[0] == '2') return PAPER_UNIT_INCH;
-#endif
 
 #ifdef LC_MEASUREMENT
 	result = setlocale(LC_MEASUREMENT, NULL);
@@ -1109,16 +1102,6 @@ static gint print_job_ps_init(PrintWindow *pw)
 	fprintf(f, "%%%%Title:\n");
 
 	/* setup page size, coordinates (do we really need this?) */
-#if 0
-	fprintf(f, "<<\n");
-	fprintf(f, "/PageSize [%f %f]\n", pw->layout_width, pw->layout_height);
-	fprintf(f, "/ImagingBBox [%f %f %f %f]\n", /* l b r t */
-		pw->margin_left, pw->margin_bottom,
-		pw->layout_width - pw->margin_right, pw->layout_height - pw->margin_top);
-	fprintf(f, "/Orientation %d\n",
-		(pw->paper_orientation == PAPER_ORIENTATION_PORTRAIT) ? 0 : 1);
-	fprintf(f, ">> setpagedevice\n");
-#endif
 
 	ret = !pipe_handler_check(pe);
 	pipe_handler_free(pe);
@@ -3217,11 +3200,6 @@ static void print_text_menu(GtkWidget *box, PrintWindow *pw)
 		      8.0, 100.0, 1.0, 0, pw->text_points,
 		      G_CALLBACK(print_text_cb_points), pw);
 
-#if 0
-	button = color_selection_new();
-	gtk_box_pack_start(GTK_BOX(group), button, FALSE, FALSE, 0);
-	gtk_widget_show(button);
-#endif
 }
 
 /*

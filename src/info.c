@@ -524,14 +524,6 @@ static void info_window_dnd_init(InfoData *id)
 	g_signal_connect(G_OBJECT(imd->pr), "drag_data_get",
 			 G_CALLBACK(info_window_dnd_data_set), id);
 
-#if 0
-	gtk_drag_dest_set(imd->pr,
-			  GTK_DEST_DEFAULT_MOTION | GTK_DEST_DEFAULT_DROP,
-			  dnd_file_drop_types, dnd_file_drop_types_count,
-			  GDK_ACTION_COPY | GDK_ACTION_MOVE | GDK_ACTION_LINK);
-	g_signal_connect(G_OBJECT(imd->pr), "drag_data_received",
-			 G_CALLBACK(info_window_dnd_data_get), id);
-#endif
 }
 
 /*

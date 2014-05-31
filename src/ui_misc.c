@@ -536,15 +536,6 @@ GtkWidget *pref_spin_new_int(GtkWidget *parent_box, const gchar *text, const gch
 			     G_CALLBACK(pref_spin_int_cb), value_var);
 }
 
-#if 0
-void pref_spin_set_blocking(GtkWidget *spin, gdouble value, gpointer block_data)
-{
-	g_signal_handlers_block_matched(G_OBJECT(spin), G_SIGNAL_MATCH_DATA, 0, 0, NULL, NULL, block_data);
-	gtk_spin_button_set_value(GTK_SPIN_BUTTON(spin), value);
-	g_signal_handlers_unblock_matched(G_OBJECT(spin), G_SIGNAL_MATCH_DATA, 0, 0, NULL, NULL, block_data);
-}
-#endif
-
 static void pref_link_sensitivity_cb(GtkWidget *watch, GtkStateType prev_state, gpointer data)
 {
 	GtkWidget *widget = data;
@@ -650,25 +641,6 @@ GtkWidget *pref_table_button(GtkWidget *table, gint column, gint row,
 
 	return button;
 }
-
-#if 0
-static GtkWidget *pref_table_checkbox(GtkWidget *table, gint column, gint row,
-				      const gchar *text, gint active,
-				      GCallback func, gpointer data)
-{
-	GtkWidget *button;
-
-	button = gtk_check_button_new_with_label(text);
-	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(button), active);
-	if (func) g_signal_connect(G_OBJECT(button), "clicked", func, data);
-
-	gtk_table_attach(GTK_TABLE(table), button, column, column + 1, row, row + 1,
-			 GTK_EXPAND | GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
-	gtk_widget_show(button);
-
-	return button;
-}
-#endif
 
 GtkWidget *pref_table_spin(GtkWidget *table, gint column, gint row,
 			   const gchar *text, const gchar *suffix,
@@ -1420,11 +1392,6 @@ GtkWidget *sizer_new(GtkWidget *parent, GtkWidget *bounding_widget,
 	handle_size = sizer_default_handle_size();
 
 	gtk_widget_set_size_request(sd->sizer, handle_size, handle_size);
-#if 0
-	/* use this if you add a shadow border to the handle */
-	gtk_widget_set_size_request(sd->sizer, handle_size + sd->sizer->style->xthickness * 2,
-					       handle_size + sd->sizer->style->ythickness * 2);
-#endif
 
 	g_object_set_data(G_OBJECT(sd->sizer), SIZER_DATA_KEY,sd);
 

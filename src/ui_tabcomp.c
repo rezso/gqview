@@ -284,15 +284,6 @@ static void tab_completion_popup_list(TabCompData *td, GList *list)
 
 	if (!list) return;
 
-#if 0
-	/*
-	 * well, the menu would be too long anyway...
-	 * (listing /dev causes gtk+ window allocation errors, -> too big a window)
-	 * this is why menu popups are disabled, this really should be a popup scrollable listview.
-	 */
-	if (g_list_length(list) > 200) return;
-#endif
-
 	menu = popup_menu_short_lived();
 
 	work = list;
@@ -662,10 +653,6 @@ GtkWidget *tab_completion_new_with_history(GtkWidget **entry, const gchar *text,
 	gtk_widget_show(combo);
 
 	combo_entry = GTK_BIN(combo)->child;
-#if 0
-	gtk_combo_set_case_sensitive(GTK_COMBO(combo), TRUE);
-	gtk_combo_set_use_arrows(GTK_COMBO(combo), FALSE);
-#endif
 
 	button = tab_completion_create_complete_button(combo_entry, combo);
 	gtk_box_pack_start(GTK_BOX(box), button, FALSE, FALSE, 0);

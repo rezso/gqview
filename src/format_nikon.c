@@ -218,13 +218,6 @@ static ExifTextList NikonTagConverter[]= {
 	EXIF_TEXT_LIST_END
 };
 
-#if 0
-static ExifTextList NikonTag[]= {
-	{ ,	"" },
-	{ ,	"" },
-	EXIF_TEXT_LIST_END
-};
-#endif
 
 static ExifMarker NikonExifMarkersList1[] = {
 { 0x0002, EXIF_FORMAT_STRING, 6,		"Nikon.unknown",	NULL,		NULL },
@@ -279,17 +272,6 @@ static ExifTextList NikonTag2FlashUsed[]= {
 	EXIF_TEXT_LIST_END
 };
 
-#if 0
-static ExifTextList NikonTagi2Saturation[]= {
-	{ -3,	"black and white" },
-	{ -2,	"-2" },
-	{ -1,	"-1" },
-	{ 0,	"normal" },
-	{ 1,	"+1" },
-	{ 2,	"+2" },
-	EXIF_TEXT_LIST_END
-};
-#endif
 
 static ExifMarker NikonExifMarkersList2[] = {
 { 0x0002, EXIF_FORMAT_SHORT_UNSIGNED, 2,	"Nikon.ISOSpeed",	"ISO speed",	NULL },

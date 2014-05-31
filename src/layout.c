@@ -22,6 +22,7 @@
 #include "utilops.h"
 #include "view_dir_list.h"
 #include "view_dir_tree.h"
+#include "view_dir_icons.h"
 #include "view_file_list.h"
 #include "view_file_icon.h"
 #include "ui_bookmark.h"
@@ -166,6 +167,13 @@ static void layout_vdtree_select_cb(ViewDirTree *vdt, const gchar *path, gpointe
 	layout_set_path(lw, path);
 }
 
+static void layout_vdicons_select_cb(ViewDirList *vdi, const gchar *path, gpointer data)
+{
+	LayoutWindow *lw = data;
+
+	layout_set_path(lw, path);
+}
+
 static GtkWidget *layout_tool_setup(LayoutWindow *lw)
 {
 	GtkWidget *box;
@@ -191,7 +199,7 @@ static GtkWidget *layout_tool_setup(LayoutWindow *lw)
 	g_signal_connect(G_OBJECT(lw->path_entry->parent), "changed",
 			 G_CALLBACK(layout_path_entry_changed_cb), lw);
 
-	if (lw->tree_view)
+	if (lw->tree_view == TREE_STYLE)
 		{
 		lw->vdt = vdtree_new(lw->path, TRUE);
 		vdtree_set_layout(lw->vdt, lw);
@@ -199,13 +207,21 @@ static GtkWidget *layout_tool_setup(LayoutWindow *lw)
 
 		lw->dir_view = lw->vdt->widget;
 		}
-	else
+	else if (lw->tree_view == LIST_STYLE)
 		{
 		lw->vdl = vdlist_new(lw->path);
 		vdlist_set_layout(lw->vdl, lw);
 		vdlist_set_select_func(lw->vdl, layout_vdlist_select_cb, lw);
 
 		lw->dir_view = lw->vdl->widget;
+		}
+	else
+		{
+		lw->vdi = vdicons_new(lw->path);
+		vdicons_set_layout(lw->vdi, lw);
+		vdicons_set_select_func(lw->vdi, layout_vdicons_select_cb, lw);
+
+		lw->dir_view = lw->vdi->widget;
 		}
 
 	gtk_box_pack_start(GTK_BOX(box), lw->dir_view, TRUE, TRUE, 0);
@@ -769,10 +785,6 @@ static void layout_list_sync_thumb(LayoutWindow *lw)
 static void layout_list_scroll_to_subpart(LayoutWindow *lw, const gchar *needle)
 {
 	if (!lw) return;
-#if 0
-	if (lw->vfl) vflist_scroll_to_subpart(lw->vfl, needle);
-	if (lw->vfi) vficon_scroll_to_subpart(lw->vfi, needle);
-#endif
 }
 
 GList *layout_list(LayoutWindow *lw)
@@ -907,6 +919,7 @@ static void layout_sync_path(LayoutWindow *lw)
 	gtk_entry_set_text(GTK_ENTRY(lw->path_entry), lw->path);
 	if (lw->vdl) vdlist_set_path(lw->vdl, lw->path);
 	if (lw->vdt) vdtree_set_path(lw->vdt, lw->path);
+	if (lw->vdi) vdicons_set_path(lw->vdi, lw->path);
 
 	if (lw->vfl) vflist_set_path(lw->vfl, lw->path);
 	if (lw->vfi) vficon_set_path(lw->vfi, lw->path);
@@ -982,6 +995,7 @@ static void layout_refresh_lists(LayoutWindow *lw)
 
 	if (lw->vdl) vdlist_refresh(lw->vdl);
 	if (lw->vdt) vdtree_refresh(lw->vdt);
+	if (lw->vdi) vdicons_refresh(lw->vdi);
 
 	if (lw->vfl) vflist_refresh(lw->vfl);
 	if (lw->vfi) vficon_refresh(lw->vfi);
@@ -1265,10 +1279,6 @@ static void layout_tools_setup(LayoutWindow *lw, GtkWidget *tools, GtkWidget *fi
 
 	vertical = (layout_location_single(lw->image_location) && !layout_location_vertical(lw->image_location)) ||
 		   (!layout_location_single(lw->image_location) && layout_location_vertical(layout_grid_compass(lw)));
-#if 0
-	layout_location_compute(lw->dir_location, lw->file_location,
-				tools, files, &w1, &w2);
-#endif
 	/* for now, tools/dir are always first in order */
 	w1 = tools;
 	w2 = files;
@@ -1585,6 +1595,7 @@ void layout_style_set(LayoutWindow *lw, gint style, const gchar *order)
 	lw->dir_view = NULL;
 	lw->vdl = NULL;
 	lw->vdt = NULL;
+	lw->vdi = NULL;
 
 	lw->file_view = NULL;
 	lw->vfl = NULL;

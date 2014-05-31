@@ -1101,11 +1101,11 @@ static gint dupe_match(DupeItem *a, DupeItem *b, DupeMatchType mask, gdouble *ra
 
 	if (mask & DUPE_MATCH_PATH)
 		{
-		if (strcmp(a->path, b->path) != 0) return FALSE;
+		if (strcasecmp(a->path, b->path) != 0) return FALSE;
 		}
 	if (mask & DUPE_MATCH_NAME)
 		{
-		if (strcmp(a->name, b->name) != 0) return FALSE;
+		if (strcasecmp(a->name, b->name) != 0) return FALSE;
 		}
 	if (mask & DUPE_MATCH_SIZE)
 		{
@@ -2876,9 +2876,6 @@ static gint dupe_window_keypress_cb(GtkWidget *widget, GdkEventKey *event, gpoin
 				case 'R': case 'r':
 					file_util_rename(NULL, dupe_listview_get_selection(dw, listview), dw->window);
 					break;
-				case 'D': case 'd':
-					file_util_delete(NULL, dupe_listview_get_selection(dw, listview), dw->window);
-					break;
 				case 'P': case 'p':
 					info_window_new(NULL, dupe_listview_get_selection(dw, listview));
 					break;
@@ -2893,6 +2890,9 @@ static gint dupe_window_keypress_cb(GtkWidget *widget, GdkEventKey *event, gpoin
 			stop_signal = TRUE;
 			switch (event->keyval)
 				{
+				case GDK_Delete: case GDK_KP_Delete:
+					file_util_delete(NULL, dupe_listview_get_selection(dw, listview), dw->window);
+					break;
 				case 'A': case 'a':
 					if (event->state & GDK_SHIFT_MASK)
 						{
@@ -2903,7 +2903,7 @@ static gint dupe_window_keypress_cb(GtkWidget *widget, GdkEventKey *event, gpoin
 						gtk_tree_selection_select_all(selection);
 						}
 					break;
-				case GDK_Delete: case GDK_KP_Delete:
+				case 'R': case 'r':
 					if (on_second)
 						{
 						dupe_second_clear(dw);
@@ -2943,11 +2943,8 @@ static gint dupe_window_keypress_cb(GtkWidget *widget, GdkEventKey *event, gpoin
 			case GDK_Return: case GDK_KP_Enter:
 				dupe_menu_view(dw, di, listview, FALSE);
 				break;
-			case 'V': case 'v':
-				dupe_menu_view(dw, di, listview, TRUE);
-				break;
 			case GDK_Delete: case GDK_KP_Delete:
-				dupe_window_remove_selection(dw, listview);
+				file_util_delete(NULL, dupe_listview_get_selection(dw, listview), dw->window);
 				break;
 			case 'C': case 'c':
 				if (!on_second)
@@ -2955,6 +2952,12 @@ static gint dupe_window_keypress_cb(GtkWidget *widget, GdkEventKey *event, gpoin
 					dupe_window_collection_from_selection(dw);
 					}
 				break;
+			case 'R': case 'r':
+				dupe_window_remove_selection(dw, listview);
+				break;
+			case 'V': case 'v':
+				dupe_menu_view(dw, di, listview, TRUE);
+				break;				
 			case '1':
 				dupe_listview_select_dupes(dw, TRUE);
 				break;

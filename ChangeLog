@@ -1,3 +1,18 @@
+Thu Jan  12 10:07:12 2011  Páder Rezső  <rezso@rezso.net>
+
+	* utilops.c: delete folder: don't show folder content, if the folder empty
+	* update .pot & .po files; remove some translations
+
+
+Tue Dec  27 16:47:12 2011  Páder Rezső  <rezso@rezso.net>
+
+	* pixbuf-renderer.c: use gdk_window_scroll instead of event->area  (bug #3029153)
+	* pixbuf-renderer.c: use gdk_region_get_rectangles instead of event->area (bug #3029180)
+	* Show thumbnails for directories (bug #1759573)
+	* dupe.c: ignore case in duplicate by name (bug #1865291)
+	* filter '.' directories (bug #1785346)
+	* code cleanup: remove #if 0 ... #endif
+	
 Sat Dec  2 20:47:12 2006  John Ellis  <johne@verizon.net>
 
 	* README: Updates.

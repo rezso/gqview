@@ -607,29 +607,26 @@ static void pixbuf_renderer_get_property(GObject *object, guint prop_id,
 
 static gint pixbuf_renderer_expose(GtkWidget *widget, GdkEventExpose *event)
 {
-	if (GTK_WIDGET_DRAWABLE(widget))
+	GdkRectangle *rects;
+	int nrects, n;
+
+	if (!GTK_WIDGET_DRAWABLE(widget)) return FALSE;
+	if (GTK_WIDGET_NO_WINDOW(widget)) return FALSE;
+
+	gdk_region_get_rectangles(event->region, &rects, &nrects);
+
+	for (n = 0; n < nrects; n++)
 		{
-		if (!GTK_WIDGET_NO_WINDOW(widget))
+		if (event->window != widget->window)
 			{
-			if (event->window != widget->window)
-				{
-				GdkRectangle area;
-
-				gdk_window_get_position(event->window, &area.x, &area.y);
-
-				area.x += event->area.x;
-				area.y += event->area.y;
-				area.width = event->area.width;
-				area.height = event->area.height;
-				pixbuf_renderer_paint(PIXBUF_RENDERER(widget), &area);
-				}
-			else
-				{
-				pixbuf_renderer_paint(PIXBUF_RENDERER(widget), &event->area);
-				}
+			GdkRectangle area;
+			gdk_window_get_position(event->window, &area.x, &area.y);
+			rects[n].x += area.x;
+			rects[n].y += area.y;
 			}
+		pixbuf_renderer_paint(PIXBUF_RENDERER(widget), &rects[n]);
 		}
-
+	g_free(rects);
 	return FALSE;
 }
 
@@ -1591,11 +1588,6 @@ static gint pr_source_tile_render(PixbufRenderer *pr, ImageTile *it,
 
 		if (pr->width < PR_MIN_SCALE_SIZE || pr->height < PR_MIN_SCALE_SIZE) fast = TRUE;
 
-#if 0
-		/* draws red over draw region, to check for leaks (regions not filled) */
-		pixbuf_set_rect_fill(it->pixbuf, x, y, w, h, 255, 0, 0, 255);
-#endif
-
 		list = pr_source_tile_compute_region(pr, sx, sy, sw, sh, TRUE);
 		work = list;
 		while (work)
@@ -2111,12 +2103,6 @@ static void pr_tile_render(PixbufRenderer *pr, ImageTile *it,
 				w, h,
 				pr->dither_quality, it->x + x, it->y + y);
 		}
-
-#if 0
-	/* enable this line for debugging the edges of tiles */
-	gdk_draw_rectangle(it->pixmap, box->style->white_gc,
-			   FALSE, 0, 0, it->w, it->h);
-#endif
 }
 
 
@@ -2833,7 +2819,6 @@ void pixbuf_renderer_scroll(PixbufRenderer *pr, gint x, gint y)
 {
 	gint old_x, old_y;
 	gint x_off, y_off;
-	gint w, h;
 
 	g_return_if_fail(IS_PIXBUF_RENDERER(pr));
 
@@ -2853,90 +2838,8 @@ void pixbuf_renderer_scroll(PixbufRenderer *pr, gint x, gint y)
 	x_off = pr->x_scroll - old_x;
 	y_off = pr->y_scroll - old_y;
 
-	w = pr->vis_width - abs(x_off);
-	h = pr->vis_height - abs(y_off);
+        gdk_window_scroll(gtk_widget_get_window(GTK_WIDGET(pr)), -x_off, -y_off);
 
-	if (w < 1 || h < 1)
-		{
-		/* scrolled completely to new material */
-		pr_queue(pr, 0, 0, pr->width, pr->height, TRUE, TILE_RENDER_ALL, FALSE, FALSE);
-		return;
-		}
-	else
-		{
-		gint x1, y1;
-		gint x2, y2;
-		GtkWidget *box;
-		GdkGC *gc;
-		GdkEvent *event;
-
-		if (x_off < 0)
-			{
-			x1 = abs(x_off);
-			x2 = 0;
-			}
-		else
-			{
-			x1 = 0;
-			x2 = abs(x_off);
-			}
-
-		if (y_off < 0)
-			{
-			y1 = abs(y_off);
-			y2 = 0;
-			}
-		else
-			{
-			y1 = 0;
-			y2 = abs(y_off);
-			}
-
-		box = GTK_WIDGET(pr);
-
-		gc = gdk_gc_new(box->window);
-		gdk_gc_set_exposures(gc, TRUE);
-		gdk_draw_drawable(box->window, gc,
-				  box->window,
-				  x2 + pr->x_offset, y2 + pr->y_offset,
-				  x1 + pr->x_offset, y1 + pr->y_offset, w, h);
-		g_object_unref(gc);
-
-		if (pr->overlay_list)
-			{
-			pr_overlay_queue_all(pr);
-			}
-
-		w = pr->vis_width - w;
-		h = pr->vis_height - h;
-
-		if (w > 0)
-			{
-			pr_queue(pr,
-				 x_off > 0 ? pr->x_scroll + (pr->vis_width - w) : pr->x_scroll, pr->y_scroll,
-				 w, pr->vis_height, TRUE, TILE_RENDER_ALL, FALSE, FALSE);
-			}
-		if (h > 0)
-			{
-			/* FIXME, to optimize this, remove overlap */
-			pr_queue(pr,
-				 pr->x_scroll, y_off > 0 ? pr->y_scroll + (pr->vis_height - h) : pr->y_scroll,
-				 pr->vis_width, h, TRUE, TILE_RENDER_ALL, FALSE, FALSE);
-			}
-
-		/* process exposures here, "expose_event" seems to miss a few with obstructed windows */
-		while ((event = gdk_event_get_graphics_expose(box->window)) != NULL)
-			{
-			pixbuf_renderer_paint(pr, &event->expose.area);
-
-			if (event->expose.count == 0)
-				{
-				gdk_event_free(event);
-				break;
-				}
-			gdk_event_free(event);
-			}
-		}
 }
 
 void pixbuf_renderer_scroll_to_point(PixbufRenderer *pr, gint x, gint y,

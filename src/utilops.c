@@ -3100,15 +3100,23 @@ void file_util_delete_dir(const gchar *path, GtkWidget *parent)
 		ud->gd = file_util_gen_dlg(_("Delete folder"), "GQview", "dlg_confirm",
 					   parent, TRUE, file_util_delete_dir_cancel_cb, ud);
 		generic_dialog_add_button(ud->gd, GTK_STOCK_DELETE, NULL, file_util_delete_dir_ok_cb, TRUE);
-
+		
+		if (ud->flist) {
 		text = g_strdup_printf(_("This will delete the folder:\n\n%s\n\n"
 					 "The contents of this folder will also be deleted."),
 					path);
+		} else {
+		text = g_strdup_printf(_("This will delete the folder:\n\n%s\n\n"
+					 "(The folder is empty.)"),
+					path);
+		}
+		
 		box = generic_dialog_add_message(ud->gd, GTK_STOCK_DIALOG_QUESTION,
 						 _("Delete folder?"),
 						 text);
 		g_free(text);
-
+		
+		if (ud->flist) {
 		box = pref_group_new(box, TRUE, _("Contents:"), GTK_ORIENTATION_HORIZONTAL);
 
 		view = file_util_dialog_add_list(box, ud->flist, FALSE);
@@ -3119,7 +3127,8 @@ void file_util_delete_dir(const gchar *path, GtkWidget *parent)
 		generic_dialog_add_image(ud->gd, box, NULL, NULL, NULL, NULL, FALSE);
 
 		box_append_safe_delete_status(ud->gd);
-
+		}
+		
 		gtk_widget_show(ud->gd->dialog);
 		}
 

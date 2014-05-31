@@ -1100,16 +1100,6 @@ GtkWidget *path_selection_new_with_files(GtkWidget *entry, const gchar *path,
 
 	gtk_tree_view_append_column(GTK_TREE_VIEW(dd->d_view), column);
 
-#if 0
-	/* only for debugging */
-	column = gtk_tree_view_column_new();
-	gtk_tree_view_column_set_title(column, _("Path"));
-	renderer = gtk_cell_renderer_text_new();
-	gtk_tree_view_column_pack_start(column, renderer, TRUE);
-	gtk_tree_view_column_add_attribute(column, renderer, "text", 1);
-	gtk_tree_view_append_column(GTK_TREE_VIEW(dd->d_view), column);
-#endif
-
 	gtk_widget_set_size_request(dd->d_view, DEST_WIDTH, DEST_HEIGHT);
 	gtk_container_add(GTK_CONTAINER(scrolled), dd->d_view);
 	gtk_widget_show(dd->d_view);
@@ -1140,9 +1130,6 @@ GtkWidget *path_selection_new_with_files(GtkWidget *entry, const gchar *path,
 		gtk_cell_layout_pack_start(GTK_CELL_LAYOUT(dd->filter_combo), renderer, TRUE);
 		gtk_cell_layout_set_attributes(GTK_CELL_LAYOUT(dd->filter_combo), renderer,
 					       "text", FILTER_COLUMN_NAME, NULL);
-#if 0
-		gtk_combo_set_case_sensitive(GTK_COMBO(dd->filter_combo), TRUE);
-#endif
 		gtk_box_pack_start(GTK_BOX(hbox2), dd->filter_combo, TRUE, TRUE, 0);
 		gtk_widget_show(dd->filter_combo);
 

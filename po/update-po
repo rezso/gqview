@@ -1,0 +1,10 @@
+#!/bin/bash
+
+for lang in $(ls -1 *.po | sed 's/.po//')
+do
+echo -n $lang \
+&& msgmerge --update $lang.po gqview.pot \
+&& msgattrib --no-obsolete -o $lang.po $lang.po \
+&& msgfmt -c --statistics $lang.po -o $lang.gmo
+done
+

@@ -87,9 +87,6 @@ static gint thumb_max_height_c;
 static gint enable_thumb_caching_c;
 static gint enable_thumb_dirs_c;
 static gint thumbnail_fast_c;
-#if 0
-static gint use_xvpics_thumbnails_c;
-#endif
 static gint thumbnail_spec_standard_c;
 static gint enable_metadata_dirs_c;
 static gint show_dot_files_c;
@@ -244,9 +241,6 @@ static void config_window_apply(void)
 	enable_thumb_caching = enable_thumb_caching_c;
 	enable_thumb_dirs = enable_thumb_dirs_c;
 	thumbnail_fast = thumbnail_fast_c;
-#if 0
-	use_xvpics_thumbnails = use_xvpics_thumbnails_c;
-#endif
 	thumbnail_spec_standard = thumbnail_spec_standard_c;
 	enable_metadata_dirs = enable_metadata_dirs_c;
 	show_dot_files = show_dot_files_c;
@@ -429,33 +423,6 @@ static void add_quality_menu(GtkWidget *table, gint column, gint row, const gcha
 			 GTK_EXPAND | GTK_FILL, 0, 0, 0);
 	gtk_widget_show(combo);
 }
-
-#if 0
-static void add_dither_menu(gint option, gint *option_c, gchar *text, GtkWidget *box)
-{
-	GtkWidget *hbox;
-	GtkWidget *omenu;
-	GtkWidget *menu;
-
-	*option_c = option;
-
-	hbox = pref_box_new(box, FALSE, GTK_ORIENTATION_HORIZONTAL, PREF_PAD_SPACE);
-	pref_label_new(hbox, text);
-
-	omenu = gtk_option_menu_new();
-	menu = gtk_menu_new();
-
-	add_menu_item(menu, _("None"), option_c, (gint)GDK_RGB_DITHER_NONE);
-	add_menu_item(menu, _("Normal"), option_c, (gint)GDK_RGB_DITHER_NORMAL);
-	add_menu_item(menu, _("Best"), option_c, (gint)GDK_RGB_DITHER_MAX);
-
-	gtk_option_menu_set_menu(GTK_OPTION_MENU(omenu), menu);
-	gtk_option_menu_set_history(GTK_OPTION_MENU(omenu), *option_c);
-
-	gtk_box_pack_start(GTK_BOX(hbox), omenu, FALSE, FALSE, 0);
-	gtk_widget_show(omenu);
-}
-#endif
 
 static void thumb_size_menu_cb(GtkWidget *combo, gpointer data)
 {
@@ -888,11 +855,6 @@ static void config_window_create(void)
 	pref_checkbox_new_int(subgroup, _("Cache thumbnails into .thumbnails"),
 			      enable_thumb_dirs, &enable_thumb_dirs_c);
 
-#if 0
-	pref_checkbox_new_int(subgroup, _("Use xvpics thumbnails when found (read only)"),
-			      use_xvpics_thumbnails, &use_xvpics_thumbnails_c);
-#endif
-
 	pref_checkbox_new_int(group, _("Faster jpeg thumbnailing (may reduce quality)"),
 			      thumbnail_fast, &thumbnail_fast_c);
 
@@ -918,9 +880,6 @@ static void config_window_create(void)
 
 	group = pref_group_new(vbox, FALSE, _("Zoom"), GTK_ORIENTATION_VERTICAL);
 
-#if 0
-	add_dither_menu(dither_quality, &dither_quality_c, _("Dithering method:"), group);
-#endif
 	table = pref_table_new(group, 2, 1, FALSE, FALSE);
 	add_quality_menu(table, 0, 0, _("Quality:"), zoom_quality, &zoom_quality_c);
 

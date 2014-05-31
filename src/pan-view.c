@@ -146,31 +146,6 @@ static void pan_queue_image_done_cb(ImageLoader *il, gpointer data)
 	while (pan_queue_step(pw));
 }
 
-#if 0
-static void pan_queue_image_area_cb(ImageLoader *il, guint x, guint y,
-				    guint width, guint height, gpointer data)
-{
-	PanWindow *pw = data;
-
-	if (pw->queue_pi)
-		{
-		PanItem *pi;
-		gint rc;
-
-		pi = pw->queue_pi;
-
-		if (!pi->pixbuf)
-			{
-			pi->pixbuf = image_loader_get_pixbuf(pw->il);
-			if (pi->pixbuf) g_object_ref(pi->pixbuf);
-			}
-
-		rc = pi->refcount;
-		image_area_changed(pw->imd, pi->x + x, pi->y + y, width, height);
-		pi->refcount = rc;
-		}
-}
-#endif
 
 static gint pan_queue_step(PanWindow *pw)
 {
@@ -203,9 +178,6 @@ static gint pan_queue_step(PanWindow *pw)
 			image_loader_set_requested_size(pw->il, pi->width, pi->height);
 			}
 
-#if 0
-		image_loader_set_area_ready_func(pw->il, pan_queue_image_area_cb, pw);
-#endif
 		image_loader_set_error_func(pw->il, pan_queue_image_done_cb, pw);
 
 		if (image_loader_start(pw->il, pan_queue_image_done_cb, pw)) return FALSE;
@@ -342,26 +314,6 @@ static gint pan_window_request_tile_cb(PixbufRenderer *pr, gint x, gint y,
 
 	g_list_free(list);
 
-#if 0
-	if (x%512 == 0 && y%512 == 0)
-		{
-		PangoLayout *layout;
-		gchar *buf;
-
-		layout = gtk_widget_create_pango_layout((GtkWidget *)pr, NULL);
-
-		buf = g_strdup_printf("%d,%d\n(#%d)", x, y,
-				      (x / pr->source_tile_width) +
-				      (y / pr->source_tile_height * (pr->image_width/pr->source_tile_width + 1)));
-		pango_layout_set_text(layout, buf, -1);
-		g_free(buf);
-
-		pixbuf_draw_layout(pixbuf, layout, (GtkWidget *)pr, 0, 0, 0, 0, 0, 255);
-
-		g_object_unref(G_OBJECT(layout));
-		}
-#endif
-
 	return TRUE;
 }
 
@@ -490,11 +442,6 @@ static void pan_window_zoom_limit(PanWindow *pw)
 		case PAN_IMAGE_SIZE_THUMB_NONE:
 		case PAN_IMAGE_SIZE_THUMB_SMALL:
 		case PAN_IMAGE_SIZE_THUMB_NORMAL:
-#if 0
-			/* easily requires > 512mb ram when window size > 1024x768 and zoom is <= -8 */
-			min = -16.0;
-			break;
-#endif
 		case PAN_IMAGE_SIZE_THUMB_LARGE:
 			min = -6.0;
 			break;
@@ -595,46 +542,6 @@ static gint pan_cache_step(PanWindow *pw)
 	fd = pw->cache_todo->data;
 	pw->cache_todo = g_list_remove(pw->cache_todo, fd);
 
-#if 0
-	if (enable_thumb_caching)
-		{
-		gchar *found;
-
-		found = cache_find_location(CACHE_TYPE_SIM, fd->path);
-		if (found && filetime(found) == fd->date)
-			{
-			cd = cache_sim_data_load(found);
-			}
-		g_free(found);
-		}
-
-	if (!cd) cd = cache_sim_data_new();
-
-	if (!cd->dimensions)
-		{
-		cd->dimensions = image_load_dimensions(fd->path, &cd->width, &cd->height);
-		if (enable_thumb_caching &&
-		    cd->dimensions)
-			{
-			gchar *base;
-			mode_t mode = 0755;
-
-			base = cache_get_location(CACHE_TYPE_SIM, fd->path, FALSE, &mode);
-			if (cache_ensure_dir_exists(base, mode))
-				{
-				g_free(cd->path);
-				cd->path = cache_get_location(CACHE_TYPE_SIM, fd->path, TRUE, NULL);
-				if (cache_sim_data_save(cd))
-					{
-					filetime_set(cd->path, filetime(fd->path));
-					}
-				}
-			g_free(base);
-			}
-
-		pw->cache_tick = 9;
-		}
-#endif
 	pc = g_new0(PanCacheData, 1);
 	memcpy(pc, fd, sizeof(FileData));
 	g_free(fd);
@@ -1385,9 +1292,6 @@ static gint pan_window_key_press_cb(GtkWidget *widget, GdkEventKey *event, gpoin
 					pan_fullscreen_toggle(pw, FALSE);
 					break;
 				case 'I': case 'i':
-#if 0
-					pan_overlay_toggle(pw);
-#endif
 					break;
 				case GDK_Delete: case GDK_KP_Delete:
 					break;
@@ -1925,13 +1829,6 @@ static void pan_search_activate(PanWindow *pw)
 {
 	gchar *text;
 
-#if 0
-	if (!GTK_WIDGET_VISIBLE(pw->search_box))
-		{
-		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(pw->search_button), TRUE);
-		}
-#endif
-
 	text = g_strdup(gtk_entry_get_text(GTK_ENTRY(pw->search_entry)));
 	pan_search_activate_cb(text, pw);
 	g_free(text);
@@ -2042,9 +1939,6 @@ static void button_cb(PixbufRenderer *pr, GdkEventButton *event, gpointer data)
 
 static void scroll_cb(PixbufRenderer *pr, GdkEventScroll *event, gpointer data)
 {
-#if 0
-	PanWindow *pw = data;
-#endif
 	gint w, h;
 
 	w = pr->vis_width;
@@ -2223,16 +2117,6 @@ static void pan_window_layout_size_cb(GtkWidget *combo, gpointer data)
 	pw->size = gtk_combo_box_get_active(GTK_COMBO_BOX(combo));
 	pan_layout_update(pw);
 }
-
-#if 0
-static void pan_window_date_toggle_cb(GtkWidget *button, gpointer data)
-{
-	PanWindow *pw = data;
-
-	pw->exif_date_enable = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(button));
-	pan_layout_update(pw);
-}
-#endif
 
 static void pan_window_entry_activate_cb(const gchar *new_text, gpointer data)
 {
@@ -2484,11 +2368,6 @@ static void pan_window_new_real(const gchar *path)
 	pw->label_zoom = gtk_label_new("");
 	gtk_container_add(GTK_CONTAINER(frame), pw->label_zoom);
 	gtk_widget_show(pw->label_zoom);
-
-#if 0
-	pw->date_button = pref_checkbox_new(box, _("Use Exif date"), pw->exif_date_enable,
-					    G_CALLBACK(pan_window_date_toggle_cb), pw);
-#endif
 
 	pw->search_button = gtk_toggle_button_new();
 	gtk_button_set_relief(GTK_BUTTON(pw->search_button), GTK_RELIEF_NONE);

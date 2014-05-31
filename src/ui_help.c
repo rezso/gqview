@@ -62,10 +62,6 @@ static void help_window_scroll(GtkWidget *text, const gchar *key)
 		gtk_text_buffer_get_iter_at_line_offset(buffer, &iter, line, 0);
 		gtk_text_buffer_place_cursor(buffer, &iter);
 
-#if 0
-		gtk_text_view_scroll_to_iter(GTK_TEXT_VIEW(text), &iter, 0.0, TRUE, 0, 0);
-#endif
-
 		/* apparently only scroll_to_mark works when the textview is not visible yet */
 
 		/* if mark exists, move it instead of creating one for every scroll */
@@ -200,9 +196,6 @@ GtkWidget *help_window_new(const gchar *title,
 
 	window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 	gtk_window_set_resizable(GTK_WINDOW(window), TRUE);
-#if 0
-	gtk_container_set_border_width(GTK_CONTAINER(window), PREF_PAD_BORDER);
-#endif
 	gtk_window_set_wmclass(GTK_WINDOW(window), subclass, wmclass);
 
 	gtk_window_set_default_size(GTK_WINDOW(window), HELP_WINDOW_WIDTH, HELP_WINDOW_HEIGHT);

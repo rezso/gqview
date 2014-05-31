@@ -191,14 +191,6 @@ gint pan_is_ignored(const gchar *s, gint ignore_symlinks)
 
 	if (!lstat_utf8(s, &st)) return TRUE;
 
-#if 0
-	/* normal filesystems have directories with some size or block allocation,
-	 * special filesystems (like linux /proc) set both to zero.
-	 * enable this check if you enable listing the root "/" folder
-	 */
-	if (st.st_size == 0 && st.st_blocks == 0) return TRUE;
-#endif
-
 	if (S_ISLNK(st.st_mode) && (ignore_symlinks || pan_is_link_loop(s))) return TRUE;
 
 	n = filename_from_path(s);

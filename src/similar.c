@@ -67,40 +67,6 @@ void image_sim_free(ImageSimilarityData *sd)
 	g_free(sd);
 }
 
-#if 0
-static void image_sim_channel_expand(guint8 *pix, gint len)
-{
-	guint8 l, h;
-	gint i;
-	gdouble scale;
-
-	/* set the start values */
-	l = h = pix[0];
-
-	/* find min/max */
-	for (i = 0; i < len; i++)
-		{
-		if (pix[i] < l) l = pix[i];
-		if (pix[i] > h) h = pix[i];
-		}
-
-	/* calc scale from range */
-	if (l != h)
-		{
-		scale = 255.0 / (gdouble)(h - l);
-		}
-	else
-		{
-		scale = 1.0;
-		}
-
-	for (i = 0; i < len; i++)
-		{
-		pix[i] = (guint8)((gdouble)pix[i] - l * scale);
-		}
-}
-#endif
-
 static int image_sim_channel_eq_sort_cb(const void *a, const void *b)
 {
 	gint *pa = (void *)a;

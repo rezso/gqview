@@ -237,9 +237,6 @@ static gint layout_key_press_cb(GtkWidget *widget, GdkEventKey *event, gpointer 
 				break;
 			case GDK_Escape:
 				/* FIXME:interrupting thumbs no longer allowed */
-#if 0
-				interrupt_thumbs();
-#endif
 				break;
 			case 'P': case 'p':
 				if (!event->state & GDK_SHIFT_MASK)
@@ -263,10 +260,6 @@ static gint layout_key_press_cb(GtkWidget *widget, GdkEventKey *event, gpointer 
 				break;
 			}
 		}
-
-#if 0
-	if (stop_signal) g_signal_stop_emission_by_name(G_OBJECT(widget), "key_press_event");
-#endif
 
 	return stop_signal;
 }
@@ -503,11 +496,11 @@ static void layout_menu_list_cb(GtkRadioAction *action, GtkRadioAction *current,
 	layout_views_set(lw, lw->tree_view, (gtk_radio_action_get_current_value(action) == 1));
 }
 
-static void layout_menu_tree_cb(GtkToggleAction *action, gpointer data)
+static void layout_menu_tree_cb(GtkRadioAction *action, GtkRadioAction *current, gpointer data)
 {
 	LayoutWindow *lw = data;
 
-	layout_views_set(lw, gtk_toggle_action_get_active(action), lw->icon_view);
+	layout_views_set(lw, gtk_radio_action_get_current_value(action), lw->icon_view);
 }
 
 static void layout_menu_fullscreen_cb(GtkAction *action, gpointer data)
@@ -778,6 +771,7 @@ static GtkActionEntry menu_entries[] = {
   { "EditMenu",		NULL,		N_("_Edit") },
   { "AdjustMenu",	NULL,		N_("_Adjust") },
   { "ViewMenu",		NULL,		N_("_View") },
+  { "DirMenu",          NULL,           N_("_Directory List") },
   { "HelpMenu",		NULL,		N_("_Help") },
 
   { "NewWindow",	GTK_STOCK_NEW,	N_("New _window"),	NULL,		NULL,	CB(layout_menu_new_window_cb) },
@@ -836,7 +830,6 @@ static GtkActionEntry menu_entries[] = {
 
 static GtkToggleActionEntry menu_toggle_entries[] = {
   { "Thumbnails",	NULL,		N_("_Thumbnails"),	"T",		NULL,	CB(layout_menu_thumb_cb) },
-  { "FolderTree",	NULL,		N_("Tr_ee"),		"<control>T",	NULL,	CB(layout_menu_tree_cb) },
   { "FloatTools",	NULL,		N_("_Float file list"),	"L",		NULL,	CB(layout_menu_float_cb) },
   { "HideToolbar",	NULL,		N_("Hide tool_bar"),	NULL,		NULL,	CB(layout_menu_toolbar_cb) },
   { "SBarKeywords",	NULL,		N_("_Keywords"),	"<control>K",	NULL,	CB(layout_menu_bar_info_cb) },
@@ -847,6 +840,12 @@ static GtkToggleActionEntry menu_toggle_entries[] = {
 static GtkRadioActionEntry menu_radio_entries[] = {
   { "ViewList",		NULL,		N_("_List"),		"<control>L",	NULL,	0 },
   { "ViewIcons",	NULL,		N_("I_cons"),		"<control>I",	NULL,	1 }
+};
+
+static GtkRadioActionEntry menu_dv_radio_entries[] = {
+  { "FolderList",	NULL,		N_("List"),		"<control>T",	NULL, 0 },
+  { "FolderTree",	NULL,		N_("Tr_ee"),		"<meta>L",	NULL, 1 },
+  { "FolderIcons",	NULL,		N_("Icons"),		"<meta>I",	NULL, 3 }
 };
 
 #undef CB
@@ -916,7 +915,12 @@ static const char *menu_ui_description =
 "      <menuitem action='ViewList'/>"
 "      <menuitem action='ViewIcons'/>"
 "      <separator/>"
-"      <menuitem action='FolderTree'/>"
+"      <menu action='DirMenu'>"
+"        <menuitem action='FolderList'/>"
+"        <menuitem action='FolderTree'/>"
+"        <menuitem action='FolderIcons'/>"
+"      </menu>"
+"      <separator/>"
 "      <menuitem action='FullScreen'/>"
 "      <separator/>"
 "      <menuitem action='FloatTools'/>"
@@ -963,6 +967,9 @@ void layout_actions_setup(LayoutWindow *lw)
 	gtk_action_group_add_radio_actions(lw->action_group,
 					   menu_radio_entries, G_N_ELEMENTS(menu_radio_entries),
 					   0, G_CALLBACK(layout_menu_list_cb), lw);
+	gtk_action_group_add_radio_actions(lw->action_group,
+					   menu_dv_radio_entries, G_N_ELEMENTS(menu_dv_radio_entries),
+					   0, G_CALLBACK(layout_menu_tree_cb),lw);
 
 	lw->ui_manager = gtk_ui_manager_new();
 	gtk_ui_manager_set_add_tearoffs(lw->ui_manager, TRUE);
@@ -1120,9 +1127,9 @@ static void layout_util_sync_views(LayoutWindow *lw)
 	GtkAction *action;
 
 	if (!lw->action_group) return;
-
+ 
 	action = gtk_action_group_get_action(lw->action_group, "FolderTree");
-	gtk_toggle_action_set_active(GTK_TOGGLE_ACTION(action), lw->tree_view);
+	gtk_radio_action_set_current_value(GTK_TOGGLE_ACTION(action), lw->tree_view);
 
 	action = gtk_action_group_get_action(lw->action_group, "ViewIcons");
 	gtk_toggle_action_set_active(GTK_TOGGLE_ACTION(action), lw->icon_view);
@@ -1171,16 +1178,31 @@ void layout_util_sync(LayoutWindow *lw)
  *-----------------------------------------------------------------------------
  */
 
-PixmapFolders *folder_icons_new(void)
+PixmapFolders *folder_icons_new(GtkWidget *widget, GtkIconSize size)
 {
 	PixmapFolders *pf;
 
 	pf = g_new0(PixmapFolders, 1);
 
-	pf->close = pixbuf_inline(PIXBUF_INLINE_FOLDER_CLOSED);
-	pf->open = pixbuf_inline(PIXBUF_INLINE_FOLDER_OPEN);
-	pf->deny = pixbuf_inline(PIXBUF_INLINE_FOLDER_LOCKED);
-	pf->parent = pixbuf_inline(PIXBUF_INLINE_FOLDER_UP);
+	pf->close = gtk_widget_render_icon(widget,
+			                   GTK_STOCK_DIRECTORY,
+					   size,
+					   NULL);
+
+	pf->open = gtk_widget_render_icon(widget,
+			                  GTK_STOCK_OPEN,
+					  size,
+					  NULL);
+
+	pf->deny = gtk_widget_render_icon(widget,
+					  GTK_STOCK_DIRECTORY,
+					  size,
+					  NULL);
+
+	pf->parent = gtk_widget_render_icon(widget,
+			                    GTK_STOCK_GO_UP,
+					    size,
+					    NULL);
 
 	return pf;
 }

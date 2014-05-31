@@ -1285,9 +1285,6 @@ static gint vficon_press_key_cb(GtkWidget *widget, GdkEventKey *event, gpointer 
 
 	if (stop_signal)
 		{
-#if 0
-		g_signal_stop_emission_by_name(GTK_OBJECT(widget), "key_press_event");
-#endif
 		tip_unschedule(vfi);
 		}
 
@@ -1331,14 +1328,6 @@ static gint vficon_press_cb(GtkWidget *widget, GdkEventButton *bevent, gpointer 
 				{
 				gtk_widget_grab_focus(vfi->listview);
 				}
-#if 0
-			if (bevent->type == GDK_2BUTTON_PRESS &&
-			    vfi->layout)
-				{
-				vficon_selection_remove(vfi, vfi->click_fd, SELECTION_PRELIGHT, &iter);
-				layout_image_full_screen_start(vfi->layout);
-				}
-#endif
 			break;
 		case 3:
 			vfi->popup = vficon_pop_menu(vfi, (fd != NULL));
@@ -2103,9 +2092,6 @@ static void vficon_cell_data_cb(GtkTreeViewColumn *tree_column, GtkCellRenderer 
 
 	if (fd && ICON_DATA(fd)->selected & SELECTION_PRELIGHT)
 		{
-#if 0
-		shift_color(&color_fg, -1, 0);
-#endif
 		shift_color(&color_bg, -1, 0);
 		}
 

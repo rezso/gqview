@@ -1407,11 +1407,6 @@ static void search_dnd_init(SearchData *sd)
 			 G_CALLBACK(search_dnd_data_set), sd);
 	g_signal_connect(G_OBJECT(sd->result_view), "drag_begin",
 			 G_CALLBACK(search_dnd_begin), sd);
-#if 0
-	g_signal_connect(G_OBJECT(sd->result_view), "drag_end",
-			 G_CALLBACK(search_dnd_end), sd);
-#endif
-			
 }
 
 /*
@@ -2716,13 +2711,6 @@ void search_new(const gchar *path, const gchar *example_file)
 	gtk_tree_sortable_set_sort_func(sortable, SEARCH_COLUMN_PATH, search_result_sort_cb,
 				  GINT_TO_POINTER(SEARCH_COLUMN_PATH), NULL);
 
-#if 0
-	/* by default, search results are unsorted until user selects a sort column - for speed,
-	 * using sort slows search speed by an order of magnitude with 1000's of results :-/
-	 */
-	gtk_tree_sortable_set_sort_column_id(sortable, SEARCH_COLUMN_PATH, GTK_SORT_ASCENDING);
-#endif
-
 	sd->result_view = gtk_tree_view_new_with_model(GTK_TREE_MODEL(store));
 	g_object_unref(store);
 	gtk_container_add(GTK_CONTAINER(scrolled), sd->result_view);
@@ -2734,10 +2722,6 @@ void search_new(const gchar *path, const gchar *example_file)
 
 	gtk_tree_view_set_headers_visible(GTK_TREE_VIEW(sd->result_view), TRUE);
 	gtk_tree_view_set_enable_search(GTK_TREE_VIEW(sd->result_view), FALSE);
-
-#if 0
-	gtk_tree_view_set_search_column(GTK_TREE_VIEW(sd->result_view), SEARCH_COLUMN_NAME);
-#endif
 
 	search_result_add_column(sd, SEARCH_COLUMN_RANK, _("Rank"), FALSE, FALSE);
 	search_result_add_column(sd, SEARCH_COLUMN_THUMB, "", TRUE, FALSE);

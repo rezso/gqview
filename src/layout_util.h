@@ -38,7 +38,7 @@ GtkWidget *layout_button_bar(LayoutWindow *lw);
 void layout_keyboard_init(LayoutWindow *lw, GtkWidget *window);
 
 
-PixmapFolders *folder_icons_new(void);
+PixmapFolders *folder_icons_new(GtkWidget *widget, GtkIconSize size);
 void folder_icons_free(PixmapFolders *pf);
 
 

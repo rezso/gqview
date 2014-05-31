@@ -914,28 +914,6 @@ static GList *parts_list_add_node_points(ViewDirTree *vdt, GList *list)
 
 /*
  *----------------------------------------------------------------------------
- * misc
- *----------------------------------------------------------------------------
- */
-
-#if 0
-static void vdtree_row_deleted_cb(GtkTreeModel *tree_model, GtkTreePath *tpath, gpointer data)
-{
-	GtkTreeIter iter;
-	NodeData *nd;
-
-	gtk_tree_model_get_iter(tree_model, &iter, tpath);
-	gtk_tree_model_get(tree_model, &iter, DIR_COLUMN_POINTER, &nd, -1);
-
-	if (!nd) return;
-
-	file_data_free(nd->fd);
-	g_free(nd);
-}
-#endif
-
-/*
- *----------------------------------------------------------------------------
  * node traversal, management
  *----------------------------------------------------------------------------
  */
@@ -1333,13 +1311,6 @@ gint vdtree_set_path(ViewDirTree *vdt, const gchar *path)
 	return TRUE;
 }
 
-#if 0
-const gchar *vdtree_get_path(ViewDirTree *vdt)
-{
-	return vdt->path;
-}
-#endif
-
 void vdtree_refresh(ViewDirTree *vdt)
 {
 	vdtree_populate_path(vdt, vdt->path, FALSE, TRUE);
@@ -1705,10 +1676,6 @@ ViewDirTree *vdtree_new(const gchar *path, gint expand)
 			 G_CALLBACK(vdtree_row_expanded), vdt);
 	g_signal_connect(G_OBJECT(vdt->treeview), "row_collapsed",
 			 G_CALLBACK(vdtree_row_collapsed), vdt);
-#if 0
-	g_signal_connect(G_OBJECT(store), "row_deleted",
-			 G_CALLBACK(vdtree_row_deleted_cb), vdt);
-#endif
 
 	selection = gtk_tree_view_get_selection(GTK_TREE_VIEW(vdt->treeview));
 	gtk_tree_selection_set_mode(selection, GTK_SELECTION_SINGLE);
@@ -1735,7 +1702,7 @@ ViewDirTree *vdtree_new(const gchar *path, gint expand)
 	gtk_container_add(GTK_CONTAINER(vdt->widget), vdt->treeview);
 	gtk_widget_show(vdt->treeview);
 
-	vdt->pf = folder_icons_new();
+	vdt->pf = folder_icons_new(vdt->widget, GTK_ICON_SIZE_MENU);
 
 	vdtree_setup_root(vdt);
 
@@ -1757,16 +1724,6 @@ void vdtree_set_select_func(ViewDirTree *vdt,
         vdt->select_func = func;
         vdt->select_data = data;
 }
-
-#if 0
-void vdtree_set_click_func(ViewDirTree *vdt,
-			   void (*func)(ViewDirTree *vdt, GdkEventButton *event, FileData *fd, gpointer), gpointer data)
-{
-	if (!td) return;
-	vdt->click_func = func;
-	vdt->click_data = data;
-}
-#endif
 
 void vdtree_set_layout(ViewDirTree *vdt, LayoutWindow *layout)
 {
