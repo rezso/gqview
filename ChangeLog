@@ -1,8 +1,12 @@
+Sun Jun  11 02:19:12 2014  P√°der Rezs≈ë  <rezso@rezso.net>
+
+	* gqview.desktop: fixes
+	* Release 2.1.6
+
 Thu Jan  12 10:07:12 2011  P√°der Rezs≈ë  <rezso@rezso.net>
 
 	* utilops.c: delete folder: don't show folder content, if the folder empty
 	* update .pot & .po files; remove some translations
-
 
 Tue Dec  27 16:47:12 2011  P√°der Rezs≈ë  <rezso@rezso.net>
 
@@ -433,13 +437,13 @@ Fri Oct 13 05:22:43 2006  John Ellis  <johne@verizon.net>
 	* de.po: Update German translation [merge from 2.0.2],
 	submitted by Ronny Steiner <Post@SIRSteiner.de>.
 	* fr.po: Update French translation,
-	submitted by …ric Lassauge <lassauge@users.sourceforge.net>.
+	submitted by √âric Lassauge <lassauge@users.sourceforge.net>.
 	* it.po: Update Italian translation,
 	submitted by Kostantino <ciclope10ATalice.it>.
 	* ko.po: Add Korean translation (mostly menus),
 	submitted by Hyun-Jin Moon <moonhyunjin@gmail.com>.
 	* pt_BR.po: Update Brazilian Portuguese translation,
-	submitted by Herval Ribeiro de Azev√™do <heraze@gmail.com>.
+	submitted by Herval Ribeiro de Azev√É¬™do <heraze@gmail.com>.
 	* sk.po: Update Slovak translation,
 	submitted by Mgr. Peter Tuharsky <tuharsky@misbb.sk>.
 	* zh_TW.po: Update Traditional Chinese translation,
@@ -1008,7 +1012,7 @@ Tue Feb  8 15:19:20 2005  John Ellis  <johne@verizon.net>
 	* po/ru.po: Update Russian translation,
 	submitted by Sergey Pinaev <dfo@antex.ru>.
 	* po/sv.po: Update Swedish translation,
-	submitted by Hans ÷fverbeck <hans.ofverbeck@home.se>.
+	submitted by Hans √ñfverbeck <hans.ofverbeck@home.se>.
 	* doc/10_6_advanced.html: Describe option 'Store keywords and comments
 	local to source image'.
 	* doc/11_4_management.html: Add list describing all folders and files
@@ -1068,7 +1072,7 @@ Mon Jan 31 11:04:20 2005  John Ellis  <johne@verizon.net>
 	* po/es.po: Update Spanish translation,
 	submitted by Ariel Fermani <arielfermani@yahoo.com>.
 	* po/fr.po: Update French translation,
-	submitted by …ric Lassauge <lassauge@users.sourceforge.net>.
+	submitted by √âric Lassauge <lassauge@users.sourceforge.net>.
 	* po/it.po: Update Italian translation,
 	submitted by Costantino <inverness1ATvirgilio.it>.
 
@@ -1261,7 +1265,7 @@ Fri Jan  7 01:21:03 2005  John Ellis  <johne@verizon.net>
 
 	* search.c: Clean up appearance of search window.
 	* po/fr.po: Update French translation,
-	submitted by …ric Lassauge <lassauge@users.sourceforge.net>.
+	submitted by √âric Lassauge <lassauge@users.sourceforge.net>.
 	* po/ru.po: Update Russian translation,
 	submitted by Sergey Pinaev <dfo@antex.ru>.
 	* preferences.c, README: Update copyright year.
@@ -1449,7 +1453,7 @@ Fri Dec 24 15:03:12 2004  John Ellis  <johne@verizon.net>
 	* main.c: Add -sr<folder> remote command for recursive slideshows,
 	based on patch submitted by Henry Minsky.
 	* po/fr.po: Update French translation,
-	submitted by …ric Lassauge <lassauge@users.sourceforge.net>.
+	submitted by √âric Lassauge <lassauge@users.sourceforge.net>.
 	* po/it.po: Update Italian translation,
 	submitted by Kostantino <inverness1ATvirgilio.it>.
 	* po/sv.po: Update Swedish translation,
@@ -1617,7 +1621,7 @@ Tue Nov  9 16:18:26 2004  John Ellis  <johne@verizon.net>
 	* po/ja.po: Update Japanese translation,
 	submitted by Takeshi AIHANA <aihana@gnome.gr.jp>.
 	* po/fr.po: Update French translation,
-	submitted by …ric Lassauge <lassauge@users.sourceforge.net>.
+	submitted by √âric Lassauge <lassauge@users.sourceforge.net>.
 	* po/sv.po: Update Swedish translation,
 	submitted by Hans Ofverbeck <hans.ofverbeck@home.se>.
 	* po/es.po, gqview.spec.in, gqview.desktop: Update Spanish translation,
@@ -2859,7 +2863,7 @@ Mon Dec 22 17:25:10 2003  John Ellis  <johne@bellatlantic.net>
 	maximum of the height property on GtkCellRenderer.
 	* configure.in (ALL_LINGUAS): Added sv, Swedish language.
 	* po/sv.po: Added Swedish translation,
-	submitted by Hans ÷fverbeck <hans.ofverbeck@home.se>.
+	submitted by Hans √ñfverbeck <hans.ofverbeck@home.se>.
 	* po/ru/po: Updated Russian translation,
 	submitted by Sergey Pinaev <dfo@antex.ru>.
 	* README, TODO: Updates.
@@ -4099,7 +4103,7 @@ Wed Jun  5 19:38:40 2002  John Ellis  <johne@bellatlantic.net>
 
 	* configure.in: Added test for Xinerama.
 	* fullscreen.c: Added Xinerama support based on patch from
-	"Jˆrg Mensmann" <joerg.mensmann@gmx.de>
+	"J√∂rg Mensmann" <joerg.mensmann@gmx.de>
 	(untested - do not have Xinerama display - NVidia's twinview does not
 	support it with tv out as the second device - crash :/ )
 	* Makefile.am(LD_ADD): Added Xinerama lib var.
@@ -5317,13 +5321,13 @@ Fri Feb  9 17:02:07 2001  John Ellis  <johne@bellatlantic.net>
 	incorrectly, subsequently causing no update if the image had the same
 	size for the main window.
 	* po/hu.po: Updated Hungarian translation from
-	M·ty·s Tibor <templar@tempi.scene.hu>
+	M√°ty√°s Tibor <templar@tempi.scene.hu>
 
 Thu Feb  8 18:16:18 2001  John Ellis  <johne@bellatlantic.net>
 
 	* configure.in (ALL_LINGUAS): Added hu (Hungarian).
 	* po/hu.po: Added Hungarian translation from
-	M·ty·s Tibor <templar@tempi.scene.hu>
+	M√°ty√°s Tibor <templar@tempi.scene.hu>
 	* po/fr.po: Updated French translation from
 	Eric Lassauge <ros_at1@muzillac.tls.mms.fr>
 
