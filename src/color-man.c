@@ -20,11 +20,7 @@
 #ifdef HAVE_LCMS
 /*** color support enabled ***/
 
-#ifdef HAVE_LCMS_LCMS_H
-  #include <lcms/lcms.h>
-#else
-  #include <lcms.h>
-#endif
+#include <lcms2.h>
 
 
 typedef struct _ColorManCache ColorManCache;
@@ -54,8 +50,6 @@ static void color_man_lib_init(void)
 
 	if (init_done) return;
 	init_done = TRUE;
-
-	cmsErrorAction(LCMS_ERROR_IGNORE);
 }
 
 

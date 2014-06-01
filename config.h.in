@@ -27,9 +27,6 @@
 /* define to enable use of color profiles with lcms */
 #undef HAVE_LCMS
 
-/* Define to 1 if the lcms header must be included as lcms/lcms.h */
-#undef HAVE_LCMS_LCMS_H
-
 /* Define if your <locale.h> file defines LC_MESSAGES. */
 #undef HAVE_LC_MESSAGES
 

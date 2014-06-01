@@ -1,3 +1,7 @@
+Sun Jun  11 03:13:45 2014  Páder Rezső  <rezso@rezso.net>
+
+	* configure.in, color-man.c: lcms2
+
 Sun Jun  11 02:19:12 2014  Páder Rezső  <rezso@rezso.net>
 
 	* gqview.desktop: fixes

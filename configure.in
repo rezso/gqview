@@ -32,17 +32,11 @@ AC_ARG_WITH(lcms, [  --without-lcms          build without lcms support])
 
 have_lcms=no
 if test "x$with_lcms" != "xno"; then
-  AC_CHECK_LIB(lcms, cmsCreate_sRGBProfile, [
-    AC_CHECK_HEADER(lcms.h,
-      have_lcms=yes, [
-      AC_CHECK_HEADER(lcms/lcms.h,
-        have_lcms=yes
-        AC_DEFINE(HAVE_LCMS_LCMS_H, 1,
-          [Define to 1 if the lcms header must be included as lcms/lcms.h]))
-      ])
+  AC_CHECK_LIB(lcms2, cmsCreate_sRGBProfile, [
+    AC_CHECK_HEADER(lcms2.h, have_lcms=yes, )
   ])
   if test "$have_lcms" = "yes"; then
-    LCMS_LIBS="-llcms"
+    LCMS_LIBS="-llcms2"
     AC_DEFINE(HAVE_LCMS, 1, [define to enable use of color profiles with lcms])
   else
     have_lcms="no (lcms not found or unusable)"
