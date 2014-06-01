@@ -2699,8 +2699,8 @@ fi
 
 # Define the identity of the package.
 
- PACKAGE=gqview
- VERSION=2.1.6
+PACKAGE=gqview
+VERSION=2.1.7
 
 
 cat >>confdefs.h <<_ACEOF

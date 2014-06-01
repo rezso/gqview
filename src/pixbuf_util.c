@@ -277,7 +277,7 @@ GdkPixbuf *pixbuf_copy_rotate_90(GdkPixbuf *src, gint counter_clockwise)
 			}
 		}
 
-	gdk_pixbuf_unref(buffer);
+	g_object_unref(buffer);
 
 	return dest;
 }

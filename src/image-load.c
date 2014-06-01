@@ -35,9 +35,9 @@ static void image_loader_sync_pixbuf(ImageLoader *il)
 
 	if (pb == il->pixbuf) return;
 
-	if (il->pixbuf) gdk_pixbuf_unref(il->pixbuf);
+	if (il->pixbuf) g_object_unref(il->pixbuf);
 	il->pixbuf = pb;
-	if (il->pixbuf) gdk_pixbuf_ref(il->pixbuf);
+	if (il->pixbuf) g_object_ref(il->pixbuf);
 }
 
 static void image_loader_area_cb(GdkPixbufLoader *loader,
@@ -338,7 +338,7 @@ void image_loader_free(ImageLoader *il)
 
 	image_loader_stop(il);
 	if (il->idle_done_id != -1) g_source_remove(il->idle_done_id);
-	if (il->pixbuf) gdk_pixbuf_unref(il->pixbuf);
+	if (il->pixbuf) g_object_unref(il->pixbuf);
 	g_free(il->path);
 	g_free(il);
 }

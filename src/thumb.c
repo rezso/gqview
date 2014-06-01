@@ -201,7 +201,7 @@ static void thumb_loader_done_cb(ImageLoader *il, gpointer data)
 	else
 		{
 		tl->pixbuf = pixbuf;
-		gdk_pixbuf_ref(tl->pixbuf);
+		g_object_ref(tl->pixbuf);
 		save = il->shrunk;
 		}
 
@@ -420,7 +420,7 @@ GdkPixbuf *thumb_loader_get_pixbuf(ThumbLoader *tl, gint with_fallback)
 
 			tmp = pixbuf;
 			pixbuf = gdk_pixbuf_scale_simple(tmp, w, h, GDK_INTERP_NEAREST);
-			gdk_pixbuf_unref(tmp);
+			g_object_unref(tmp);
 			}
 		}
 	else
@@ -467,7 +467,7 @@ void thumb_loader_free(ThumbLoader *tl)
 		return;
 		}
 
-	if (tl->pixbuf) gdk_pixbuf_unref(tl->pixbuf);
+	if (tl->pixbuf) g_object_unref(tl->pixbuf);
 	image_loader_free(tl->il);
 	g_free(tl->path);
 
@@ -595,7 +595,7 @@ static GdkPixbuf *get_xv_thumbnail(gchar *thumb_filename, gint max_w, gint max_h
 
 			tmp = pixbuf;
 			pixbuf = gdk_pixbuf_scale_simple(tmp, width, height, GDK_INTERP_NEAREST);
-			gdk_pixbuf_unref(tmp);
+			g_object_unref(tmp);
 			}
 	
 		return pixbuf;

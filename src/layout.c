@@ -1931,7 +1931,7 @@ LayoutWindow *layout_new_with_geometry(const gchar *path, gint popped, gint hidd
 
 		pixbuf = pixbuf_inline(PIXBUF_INLINE_LOGO);
 		image_change_pixbuf(lw->image, pixbuf, 1.0);
-		gdk_pixbuf_unref(pixbuf);
+		g_object_unref(pixbuf);
 		}
 
 	/* set up the time stat timeout */

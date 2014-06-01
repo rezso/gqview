@@ -1765,7 +1765,7 @@ static void pr_tile_free(ImageTile *it)
 {
 	if (!it) return;
 
-	if (it->pixbuf) gdk_pixbuf_unref(it->pixbuf);
+	if (it->pixbuf) g_object_unref(it->pixbuf);
 	if (it->pixmap) g_object_unref(it->pixmap);
 
 	g_free(it);
