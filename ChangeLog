@@ -1,3 +1,10 @@
+Sat Jul  5 2014  Páder Rezső  <rezso@rezso.net>
+
+	* thumbnail path depends on glib
+	* remove xvpics support
+	* update translations
+	* Release 2.1.8
+
 Sun Jun  11 2014  Páder Rezső  <rezso@rezso.net>
 
 	* configure.in, color-man.c: lcms2
