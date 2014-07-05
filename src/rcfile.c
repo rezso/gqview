@@ -145,7 +145,6 @@ static void write_bool_option(FILE *f, gchar *label, gint n)
 {
 	fprintf(f,"%s: ", label);
 	if (n) fprintf(f,"true\n"); else fprintf(f,"false\n");
-	fprintf(f,"\n");
 }
 
 static gint read_bool_option(FILE *f, gchar *option, gchar *label, gchar *value, gint n)
@@ -242,7 +241,6 @@ void save_options(void)
 	write_bool_option(f, "cache_thumbnails", enable_thumb_caching);
 	write_bool_option(f, "cache_thumbnails_into_dirs", enable_thumb_dirs);
 	write_bool_option(f, "thumbnail_fast", thumbnail_fast);
-	write_bool_option(f, "use_xvpics_thumbnails", use_xvpics_thumbnails);
 	write_bool_option(f, "thumbnail_spec_standard", thumbnail_spec_standard);
 	fprintf(f,"\n");
 
@@ -482,8 +480,6 @@ void load_options(void)
 			"cache_thumbnails_into_dirs", value, enable_thumb_dirs);
 		thumbnail_fast = read_bool_option(f, option,
 			"thumbnail_fast", value, thumbnail_fast);
-		use_xvpics_thumbnails = read_bool_option(f, option,
-			"use_xvpics_thumbnails", value, use_xvpics_thumbnails);
 		thumbnail_spec_standard = read_bool_option(f, option,
 			"thumbnail_spec_standard", value, thumbnail_spec_standard);
 

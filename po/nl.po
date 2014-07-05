@@ -7,10 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GQview 1.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-12 09:51+0100\n"
+"POT-Creation-Date: 2014-07-05 10:32+0200\n"
 "PO-Revision-Date: 2005-02-26 18:35+0100\n"
 "Last-Translator: Tino Meinen <a.t.meinen@chello.nl>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -95,7 +96,7 @@ msgstr "Opmerking nu opslaan"
 msgid "Tag"
 msgstr "Tag"
 
-#: .././src/bar_exif.c:437 .././src/dupe.c:2589 .././src/dupe.c:3112
+#: .././src/bar_exif.c:437 .././src/dupe.c:2589 .././src/dupe.c:3115
 #: .././src/print.c:3188 .././src/search.c:2728 .././src/utilops.c:2779
 #: .././src/view_file_list.c:1625
 msgid "Name"
@@ -113,7 +114,7 @@ msgstr "Formaat"
 msgid "Elements"
 msgstr "Elementen"
 
-#: .././src/bar_exif.c:441 .././src/preferences.c:1022
+#: .././src/bar_exif.c:441 .././src/preferences.c:1018
 msgid "Description"
 msgstr "Beschrijving"
 
@@ -267,7 +268,7 @@ msgstr "Miniaturen aanmaken"
 msgid "S_tart"
 msgstr "S_tarten"
 
-#: .././src/cache_maint.c:841 .././src/preferences.c:1159
+#: .././src/cache_maint.c:841 .././src/preferences.c:1155
 msgid "Folder:"
 msgstr "Map:"
 
@@ -322,7 +323,7 @@ msgstr "GQview miniaturen cache"
 
 #: .././src/cache_maint.c:1178 .././src/cache_maint.c:1198
 #: .././src/cache_maint.c:1226 .././src/pan-view.c:1427
-#: .././src/pan-view.c:2251 .././src/preferences.c:1136
+#: .././src/pan-view.c:2251 .././src/preferences.c:1132
 #: .././src/utilops.c:1571
 msgid "Location:"
 msgstr "Locatie:"
@@ -555,23 +556,23 @@ msgstr "_Dubbele zoeken..."
 msgid "Print..."
 msgstr "Afdrukken..."
 
-#: .././src/collect-table.c:1969 .././src/dupe.c:3300 .././src/img-view.c:1411
+#: .././src/collect-table.c:1969 .././src/dupe.c:3303 .././src/img-view.c:1411
 msgid "Dropped list includes folders."
 msgstr "De lijst bevat mappen."
 
-#: .././src/collect-table.c:1971 .././src/dupe.c:3302 .././src/img-view.c:1413
+#: .././src/collect-table.c:1971 .././src/dupe.c:3305 .././src/img-view.c:1413
 msgid "_Add contents"
 msgstr "Inhoud _toevoegen"
 
-#: .././src/collect-table.c:1973 .././src/dupe.c:3303 .././src/img-view.c:1414
+#: .././src/collect-table.c:1973 .././src/dupe.c:3306 .././src/img-view.c:1414
 msgid "Add contents _recursive"
 msgstr "Inhoud _recursief toevoegen"
 
-#: .././src/collect-table.c:1975 .././src/dupe.c:3304 .././src/img-view.c:1415
+#: .././src/collect-table.c:1975 .././src/dupe.c:3307 .././src/img-view.c:1415
 msgid "_Skip folders"
 msgstr "Mappen _overslaan"
 
-#: .././src/collect-table.c:1978 .././src/dupe.c:3306 .././src/img-view.c:1417
+#: .././src/collect-table.c:1978 .././src/dupe.c:3309 .././src/img-view.c:1417
 #: .././src/view_dir_list.c:214 .././src/view_dir_tree.c:306
 #: .././src/view_dir_icons.c:218
 msgid "Cancel"
@@ -640,18 +641,18 @@ msgstr "Venster sl_uiten"
 msgid "%d files (set 2)"
 msgstr "%d bestanden (set 2)"
 
-#: .././src/dupe.c:2590 .././src/dupe.c:3113 .././src/preferences.c:941
+#: .././src/dupe.c:2590 .././src/dupe.c:3116 .././src/preferences.c:937
 #: .././src/print.c:3192 .././src/search.c:2729 .././src/view_file_list.c:1626
 msgid "Size"
 msgstr "Grootte"
 
-#: .././src/dupe.c:2591 .././src/dupe.c:3114 .././src/exif.c:296
+#: .././src/dupe.c:2591 .././src/dupe.c:3117 .././src/exif.c:296
 #: .././src/exif.c:417 .././src/print.c:3190 .././src/search.c:2730
 #: .././src/view_file_list.c:1627
 msgid "Date"
 msgstr "Datum"
 
-#: .././src/dupe.c:2592 .././src/dupe.c:3115 .././src/print.c:3194
+#: .././src/dupe.c:2592 .././src/dupe.c:3118 .././src/print.c:3194
 #: .././src/search.c:2731
 msgid "Dimensions"
 msgstr "Afmetingen"
@@ -660,7 +661,7 @@ msgstr "Afmetingen"
 msgid "Checksum"
 msgstr "Controlesom"
 
-#: .././src/dupe.c:2594 .././src/dupe.c:3116 .././src/search.c:2732
+#: .././src/dupe.c:2594 .././src/dupe.c:3119 .././src/search.c:2732
 msgid "Path"
 msgstr "Pad"
 
@@ -680,23 +681,23 @@ msgstr "Overeenkomst (klein)"
 msgid "Similarity (custom)"
 msgstr "Overeenkomst (aangepast)"
 
-#: .././src/dupe.c:3076
+#: .././src/dupe.c:3079
 msgid "Find duplicates - GQview"
 msgstr "Dubbele bestanden zoeken - GQview"
 
-#: .././src/dupe.c:3148
+#: .././src/dupe.c:3151
 msgid "Compare to:"
 msgstr "Vergelijken met:"
 
-#: .././src/dupe.c:3161
+#: .././src/dupe.c:3164
 msgid "Compare by:"
 msgstr "Vergelijken via:"
 
-#: .././src/dupe.c:3169 .././src/preferences.c:837 .././src/search.c:2745
+#: .././src/dupe.c:3172 .././src/preferences.c:836 .././src/search.c:2745
 msgid "Thumbnails"
 msgstr "Miniaturen"
 
-#: .././src/dupe.c:3176
+#: .././src/dupe.c:3179
 msgid "Compare two file sets"
 msgstr "Twee verzamelingen vergelijken"
 
@@ -1146,7 +1147,7 @@ msgstr "Eigenaar:"
 msgid "Group:"
 msgstr "Groep:"
 
-#: .././src/info.c:380 .././src/preferences.c:818
+#: .././src/info.c:380 .././src/preferences.c:817
 msgid "General"
 msgstr "Algemeen"
 
@@ -1246,7 +1247,7 @@ msgstr "Gereedschap"
 msgid "Files"
 msgstr "Bestanden"
 
-#: .././src/layout_config.c:57 .././src/preferences.c:878 .././src/print.c:114
+#: .././src/layout_config.c:57 .././src/preferences.c:874 .././src/print.c:114
 msgid "Image"
 msgstr "Afbeelding"
 
@@ -1473,7 +1474,7 @@ msgstr "Inzoomen"
 msgid "Zoom out"
 msgstr "Uitzoomen"
 
-#: .././src/layout_util.c:1107 .././src/preferences.c:904
+#: .././src/layout_util.c:1107 .././src/preferences.c:900
 msgid "Fit image to window"
 msgstr "Afbeelding passend maken"
 
@@ -1745,7 +1746,7 @@ msgstr "Sorteren..."
 msgid "Date:"
 msgstr "Datum:"
 
-#: .././src/pan-view.c:1431 .././src/preferences.c:840 .././src/print.c:3199
+#: .././src/pan-view.c:1431 .././src/preferences.c:839 .././src/print.c:3199
 #: .././src/print.c:3401
 msgid "Size:"
 msgstr "Grootte:"
@@ -1869,11 +1870,11 @@ msgid ""
 "performance."
 msgstr ""
 
-#: .././src/pan-view.c:2464 .././src/preferences.c:843
+#: .././src/pan-view.c:2464 .././src/preferences.c:842
 msgid "Cache thumbnails"
 msgstr "Miniaturen 'cachen'"
 
-#: .././src/pan-view.c:2466 .././src/preferences.c:849
+#: .././src/pan-view.c:2466 .././src/preferences.c:848
 msgid "Use shared thumbnail cache"
 msgstr "Gedeelde miniaturen cache gebruiken"
 
@@ -1905,31 +1906,31 @@ msgstr "Geen"
 msgid "_Full size"
 msgstr "Volledige grootte"
 
-#: .././src/preferences.c:408
+#: .././src/preferences.c:407
 msgid "Nearest (worst, but fastest)"
 msgstr "Meest gelijkend (meest beroerd, maar snelst)"
 
-#: .././src/preferences.c:410
+#: .././src/preferences.c:409
 msgid "Tiles"
 msgstr "Tegels"
 
-#: .././src/preferences.c:412
+#: .././src/preferences.c:411
 msgid "Bilinear"
 msgstr "Bilinear"
 
-#: .././src/preferences.c:414
+#: .././src/preferences.c:413
 msgid "Hyper (best, but slowest)"
 msgstr "Hyper (beste, maar langzaamste)"
 
-#: .././src/preferences.c:495 .././src/print.c:369
+#: .././src/preferences.c:494 .././src/print.c:369
 msgid "Custom"
 msgstr "Aangepast"
 
-#: .././src/preferences.c:659 .././src/preferences.c:662
+#: .././src/preferences.c:658 .././src/preferences.c:661
 msgid "Reset filters"
 msgstr "Filters resetten"
 
-#: .././src/preferences.c:663
+#: .././src/preferences.c:662
 msgid ""
 "This will reset the file filters to the defaults.\n"
 "Continue?"
@@ -1937,11 +1938,11 @@ msgstr ""
 "Dit zal de oude waarden voor bestandsfilters terughalen.\n"
 "Doorgaan?"
 
-#: .././src/preferences.c:696 .././src/preferences.c:699
+#: .././src/preferences.c:695 .././src/preferences.c:698
 msgid "Reset editors"
 msgstr "Editors resetten"
 
-#: .././src/preferences.c:700
+#: .././src/preferences.c:699
 msgid ""
 "This will reset the edit commands to the defaults.\n"
 "Continue?"
@@ -1949,309 +1950,305 @@ msgstr ""
 "Dit zal de oude waarden voor de edit-opdrachten herstellen.\n"
 "Doorgaan?"
 
-#: .././src/preferences.c:724 .././src/preferences.c:727
+#: .././src/preferences.c:723 .././src/preferences.c:726
 msgid "Clear trash"
 msgstr "Prullenbak legen"
 
-#: .././src/preferences.c:728
+#: .././src/preferences.c:727
 msgid "This will remove the trash contents."
 msgstr "Hiermee zal de inhoud van de prullenbak verwijderd worden"
 
-#: .././src/preferences.c:767
+#: .././src/preferences.c:766
 msgid "GQview Preferences"
 msgstr "GQview - voorkeuren"
 
-#: .././src/preferences.c:821
+#: .././src/preferences.c:820
 msgid "Startup"
 msgstr "Opstarten"
 
-#: .././src/preferences.c:823
+#: .././src/preferences.c:822
 msgid "Change to folder:"
 msgstr "Ga naar map:"
 
-#: .././src/preferences.c:834
+#: .././src/preferences.c:833
 msgid "Use current"
 msgstr "Huidige gebruiken"
 
-#: .././src/preferences.c:841 .././src/preferences.c:884
+#: .././src/preferences.c:840 .././src/preferences.c:880
 msgid "Quality:"
 msgstr "Kwaliteit:"
 
-#: .././src/preferences.c:855
-msgid "Cache thumbnails into .thumbnails"
-msgstr "Miniaturen 'cachen' in .thumbnails"
-
-#: .././src/preferences.c:858
+#: .././src/preferences.c:854
 msgid "Faster jpeg thumbnailing (may reduce quality)"
 msgstr ""
 
-#: .././src/preferences.c:861
+#: .././src/preferences.c:857
 msgid "Slide show"
 msgstr "Diavoorstelling"
 
-#: .././src/preferences.c:864
+#: .././src/preferences.c:860
 msgid "Delay between image change:"
 msgstr "Afbeelding wisselingstijd:"
 
-#: .././src/preferences.c:864
+#: .././src/preferences.c:860
 msgid "seconds"
 msgstr "seconden"
 
-#: .././src/preferences.c:870
+#: .././src/preferences.c:866
 msgid "Random"
 msgstr "Willekeurig"
 
-#: .././src/preferences.c:871
+#: .././src/preferences.c:867
 msgid "Repeat"
 msgstr "Herhalen"
 
-#: .././src/preferences.c:881
+#: .././src/preferences.c:877
 msgid "Zoom"
 msgstr "Zoomen"
 
-#: .././src/preferences.c:886
+#: .././src/preferences.c:882
 msgid "Two pass zooming"
 msgstr "Zoomen in twee stappen"
 
-#: .././src/preferences.c:889
+#: .././src/preferences.c:885
 msgid "Allow enlargement of image for zoom to fit"
 msgstr "Afbeeldingen zoomen zodat ze in het venster passen"
 
-#: .././src/preferences.c:893
+#: .././src/preferences.c:889
 msgid "Zoom increment:"
 msgstr "Stapgrootte voor zoomen:"
 
-#: .././src/preferences.c:898
+#: .././src/preferences.c:894
 msgid "When new image is selected:"
 msgstr "Bij het tonen van de volgende afbeelding"
 
-#: .././src/preferences.c:901
+#: .././src/preferences.c:897
 msgid "Zoom to original size"
 msgstr "Op oorspronkelijke grootte tonen"
 
-#: .././src/preferences.c:907
+#: .././src/preferences.c:903
 msgid "Leave Zoom at previous setting"
 msgstr "Zoom-waarde niet veranderen"
 
-#: .././src/preferences.c:911
+#: .././src/preferences.c:907
 msgid "Appearance"
 msgstr "Weergave"
 
-#: .././src/preferences.c:913
+#: .././src/preferences.c:909
 msgid "Black background"
 msgstr "Zwarte achtergrond"
 
-#: .././src/preferences.c:916
+#: .././src/preferences.c:912
 msgid "Convenience"
 msgstr "Gebruiksvriendelijk"
 
-#: .././src/preferences.c:918
+#: .././src/preferences.c:914
 msgid "Refresh on file change"
 msgstr "Verversen bij aanpassing van bestand"
 
-#: .././src/preferences.c:920
+#: .././src/preferences.c:916
 msgid "Preload next image"
 msgstr "Alvast de volgende afbeelding laden"
 
-#: .././src/preferences.c:922
+#: .././src/preferences.c:918
 msgid "Auto rotate image using Exif information"
 msgstr "Afbeelding automatisch draaien afgaand op Exif info"
 
-#: .././src/preferences.c:931
+#: .././src/preferences.c:927
 msgid "Windows"
 msgstr "Vensters"
 
-#: .././src/preferences.c:934
+#: .././src/preferences.c:930
 msgid "State"
 msgstr "Toestand"
 
-#: .././src/preferences.c:936
+#: .././src/preferences.c:932
 msgid "Remember window positions"
 msgstr "Positie van vensters onthouden"
 
-#: .././src/preferences.c:938
+#: .././src/preferences.c:934
 msgid "Remember tool state (float/hidden)"
 msgstr "De werkbalk-toestand (zwevend/verborgen) onthouden"
 
-#: .././src/preferences.c:943
+#: .././src/preferences.c:939
 msgid "Fit window to image when tools are hidden/floating"
 msgstr "Venster aanpassen aan afbeelding als werkbalk zweeft/verborgen is"
 
-#: .././src/preferences.c:947
+#: .././src/preferences.c:943
 msgid "Limit size when auto-sizing window (%):"
 msgstr "Grootte beperken bij automatisch aanpassen van venster (%):"
 
-#: .././src/preferences.c:954 .././src/print.c:3349 .././src/print.c:3356
+#: .././src/preferences.c:950 .././src/print.c:3349 .././src/print.c:3356
 msgid "Layout"
 msgstr "Indeling"
 
-#: .././src/preferences.c:967
+#: .././src/preferences.c:963
 msgid "Filtering"
 msgstr "Filteren"
 
-#: .././src/preferences.c:972
+#: .././src/preferences.c:968
 msgid "Show entries that begin with a dot"
 msgstr "Mappen tonen die met een punt beginnen"
 
-#: .././src/preferences.c:974
+#: .././src/preferences.c:970
 msgid "Case sensitive sort"
 msgstr "Hoofdlettergevoelig"
 
-#: .././src/preferences.c:977
+#: .././src/preferences.c:973
 msgid "Disable File Filtering"
 msgstr "Bestandsfiltering uitschakelen"
 
-#: .././src/preferences.c:980
+#: .././src/preferences.c:976
 msgid "File types"
 msgstr "Bestandstypes"
 
 # kolomkop voor de filters
-#: .././src/preferences.c:1002
+#: .././src/preferences.c:998
 msgid "Filter"
 msgstr "Filter"
 
-#: .././src/preferences.c:1039 .././src/preferences.c:1103
+#: .././src/preferences.c:1035 .././src/preferences.c:1099
 msgid "Defaults"
 msgstr "Standaarden"
 
-#: .././src/preferences.c:1060
+#: .././src/preferences.c:1056
 msgid "Editors"
 msgstr "Editors"
 
-#: .././src/preferences.c:1066
+#: .././src/preferences.c:1062
 msgid "#"
 msgstr "#"
 
 # duidelijker zo
-#: .././src/preferences.c:1069 .././src/preferences.c:1223
+#: .././src/preferences.c:1065 .././src/preferences.c:1219
 msgid "Menu name"
 msgstr "Naam van programma"
 
 # Kan beter
-#: .././src/preferences.c:1072
+#: .././src/preferences.c:1068
 msgid "Command Line"
 msgstr "Opdrachtregel"
 
 # dit is de titel van het tabblad
 # 'Extra' is niet de letterlijke vertaling maar wel een goede hier.
-#: .././src/preferences.c:1119
+#: .././src/preferences.c:1115
 msgid "Advanced"
 msgstr "Extra"
 
-#: .././src/preferences.c:1132
+#: .././src/preferences.c:1128
 msgid "Full screen"
 msgstr "_Volledig scherm"
 
-#: .././src/preferences.c:1140
+#: .././src/preferences.c:1136
 msgid "Smooth image flip"
 msgstr "Afbeeldingswisseling vloeiend"
 
-#: .././src/preferences.c:1142
+#: .././src/preferences.c:1138
 msgid "Disable screen saver"
 msgstr "Schermbeveiliging uit"
 
-#: .././src/preferences.c:1145
+#: .././src/preferences.c:1141
 msgid "Delete"
 msgstr "Verwijderen"
 
-#: .././src/preferences.c:1147
+#: .././src/preferences.c:1143
 msgid "Confirm file delete"
 msgstr "Verwijderen van bestand bevestigen"
 
-#: .././src/preferences.c:1149
+#: .././src/preferences.c:1145
 msgid "Enable Delete key"
 msgstr "Delete-toets verwijdert bestand"
 
-#: .././src/preferences.c:1152
+#: .././src/preferences.c:1148
 msgid "Safe delete"
 msgstr "Veilig verwijderen"
 
-#: .././src/preferences.c:1170
+#: .././src/preferences.c:1166
 msgid "Maximum size:"
 msgstr "Maximale grootte:"
 
-#: .././src/preferences.c:1170
+#: .././src/preferences.c:1166
 msgid "MB"
 msgstr "MB"
 
 # normale vertaling zou Beeld zijn, maar dit is in de preferences.
-#: .././src/preferences.c:1173
+#: .././src/preferences.c:1169
 msgid "View"
 msgstr "Weergeven"
 
-#: .././src/preferences.c:1183
+#: .././src/preferences.c:1179
 msgid "Behavior"
 msgstr "Gedrag"
 
-#: .././src/preferences.c:1185
+#: .././src/preferences.c:1181
 msgid "Rectangular selection in icon view"
 msgstr "Rechthoekige selectie bij pictogramweergave"
 
-#: .././src/preferences.c:1188
+#: .././src/preferences.c:1184
 msgid "Descend folders in tree view"
 msgstr "Mappen binnengaan in boom-weergave"
 
-#: .././src/preferences.c:1191
+#: .././src/preferences.c:1187
 msgid "In place renaming"
 msgstr "Snel hernoemen van bestanden"
 
-#: .././src/preferences.c:1194
+#: .././src/preferences.c:1190
 msgid "Navigation"
 msgstr "Navigatie"
 
-#: .././src/preferences.c:1196
+#: .././src/preferences.c:1192
 msgid "Progressive keyboard scrolling"
 msgstr "Versnelling bij het schuiven van afbeelding via toetsenbord"
 
-#: .././src/preferences.c:1198
+#: .././src/preferences.c:1194
 msgid "Mouse wheel scrolls image"
 msgstr "Muiswiel schuift afbeelding"
 
-#: .././src/preferences.c:1201
+#: .././src/preferences.c:1197
 msgid "Miscellaneous"
 msgstr "Overige"
 
-#: .././src/preferences.c:1203
+#: .././src/preferences.c:1199
 msgid "Store keywords and comments local to source images"
 msgstr "Steekwoorden en opmerkingen locaal bij de afbeeldingen opslaan"
 
-#: .././src/preferences.c:1206
+#: .././src/preferences.c:1202
 msgid "Custom similarity threshold:"
 msgstr "Aangepaste drempelwaarde voor overeenkomst:"
 
-#: .././src/preferences.c:1209
+#: .././src/preferences.c:1205
 msgid "Offscreen cache size (Mb per image):"
 msgstr "Offscreen cache grootte (Mb per afbeelding):"
 
-#: .././src/preferences.c:1212
+#: .././src/preferences.c:1208
 #, fuzzy
 msgid "Color profiles"
 msgstr "Alle bestanden"
 
-#: .././src/preferences.c:1220
+#: .././src/preferences.c:1216
 msgid "Type"
 msgstr ""
 
-#: .././src/preferences.c:1226
+#: .././src/preferences.c:1222
 #, fuzzy
 msgid "File"
 msgstr "Bestand:"
 
-#: .././src/preferences.c:1248 .././src/preferences.c:1259
+#: .././src/preferences.c:1244 .././src/preferences.c:1255
 #, fuzzy
 msgid "Select color profile"
 msgstr "Map selecteren"
 
-#: .././src/preferences.c:1256
+#: .././src/preferences.c:1252
 #, fuzzy
 msgid "Screen:"
 msgstr "Scherm"
 
-#: .././src/preferences.c:1339
+#: .././src/preferences.c:1335
 msgid "About - GQview"
 msgstr "Info - GQview"
 
-#: .././src/preferences.c:1352
+#: .././src/preferences.c:1348
 #, c-format
 msgid ""
 "GQview %s\n"
@@ -2270,7 +2267,7 @@ msgstr ""
 "\n"
 "Uitgegeven onder de GNU General Public License"
 
-#: .././src/preferences.c:1370
+#: .././src/preferences.c:1366
 msgid "Credits..."
 msgstr "Met dank aan..."
 
@@ -2573,7 +2570,7 @@ msgstr "Scherpte (DPI):"
 msgid "Remember print settings"
 msgstr "Afdrukinstellingen onthouden"
 
-#: .././src/rcfile.c:185
+#: .././src/rcfile.c:184
 #, c-format
 msgid "error saving config file: %s\n"
 msgstr "Fout bij opslaan van bestand: %s\n"
@@ -2710,7 +2707,7 @@ msgstr "% gelijkend op"
 msgid "Rank"
 msgstr "Rang"
 
-#: .././src/thumb.c:375
+#: .././src/thumb.c:364
 msgid "Thumbnail image in cache failed to load, trying to recreate.\n"
 msgstr "Laden van miniatuur in cache mislukt, probeer een nieuwe te maken.\n"
 

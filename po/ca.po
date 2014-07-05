@@ -7,10 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GQview 1.5.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-12 09:51+0100\n"
+"POT-Creation-Date: 2014-07-05 10:32+0200\n"
 "PO-Revision-Date: 2005-09-10 18:08+0200\n"
 "Last-Translator: Jordi Vilalta Prat <jvprat@gmail.com>\n"
 "Language-Team: catux.org <mecatxis@ya.com>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -94,7 +95,7 @@ msgstr "Desar commentari"
 msgid "Tag"
 msgstr "Marcador"
 
-#: .././src/bar_exif.c:437 .././src/dupe.c:2589 .././src/dupe.c:3112
+#: .././src/bar_exif.c:437 .././src/dupe.c:2589 .././src/dupe.c:3115
 #: .././src/print.c:3188 .././src/search.c:2728 .././src/utilops.c:2779
 #: .././src/view_file_list.c:1625
 msgid "Name"
@@ -112,7 +113,7 @@ msgstr "Format"
 msgid "Elements"
 msgstr "Elements"
 
-#: .././src/bar_exif.c:441 .././src/preferences.c:1022
+#: .././src/bar_exif.c:441 .././src/preferences.c:1018
 msgid "Description"
 msgstr "Descripció"
 
@@ -266,7 +267,7 @@ msgstr "Crea miniatures"
 msgid "S_tart"
 msgstr "I_nici"
 
-#: .././src/cache_maint.c:841 .././src/preferences.c:1159
+#: .././src/cache_maint.c:841 .././src/preferences.c:1155
 msgid "Folder:"
 msgstr "Carpeta:"
 
@@ -321,7 +322,7 @@ msgstr "Memòria cau de miniatures de GQview"
 
 #: .././src/cache_maint.c:1178 .././src/cache_maint.c:1198
 #: .././src/cache_maint.c:1226 .././src/pan-view.c:1427
-#: .././src/pan-view.c:2251 .././src/preferences.c:1136
+#: .././src/pan-view.c:2251 .././src/preferences.c:1132
 #: .././src/utilops.c:1571
 msgid "Location:"
 msgstr "Ubicació:"
@@ -553,23 +554,23 @@ msgstr "_Cerca imatges duplicades"
 msgid "Print..."
 msgstr "Imprimeix..."
 
-#: .././src/collect-table.c:1969 .././src/dupe.c:3300 .././src/img-view.c:1411
+#: .././src/collect-table.c:1969 .././src/dupe.c:3303 .././src/img-view.c:1411
 msgid "Dropped list includes folders."
 msgstr "La llista deixada inclou carpetes."
 
-#: .././src/collect-table.c:1971 .././src/dupe.c:3302 .././src/img-view.c:1413
+#: .././src/collect-table.c:1971 .././src/dupe.c:3305 .././src/img-view.c:1413
 msgid "_Add contents"
 msgstr "_Afegeix continguts"
 
-#: .././src/collect-table.c:1973 .././src/dupe.c:3303 .././src/img-view.c:1414
+#: .././src/collect-table.c:1973 .././src/dupe.c:3306 .././src/img-view.c:1414
 msgid "Add contents _recursive"
 msgstr "Afegeix continguts _recursivament"
 
-#: .././src/collect-table.c:1975 .././src/dupe.c:3304 .././src/img-view.c:1415
+#: .././src/collect-table.c:1975 .././src/dupe.c:3307 .././src/img-view.c:1415
 msgid "_Skip folders"
 msgstr "_Salta carpetes"
 
-#: .././src/collect-table.c:1978 .././src/dupe.c:3306 .././src/img-view.c:1417
+#: .././src/collect-table.c:1978 .././src/dupe.c:3309 .././src/img-view.c:1417
 #: .././src/view_dir_list.c:214 .././src/view_dir_tree.c:306
 #: .././src/view_dir_icons.c:218
 msgid "Cancel"
@@ -638,18 +639,18 @@ msgstr "Tanca la _finestra"
 msgid "%d files (set 2)"
 msgstr "%d fitxers (definiu-ne 2)"
 
-#: .././src/dupe.c:2590 .././src/dupe.c:3113 .././src/preferences.c:941
+#: .././src/dupe.c:2590 .././src/dupe.c:3116 .././src/preferences.c:937
 #: .././src/print.c:3192 .././src/search.c:2729 .././src/view_file_list.c:1626
 msgid "Size"
 msgstr "Mida"
 
-#: .././src/dupe.c:2591 .././src/dupe.c:3114 .././src/exif.c:296
+#: .././src/dupe.c:2591 .././src/dupe.c:3117 .././src/exif.c:296
 #: .././src/exif.c:417 .././src/print.c:3190 .././src/search.c:2730
 #: .././src/view_file_list.c:1627
 msgid "Date"
 msgstr "Data"
 
-#: .././src/dupe.c:2592 .././src/dupe.c:3115 .././src/print.c:3194
+#: .././src/dupe.c:2592 .././src/dupe.c:3118 .././src/print.c:3194
 #: .././src/search.c:2731
 msgid "Dimensions"
 msgstr "Dimensions"
@@ -658,7 +659,7 @@ msgstr "Dimensions"
 msgid "Checksum"
 msgstr "Suma de verificació"
 
-#: .././src/dupe.c:2594 .././src/dupe.c:3116 .././src/search.c:2732
+#: .././src/dupe.c:2594 .././src/dupe.c:3119 .././src/search.c:2732
 msgid "Path"
 msgstr "Camí"
 
@@ -678,23 +679,23 @@ msgstr "Semblança (baixa)"
 msgid "Similarity (custom)"
 msgstr "Semblança (personalitzada)"
 
-#: .././src/dupe.c:3076
+#: .././src/dupe.c:3079
 msgid "Find duplicates - GQview"
 msgstr "Cerca de duplicats - GQview"
 
-#: .././src/dupe.c:3148
+#: .././src/dupe.c:3151
 msgid "Compare to:"
 msgstr "Compara amb:"
 
-#: .././src/dupe.c:3161
+#: .././src/dupe.c:3164
 msgid "Compare by:"
 msgstr "Compara per:"
 
-#: .././src/dupe.c:3169 .././src/preferences.c:837 .././src/search.c:2745
+#: .././src/dupe.c:3172 .././src/preferences.c:836 .././src/search.c:2745
 msgid "Thumbnails"
 msgstr "Miniatures"
 
-#: .././src/dupe.c:3176
+#: .././src/dupe.c:3179
 msgid "Compare two file sets"
 msgstr "Compara dos conjunts de fitxers"
 
@@ -1142,7 +1143,7 @@ msgstr "Propietari:"
 msgid "Group:"
 msgstr "Grup:"
 
-#: .././src/info.c:380 .././src/preferences.c:818
+#: .././src/info.c:380 .././src/preferences.c:817
 msgid "General"
 msgstr "General"
 
@@ -1242,7 +1243,7 @@ msgstr "Eines"
 msgid "Files"
 msgstr "Fitxers"
 
-#: .././src/layout_config.c:57 .././src/preferences.c:878 .././src/print.c:114
+#: .././src/layout_config.c:57 .././src/preferences.c:874 .././src/print.c:114
 msgid "Image"
 msgstr "Imatge"
 
@@ -1466,7 +1467,7 @@ msgstr "Apropa"
 msgid "Zoom out"
 msgstr "Allunya"
 
-#: .././src/layout_util.c:1107 .././src/preferences.c:904
+#: .././src/layout_util.c:1107 .././src/preferences.c:900
 msgid "Fit image to window"
 msgstr "Ajusta la imatge a la finestra"
 
@@ -1738,7 +1739,7 @@ msgstr "S'està ordenant..."
 msgid "Date:"
 msgstr "Data"
 
-#: .././src/pan-view.c:1431 .././src/preferences.c:840 .././src/print.c:3199
+#: .././src/pan-view.c:1431 .././src/preferences.c:839 .././src/print.c:3199
 #: .././src/print.c:3401
 msgid "Size:"
 msgstr "Mida:"
@@ -1862,11 +1863,11 @@ msgid ""
 "performance."
 msgstr ""
 
-#: .././src/pan-view.c:2464 .././src/preferences.c:843
+#: .././src/pan-view.c:2464 .././src/preferences.c:842
 msgid "Cache thumbnails"
 msgstr "Desa les miniatures en memòria cau"
 
-#: .././src/pan-view.c:2466 .././src/preferences.c:849
+#: .././src/pan-view.c:2466 .././src/preferences.c:848
 msgid "Use shared thumbnail cache"
 msgstr "Utilitza la memòria cau compartida de miniatures"
 
@@ -1898,31 +1899,31 @@ msgstr "Cap"
 msgid "_Full size"
 msgstr "Mida Màxima"
 
-#: .././src/preferences.c:408
+#: .././src/preferences.c:407
 msgid "Nearest (worst, but fastest)"
 msgstr "El més proper (el pitjor, però el més ràpid)"
 
-#: .././src/preferences.c:410
+#: .././src/preferences.c:409
 msgid "Tiles"
 msgstr "mosaic"
 
-#: .././src/preferences.c:412
+#: .././src/preferences.c:411
 msgid "Bilinear"
 msgstr "Bilineal"
 
-#: .././src/preferences.c:414
+#: .././src/preferences.c:413
 msgid "Hyper (best, but slowest)"
 msgstr "Hyper (el millor, però el més lent)"
 
-#: .././src/preferences.c:495 .././src/print.c:369
+#: .././src/preferences.c:494 .././src/print.c:369
 msgid "Custom"
 msgstr "Personalitzat"
 
-#: .././src/preferences.c:659 .././src/preferences.c:662
+#: .././src/preferences.c:658 .././src/preferences.c:661
 msgid "Reset filters"
 msgstr "Reinicia els filtres"
 
-#: .././src/preferences.c:663
+#: .././src/preferences.c:662
 msgid ""
 "This will reset the file filters to the defaults.\n"
 "Continue?"
@@ -1930,11 +1931,11 @@ msgstr ""
 "Això deixarà els filtres amb les opcions per defecte.\n"
 "Voleu continuar?"
 
-#: .././src/preferences.c:696 .././src/preferences.c:699
+#: .././src/preferences.c:695 .././src/preferences.c:698
 msgid "Reset editors"
 msgstr "Reinicia els editors"
 
-#: .././src/preferences.c:700
+#: .././src/preferences.c:699
 msgid ""
 "This will reset the edit commands to the defaults.\n"
 "Continue?"
@@ -1942,307 +1943,303 @@ msgstr ""
 "Es modificaran les ordres d'edició pels seus valors per defecte.\n"
 "Voleu continuar?"
 
-#: .././src/preferences.c:724 .././src/preferences.c:727
+#: .././src/preferences.c:723 .././src/preferences.c:726
 msgid "Clear trash"
 msgstr "Buida la paperera"
 
-#: .././src/preferences.c:728
+#: .././src/preferences.c:727
 msgid "This will remove the trash contents."
 msgstr "Això eliminarà el contingut de la paperera."
 
-#: .././src/preferences.c:767
+#: .././src/preferences.c:766
 msgid "GQview Preferences"
 msgstr "Preferències de GQview"
 
-#: .././src/preferences.c:821
+#: .././src/preferences.c:820
 msgid "Startup"
 msgstr "Inici"
 
-#: .././src/preferences.c:823
+#: .././src/preferences.c:822
 msgid "Change to folder:"
 msgstr "Canvia a la carpeta:"
 
-#: .././src/preferences.c:834
+#: .././src/preferences.c:833
 msgid "Use current"
 msgstr "Fes servir l'actual"
 
-#: .././src/preferences.c:841 .././src/preferences.c:884
+#: .././src/preferences.c:840 .././src/preferences.c:880
 msgid "Quality:"
 msgstr "Qualitat:"
 
-#: .././src/preferences.c:855
-msgid "Cache thumbnails into .thumbnails"
-msgstr "Desa les miniatures a .thumbnails (com a memòria cau)"
-
-#: .././src/preferences.c:858
+#: .././src/preferences.c:854
 msgid "Faster jpeg thumbnailing (may reduce quality)"
 msgstr ""
 
-#: .././src/preferences.c:861
+#: .././src/preferences.c:857
 msgid "Slide show"
 msgstr "Projecció de diapositives"
 
-#: .././src/preferences.c:864
+#: .././src/preferences.c:860
 msgid "Delay between image change:"
 msgstr "Retard abans del canvi d'imatge:"
 
-#: .././src/preferences.c:864
+#: .././src/preferences.c:860
 msgid "seconds"
 msgstr "segons"
 
-#: .././src/preferences.c:870
+#: .././src/preferences.c:866
 msgid "Random"
 msgstr "Aleatori"
 
-#: .././src/preferences.c:871
+#: .././src/preferences.c:867
 msgid "Repeat"
 msgstr "Repeteix"
 
-#: .././src/preferences.c:881
+#: .././src/preferences.c:877
 msgid "Zoom"
 msgstr "Zoom"
 
-#: .././src/preferences.c:886
+#: .././src/preferences.c:882
 msgid "Two pass zooming"
 msgstr "Fes zoom en dues passades"
 
-#: .././src/preferences.c:889
+#: .././src/preferences.c:885
 msgid "Allow enlargement of image for zoom to fit"
 msgstr "Permet l'ampliació de la imatge perque encaixi"
 
-#: .././src/preferences.c:893
+#: .././src/preferences.c:889
 msgid "Zoom increment:"
 msgstr "Increment del zoom:"
 
-#: .././src/preferences.c:898
+#: .././src/preferences.c:894
 msgid "When new image is selected:"
 msgstr "Quan se seleccioni una nova imatge:"
 
-#: .././src/preferences.c:901
+#: .././src/preferences.c:897
 msgid "Zoom to original size"
 msgstr "Mostra en la mida original"
 
-#: .././src/preferences.c:907
+#: .././src/preferences.c:903
 msgid "Leave Zoom at previous setting"
 msgstr "Deixa el Zoom en l'estat anterior"
 
-#: .././src/preferences.c:911
+#: .././src/preferences.c:907
 msgid "Appearance"
 msgstr "Aspecte"
 
-#: .././src/preferences.c:913
+#: .././src/preferences.c:909
 msgid "Black background"
 msgstr "Fons de pantalla negre"
 
-#: .././src/preferences.c:916
+#: .././src/preferences.c:912
 msgid "Convenience"
 msgstr "Conveniència"
 
-#: .././src/preferences.c:918
+#: .././src/preferences.c:914
 msgid "Refresh on file change"
 msgstr "Actualitzar quant hi hagi un canvi a l'arxiu"
 
-#: .././src/preferences.c:920
+#: .././src/preferences.c:916
 msgid "Preload next image"
 msgstr "Precarrega la següent imatge"
 
-#: .././src/preferences.c:922
+#: .././src/preferences.c:918
 msgid "Auto rotate image using Exif information"
 msgstr "Volteja la imatge automàticament usant la informació Exif"
 
-#: .././src/preferences.c:931
+#: .././src/preferences.c:927
 msgid "Windows"
 msgstr "Finestres"
 
-#: .././src/preferences.c:934
+#: .././src/preferences.c:930
 msgid "State"
 msgstr "Estat"
 
-#: .././src/preferences.c:936
+#: .././src/preferences.c:932
 msgid "Remember window positions"
 msgstr "Recordar la posició de les finestres"
 
-#: .././src/preferences.c:938
+#: .././src/preferences.c:934
 msgid "Remember tool state (float/hidden)"
 msgstr "Recordar l'estat de les eines (en pantalla/ocult)"
 
-#: .././src/preferences.c:943
+#: .././src/preferences.c:939
 msgid "Fit window to image when tools are hidden/floating"
 msgstr ""
 "Ajusta la finestra a la imatge quan les eines estiguin amagades o flotant"
 
-#: .././src/preferences.c:947
+#: .././src/preferences.c:943
 msgid "Limit size when auto-sizing window (%):"
 msgstr "Limitar la mida quan es dimensioni automaticament la finestra (%):"
 
-#: .././src/preferences.c:954 .././src/print.c:3349 .././src/print.c:3356
+#: .././src/preferences.c:950 .././src/print.c:3349 .././src/print.c:3356
 msgid "Layout"
 msgstr "Format"
 
-#: .././src/preferences.c:967
+#: .././src/preferences.c:963
 msgid "Filtering"
 msgstr "Filtratge"
 
-#: .././src/preferences.c:972
+#: .././src/preferences.c:968
 msgid "Show entries that begin with a dot"
 msgstr "Mostra les entrades que comencen per punt"
 
-#: .././src/preferences.c:974
+#: .././src/preferences.c:970
 msgid "Case sensitive sort"
 msgstr "Ordena distingint entre majúscules i minúscules"
 
-#: .././src/preferences.c:977
+#: .././src/preferences.c:973
 msgid "Disable File Filtering"
 msgstr "Desactivar els filtres de fitxers"
 
-#: .././src/preferences.c:980
+#: .././src/preferences.c:976
 msgid "File types"
 msgstr "Tipus de fitxers"
 
-#: .././src/preferences.c:1002
+#: .././src/preferences.c:998
 msgid "Filter"
 msgstr "Filtre"
 
-#: .././src/preferences.c:1039 .././src/preferences.c:1103
+#: .././src/preferences.c:1035 .././src/preferences.c:1099
 msgid "Defaults"
 msgstr "Opcions per defecte"
 
-#: .././src/preferences.c:1060
+#: .././src/preferences.c:1056
 msgid "Editors"
 msgstr "Editors"
 
-#: .././src/preferences.c:1066
+#: .././src/preferences.c:1062
 msgid "#"
 msgstr "#"
 
-#: .././src/preferences.c:1069 .././src/preferences.c:1223
+#: .././src/preferences.c:1065 .././src/preferences.c:1219
 msgid "Menu name"
 msgstr "Nom del menú"
 
-#: .././src/preferences.c:1072
+#: .././src/preferences.c:1068
 #, fuzzy
 msgid "Command Line"
 msgstr "Línia de comandes"
 
-#: .././src/preferences.c:1119
+#: .././src/preferences.c:1115
 msgid "Advanced"
 msgstr "Avançat"
 
-#: .././src/preferences.c:1132
+#: .././src/preferences.c:1128
 msgid "Full screen"
 msgstr "Pantalla completa"
 
-#: .././src/preferences.c:1140
+#: .././src/preferences.c:1136
 msgid "Smooth image flip"
 msgstr "Inverteix la imatge suaument"
 
-#: .././src/preferences.c:1142
+#: .././src/preferences.c:1138
 msgid "Disable screen saver"
 msgstr "Desactiva el salvapantalles"
 
-#: .././src/preferences.c:1145
+#: .././src/preferences.c:1141
 msgid "Delete"
 msgstr "Suprimeix"
 
-#: .././src/preferences.c:1147
+#: .././src/preferences.c:1143
 msgid "Confirm file delete"
 msgstr "Confirmeu l'eliminació del fitxer"
 
-#: .././src/preferences.c:1149
+#: .././src/preferences.c:1145
 msgid "Enable Delete key"
 msgstr "Activa la tecla de supressió"
 
-#: .././src/preferences.c:1152
+#: .././src/preferences.c:1148
 msgid "Safe delete"
 msgstr "Supressió segura"
 
-#: .././src/preferences.c:1170
+#: .././src/preferences.c:1166
 msgid "Maximum size:"
 msgstr "Mida màxima:"
 
-#: .././src/preferences.c:1170
+#: .././src/preferences.c:1166
 msgid "MB"
 msgstr "MB"
 
-#: .././src/preferences.c:1173
+#: .././src/preferences.c:1169
 msgid "View"
 msgstr "Visualització"
 
-#: .././src/preferences.c:1183
+#: .././src/preferences.c:1179
 msgid "Behavior"
 msgstr "Comportament"
 
-#: .././src/preferences.c:1185
+#: .././src/preferences.c:1181
 msgid "Rectangular selection in icon view"
 msgstr "Selecció rectangular a la vista d'icones"
 
-#: .././src/preferences.c:1188
+#: .././src/preferences.c:1184
 msgid "Descend folders in tree view"
 msgstr "Carpetes descendents en la vista d'arbre"
 
-#: .././src/preferences.c:1191
+#: .././src/preferences.c:1187
 msgid "In place renaming"
 msgstr "Canvia el nom en el lloc"
 
-#: .././src/preferences.c:1194
+#: .././src/preferences.c:1190
 msgid "Navigation"
 msgstr "Navegació"
 
-#: .././src/preferences.c:1196
+#: .././src/preferences.c:1192
 msgid "Progressive keyboard scrolling"
 msgstr "Desplaçament progressiu des del teclat"
 
-#: .././src/preferences.c:1198
+#: .././src/preferences.c:1194
 msgid "Mouse wheel scrolls image"
 msgstr "La rodeta del ratolí pot desplaçar la imatge"
 
-#: .././src/preferences.c:1201
+#: .././src/preferences.c:1197
 msgid "Miscellaneous"
 msgstr "Miscel·lània"
 
-#: .././src/preferences.c:1203
+#: .././src/preferences.c:1199
 msgid "Store keywords and comments local to source images"
 msgstr ""
 "Desa les paraules clau i els comentaris al mateix lloc que les imatges "
 "originals"
 
-#: .././src/preferences.c:1206
+#: .././src/preferences.c:1202
 msgid "Custom similarity threshold:"
 msgstr "Llindar de semblança personalitzat:"
 
-#: .././src/preferences.c:1209
+#: .././src/preferences.c:1205
 msgid "Offscreen cache size (Mb per image):"
 msgstr "Mida a la memòria cau fora d'enquadrament"
 
-#: .././src/preferences.c:1212
+#: .././src/preferences.c:1208
 #, fuzzy
 msgid "Color profiles"
 msgstr "Tots els fitxers"
 
-#: .././src/preferences.c:1220
+#: .././src/preferences.c:1216
 msgid "Type"
 msgstr ""
 
-#: .././src/preferences.c:1226
+#: .././src/preferences.c:1222
 #, fuzzy
 msgid "File"
 msgstr "Fitxer:"
 
-#: .././src/preferences.c:1248 .././src/preferences.c:1259
+#: .././src/preferences.c:1244 .././src/preferences.c:1255
 #, fuzzy
 msgid "Select color profile"
 msgstr "Seleccioneu una carpeta"
 
-#: .././src/preferences.c:1256
+#: .././src/preferences.c:1252
 #, fuzzy
 msgid "Screen:"
 msgstr "Pantalla"
 
-#: .././src/preferences.c:1339
+#: .././src/preferences.c:1335
 msgid "About - GQview"
 msgstr "Sobre - GQview"
 
-#: .././src/preferences.c:1352
+#: .././src/preferences.c:1348
 #, c-format
 msgid ""
 "GQview %s\n"
@@ -2261,7 +2258,7 @@ msgstr ""
 "\n"
 "Alliberat sota la Llicència Pública General GNU"
 
-#: .././src/preferences.c:1370
+#: .././src/preferences.c:1366
 msgid "Credits..."
 msgstr "Credits..."
 
@@ -2560,7 +2557,7 @@ msgstr "PPP:"
 msgid "Remember print settings"
 msgstr "Recorda els ajustos d'impressió"
 
-#: .././src/rcfile.c:185
+#: .././src/rcfile.c:184
 #, c-format
 msgid "error saving config file: %s\n"
 msgstr "s'ha produït un error en desar el fitxer de configuració: %s\n"
@@ -2697,7 +2694,7 @@ msgstr "% semblant a"
 msgid "Rank"
 msgstr "Rang"
 
-#: .././src/thumb.c:375
+#: .././src/thumb.c:364
 msgid "Thumbnail image in cache failed to load, trying to recreate.\n"
 msgstr ""
 "Ha fallat la càrrega a la caché de la imatge en miniatura, proveu de tornar-"

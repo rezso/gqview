@@ -7,10 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gqview 2.1.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-12 09:51+0100\n"
+"POT-Creation-Date: 2014-07-05 10:32+0200\n"
 "PO-Revision-Date: 2006-10-19 01:30+0300\n"
 "Last-Translator: Pavel Piatruk <berserker@neolocation.com>\n"
 "Language-Team: Belarusian <i18n@mova.org>\n"
+"Language: be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -93,7 +94,7 @@ msgstr "Захаваць каментар"
 msgid "Tag"
 msgstr "Тэг"
 
-#: .././src/bar_exif.c:437 .././src/dupe.c:2589 .././src/dupe.c:3112
+#: .././src/bar_exif.c:437 .././src/dupe.c:2589 .././src/dupe.c:3115
 #: .././src/print.c:3188 .././src/search.c:2728 .././src/utilops.c:2779
 #: .././src/view_file_list.c:1625
 msgid "Name"
@@ -111,7 +112,7 @@ msgstr "Фармат"
 msgid "Elements"
 msgstr "Элементы"
 
-#: .././src/bar_exif.c:441 .././src/preferences.c:1022
+#: .././src/bar_exif.c:441 .././src/preferences.c:1018
 msgid "Description"
 msgstr "Апісанне"
 
@@ -263,7 +264,7 @@ msgstr "Стварыць мініяцюры"
 msgid "S_tart"
 msgstr "П_ачаць"
 
-#: .././src/cache_maint.c:841 .././src/preferences.c:1159
+#: .././src/cache_maint.c:841 .././src/preferences.c:1155
 msgid "Folder:"
 msgstr "Тэчка:"
 
@@ -318,7 +319,7 @@ msgstr "Кэш мініяцюраў GQview"
 
 #: .././src/cache_maint.c:1178 .././src/cache_maint.c:1198
 #: .././src/cache_maint.c:1226 .././src/pan-view.c:1427
-#: .././src/pan-view.c:2251 .././src/preferences.c:1136
+#: .././src/pan-view.c:2251 .././src/preferences.c:1132
 #: .././src/utilops.c:1571
 msgid "Location:"
 msgstr "Змяшчэнне:"
@@ -550,23 +551,23 @@ msgstr "_Знайсці аднолькавыя..."
 msgid "Print..."
 msgstr "Друк..."
 
-#: .././src/collect-table.c:1969 .././src/dupe.c:3300 .././src/img-view.c:1411
+#: .././src/collect-table.c:1969 .././src/dupe.c:3303 .././src/img-view.c:1411
 msgid "Dropped list includes folders."
 msgstr "Спіс адкінутых змяшчае тэчкі"
 
-#: .././src/collect-table.c:1971 .././src/dupe.c:3302 .././src/img-view.c:1413
+#: .././src/collect-table.c:1971 .././src/dupe.c:3305 .././src/img-view.c:1413
 msgid "_Add contents"
 msgstr "_Дадаць змест"
 
-#: .././src/collect-table.c:1973 .././src/dupe.c:3303 .././src/img-view.c:1414
+#: .././src/collect-table.c:1973 .././src/dupe.c:3306 .././src/img-view.c:1414
 msgid "Add contents _recursive"
 msgstr "Дадаць змест _рэкурсіўна"
 
-#: .././src/collect-table.c:1975 .././src/dupe.c:3304 .././src/img-view.c:1415
+#: .././src/collect-table.c:1975 .././src/dupe.c:3307 .././src/img-view.c:1415
 msgid "_Skip folders"
 msgstr "Прапусціць тэчкі"
 
-#: .././src/collect-table.c:1978 .././src/dupe.c:3306 .././src/img-view.c:1417
+#: .././src/collect-table.c:1978 .././src/dupe.c:3309 .././src/img-view.c:1417
 #: .././src/view_dir_list.c:214 .././src/view_dir_tree.c:306
 #: .././src/view_dir_icons.c:218
 msgid "Cancel"
@@ -635,18 +636,18 @@ msgstr "Зарыць акно"
 msgid "%d files (set 2)"
 msgstr "%d файлаў (набор 2)"
 
-#: .././src/dupe.c:2590 .././src/dupe.c:3113 .././src/preferences.c:941
+#: .././src/dupe.c:2590 .././src/dupe.c:3116 .././src/preferences.c:937
 #: .././src/print.c:3192 .././src/search.c:2729 .././src/view_file_list.c:1626
 msgid "Size"
 msgstr "Памер"
 
-#: .././src/dupe.c:2591 .././src/dupe.c:3114 .././src/exif.c:296
+#: .././src/dupe.c:2591 .././src/dupe.c:3117 .././src/exif.c:296
 #: .././src/exif.c:417 .././src/print.c:3190 .././src/search.c:2730
 #: .././src/view_file_list.c:1627
 msgid "Date"
 msgstr "дата"
 
-#: .././src/dupe.c:2592 .././src/dupe.c:3115 .././src/print.c:3194
+#: .././src/dupe.c:2592 .././src/dupe.c:3118 .././src/print.c:3194
 #: .././src/search.c:2731
 msgid "Dimensions"
 msgstr "Вымярэнні"
@@ -655,7 +656,7 @@ msgstr "Вымярэнні"
 msgid "Checksum"
 msgstr "Кантрольная сума"
 
-#: .././src/dupe.c:2594 .././src/dupe.c:3116 .././src/search.c:2732
+#: .././src/dupe.c:2594 .././src/dupe.c:3119 .././src/search.c:2732
 msgid "Path"
 msgstr "Шлях"
 
@@ -675,23 +676,23 @@ msgstr "Падабенства (нізкае)"
 msgid "Similarity (custom)"
 msgstr "Падабенства (іншае)"
 
-#: .././src/dupe.c:3076
+#: .././src/dupe.c:3079
 msgid "Find duplicates - GQview"
 msgstr "Адшукванне аднолькавых - GQview"
 
-#: .././src/dupe.c:3148
+#: .././src/dupe.c:3151
 msgid "Compare to:"
 msgstr "Параўнаць з:"
 
-#: .././src/dupe.c:3161
+#: .././src/dupe.c:3164
 msgid "Compare by:"
 msgstr "Параўнаць па:"
 
-#: .././src/dupe.c:3169 .././src/preferences.c:837 .././src/search.c:2745
+#: .././src/dupe.c:3172 .././src/preferences.c:836 .././src/search.c:2745
 msgid "Thumbnails"
 msgstr "Мініяцюры"
 
-#: .././src/dupe.c:3176
+#: .././src/dupe.c:3179
 msgid "Compare two file sets"
 msgstr "Параўнаць два наборы файлаў"
 
@@ -1139,7 +1140,7 @@ msgstr "Уладальнік:"
 msgid "Group:"
 msgstr "Група:"
 
-#: .././src/info.c:380 .././src/preferences.c:818
+#: .././src/info.c:380 .././src/preferences.c:817
 msgid "General"
 msgstr "Агульныя"
 
@@ -1239,7 +1240,7 @@ msgstr "Прылады"
 msgid "Files"
 msgstr "Файлы"
 
-#: .././src/layout_config.c:57 .././src/preferences.c:878 .././src/print.c:114
+#: .././src/layout_config.c:57 .././src/preferences.c:874 .././src/print.c:114
 msgid "Image"
 msgstr "Выява"
 
@@ -1462,7 +1463,7 @@ msgstr "Павялічыць"
 msgid "Zoom out"
 msgstr "Паменьшыць"
 
-#: .././src/layout_util.c:1107 .././src/preferences.c:904
+#: .././src/layout_util.c:1107 .././src/preferences.c:900
 msgid "Fit image to window"
 msgstr "Дапасаваць выяву да акна"
 
@@ -1730,7 +1731,7 @@ msgstr "Сартаванне выяў..."
 msgid "Date:"
 msgstr "Дата:"
 
-#: .././src/pan-view.c:1431 .././src/preferences.c:840 .././src/print.c:3199
+#: .././src/pan-view.c:1431 .././src/preferences.c:839 .././src/print.c:3199
 #: .././src/print.c:3401
 msgid "Size:"
 msgstr "Памер:"
@@ -1845,11 +1846,11 @@ msgstr ""
 "наладкі могуць быць уключаны. Заўважце, што абедзве наладкі мусяць быць "
 "уключаны для абвяшчэння зменаў прадукцыйнасці."
 
-#: .././src/pan-view.c:2464 .././src/preferences.c:843
+#: .././src/pan-view.c:2464 .././src/preferences.c:842
 msgid "Cache thumbnails"
 msgstr "Кэшаваць мініяцюры"
 
-#: .././src/pan-view.c:2466 .././src/preferences.c:849
+#: .././src/pan-view.c:2466 .././src/preferences.c:848
 msgid "Use shared thumbnail cache"
 msgstr "Выкарыстоўваць агульны кэш мініяцюраў"
 
@@ -1880,31 +1881,31 @@ msgstr "Няма"
 msgid "_Full size"
 msgstr "Поўны памер"
 
-#: .././src/preferences.c:408
+#: .././src/preferences.c:407
 msgid "Nearest (worst, but fastest)"
 msgstr "Найбліжэйшае (горш, але хутчэй)"
 
-#: .././src/preferences.c:410
+#: .././src/preferences.c:409
 msgid "Tiles"
 msgstr "Брукаванкай"
 
-#: .././src/preferences.c:412
+#: .././src/preferences.c:411
 msgid "Bilinear"
 msgstr "Дзвюхлінейнае"
 
-#: .././src/preferences.c:414
+#: .././src/preferences.c:413
 msgid "Hyper (best, but slowest)"
 msgstr "Гіпер (лепш, але марудней)"
 
-#: .././src/preferences.c:495 .././src/print.c:369
+#: .././src/preferences.c:494 .././src/print.c:369
 msgid "Custom"
 msgstr "Іншае"
 
-#: .././src/preferences.c:659 .././src/preferences.c:662
+#: .././src/preferences.c:658 .././src/preferences.c:661
 msgid "Reset filters"
 msgstr "Скінуць фільтры"
 
-#: .././src/preferences.c:663
+#: .././src/preferences.c:662
 msgid ""
 "This will reset the file filters to the defaults.\n"
 "Continue?"
@@ -1912,11 +1913,11 @@ msgstr ""
 "Значэнні фільтраў файлаў стануцца стандартнымі.\n"
 "Працягнуць?"
 
-#: .././src/preferences.c:696 .././src/preferences.c:699
+#: .././src/preferences.c:695 .././src/preferences.c:698
 msgid "Reset editors"
 msgstr "Скінуць рэдактары"
 
-#: .././src/preferences.c:700
+#: .././src/preferences.c:699
 msgid ""
 "This will reset the edit commands to the defaults.\n"
 "Continue?"
@@ -1924,303 +1925,299 @@ msgstr ""
 "Значэнні камандаў рэдагавання стануцца стандартнымі.\n"
 "Працягнуць?"
 
-#: .././src/preferences.c:724 .././src/preferences.c:727
+#: .././src/preferences.c:723 .././src/preferences.c:726
 msgid "Clear trash"
 msgstr "Ачысціць сметніцу"
 
-#: .././src/preferences.c:728
+#: .././src/preferences.c:727
 msgid "This will remove the trash contents."
 msgstr "Змест сметніцы будзе выдалены."
 
-#: .././src/preferences.c:767
+#: .././src/preferences.c:766
 msgid "GQview Preferences"
 msgstr "Наладкі GQview"
 
-#: .././src/preferences.c:821
+#: .././src/preferences.c:820
 msgid "Startup"
 msgstr "Запуск"
 
-#: .././src/preferences.c:823
+#: .././src/preferences.c:822
 msgid "Change to folder:"
 msgstr "Пачатковая тэчка:"
 
-#: .././src/preferences.c:834
+#: .././src/preferences.c:833
 msgid "Use current"
 msgstr "Ужываць цяперашнюю"
 
-#: .././src/preferences.c:841 .././src/preferences.c:884
+#: .././src/preferences.c:840 .././src/preferences.c:880
 msgid "Quality:"
 msgstr "Якасць:"
 
-#: .././src/preferences.c:855
-msgid "Cache thumbnails into .thumbnails"
-msgstr "Кэшаваць мініяцюры ў ~/.thumbnails"
-
-#: .././src/preferences.c:858
+#: .././src/preferences.c:854
 msgid "Faster jpeg thumbnailing (may reduce quality)"
 msgstr "Хутчэйшая jpeg-мініяцюрызацыя (можа пагоршыць якасць)"
 
-#: .././src/preferences.c:861
+#: .././src/preferences.c:857
 msgid "Slide show"
 msgstr "Паказ слайдаў"
 
-#: .././src/preferences.c:864
+#: .././src/preferences.c:860
 msgid "Delay between image change:"
 msgstr "Затрымка паміж зменай выяў:"
 
-#: .././src/preferences.c:864
+#: .././src/preferences.c:860
 msgid "seconds"
 msgstr "секунд"
 
-#: .././src/preferences.c:870
+#: .././src/preferences.c:866
 msgid "Random"
 msgstr "Выпадкова"
 
-#: .././src/preferences.c:871
+#: .././src/preferences.c:867
 msgid "Repeat"
 msgstr "Паўтор"
 
-#: .././src/preferences.c:881
+#: .././src/preferences.c:877
 msgid "Zoom"
 msgstr "Маштаб"
 
-#: .././src/preferences.c:886
+#: .././src/preferences.c:882
 msgid "Two pass zooming"
 msgstr "Двухпраходнае маштабаванне"
 
-#: .././src/preferences.c:889
+#: .././src/preferences.c:885
 msgid "Allow enlargement of image for zoom to fit"
 msgstr "Дазвол павелічэння выявы дзеля дапасоўкі памеру"
 
-#: .././src/preferences.c:893
+#: .././src/preferences.c:889
 msgid "Zoom increment:"
 msgstr "Крок маштабавання:"
 
-#: .././src/preferences.c:898
+#: .././src/preferences.c:894
 msgid "When new image is selected:"
 msgstr "Калі новая выява вылучана:"
 
-#: .././src/preferences.c:901
+#: .././src/preferences.c:897
 msgid "Zoom to original size"
 msgstr "Маштабаваць да арыгінальнага памеру"
 
-#: .././src/preferences.c:907
+#: .././src/preferences.c:903
 msgid "Leave Zoom at previous setting"
 msgstr "Пакінуць Маштаб папярэднім"
 
-#: .././src/preferences.c:911
+#: .././src/preferences.c:907
 msgid "Appearance"
 msgstr "Выгляд"
 
-#: .././src/preferences.c:913
+#: .././src/preferences.c:909
 msgid "Black background"
 msgstr "Чорны фон"
 
-#: .././src/preferences.c:916
+#: .././src/preferences.c:912
 msgid "Convenience"
 msgstr "Выгоды"
 
-#: .././src/preferences.c:918
+#: .././src/preferences.c:914
 msgid "Refresh on file change"
 msgstr "Перамалёўваць выяву пры змяненні файла"
 
-#: .././src/preferences.c:920
+#: .././src/preferences.c:916
 msgid "Preload next image"
 msgstr "Загадзя загружаць у памяць наступную выяву"
 
-#: .././src/preferences.c:922
+#: .././src/preferences.c:918
 msgid "Auto rotate image using Exif information"
 msgstr "Аўтапаварот выявы паводле звестак Exif"
 
-#: .././src/preferences.c:931
+#: .././src/preferences.c:927
 msgid "Windows"
 msgstr "Вокны"
 
-#: .././src/preferences.c:934
+#: .././src/preferences.c:930
 msgid "State"
 msgstr "Статус"
 
-#: .././src/preferences.c:936
+#: .././src/preferences.c:932
 msgid "Remember window positions"
 msgstr "Запамінаць пазіцыі акон"
 
-#: .././src/preferences.c:938
+#: .././src/preferences.c:934
 msgid "Remember tool state (float/hidden)"
 msgstr "Запамінаць статус прыладаў (адлучаны/схаваны)"
 
-#: .././src/preferences.c:943
+#: .././src/preferences.c:939
 msgid "Fit window to image when tools are hidden/floating"
 msgstr "Дапасоўваць акно да выявы, калі прылады адлучаныя/схаваныя"
 
-#: .././src/preferences.c:947
+#: .././src/preferences.c:943
 msgid "Limit size when auto-sizing window (%):"
 msgstr "Ліміт памеру пры яго аўтавызначэнні (%):"
 
-#: .././src/preferences.c:954 .././src/print.c:3349 .././src/print.c:3356
+#: .././src/preferences.c:950 .././src/print.c:3349 .././src/print.c:3356
 msgid "Layout"
 msgstr "Спалучэнне"
 
-#: .././src/preferences.c:967
+#: .././src/preferences.c:963
 msgid "Filtering"
 msgstr "Фільтрацыя"
 
-#: .././src/preferences.c:972
+#: .././src/preferences.c:968
 msgid "Show entries that begin with a dot"
 msgstr "Паказаць уваходжанні, што пачынаюцца з кропкі"
 
-#: .././src/preferences.c:974
+#: .././src/preferences.c:970
 msgid "Case sensitive sort"
 msgstr "Сартоўка з улікам рэгістру"
 
-#: .././src/preferences.c:977
+#: .././src/preferences.c:973
 msgid "Disable File Filtering"
 msgstr "Адключыць фільтрацыю файлаў"
 
-#: .././src/preferences.c:980
+#: .././src/preferences.c:976
 msgid "File types"
 msgstr "Тыпы файлаў"
 
-#: .././src/preferences.c:1002
+#: .././src/preferences.c:998
 msgid "Filter"
 msgstr "Фільтр"
 
-#: .././src/preferences.c:1039 .././src/preferences.c:1103
+#: .././src/preferences.c:1035 .././src/preferences.c:1099
 msgid "Defaults"
 msgstr "Прадвызначанае"
 
-#: .././src/preferences.c:1060
+#: .././src/preferences.c:1056
 msgid "Editors"
 msgstr "Рэдактары"
 
-#: .././src/preferences.c:1066
+#: .././src/preferences.c:1062
 msgid "#"
 msgstr "#"
 
-#: .././src/preferences.c:1069 .././src/preferences.c:1223
+#: .././src/preferences.c:1065 .././src/preferences.c:1219
 msgid "Menu name"
 msgstr "Назва меню"
 
-#: .././src/preferences.c:1072
+#: .././src/preferences.c:1068
 msgid "Command Line"
 msgstr "Камандны радок"
 
-#: .././src/preferences.c:1119
+#: .././src/preferences.c:1115
 msgid "Advanced"
 msgstr "Адмысловае"
 
-#: .././src/preferences.c:1132
+#: .././src/preferences.c:1128
 msgid "Full screen"
 msgstr "Поўны экран"
 
-#: .././src/preferences.c:1140
+#: .././src/preferences.c:1136
 msgid "Smooth image flip"
 msgstr "Згладжанае перавяртанне выявы"
 
-#: .././src/preferences.c:1142
+#: .././src/preferences.c:1138
 msgid "Disable screen saver"
 msgstr "Адключыць зберагальнік экрану"
 
-#: .././src/preferences.c:1145
+#: .././src/preferences.c:1141
 msgid "Delete"
 msgstr "Выдаленне"
 
-#: .././src/preferences.c:1147
+#: .././src/preferences.c:1143
 msgid "Confirm file delete"
 msgstr "Сцвярджаць выдаленне файлаў"
 
-#: .././src/preferences.c:1149
+#: .././src/preferences.c:1145
 msgid "Enable Delete key"
 msgstr "Уключыць клавішу Delete"
 
-#: .././src/preferences.c:1152
+#: .././src/preferences.c:1148
 msgid "Safe delete"
 msgstr "Бяспечнае выдаленне"
 
-#: .././src/preferences.c:1170
+#: .././src/preferences.c:1166
 msgid "Maximum size:"
 msgstr "Максімальны памер:"
 
-#: .././src/preferences.c:1170
+#: .././src/preferences.c:1166
 msgid "MB"
 msgstr "Мб"
 
-#: .././src/preferences.c:1173
+#: .././src/preferences.c:1169
 msgid "View"
 msgstr "Прагляд"
 
-#: .././src/preferences.c:1183
+#: .././src/preferences.c:1179
 msgid "Behavior"
 msgstr "Паводзіны"
 
-#: .././src/preferences.c:1185
+#: .././src/preferences.c:1181
 msgid "Rectangular selection in icon view"
 msgstr "Прамавугольнае вылучэнне у выглядзе іконкі"
 
-#: .././src/preferences.c:1188
+#: .././src/preferences.c:1184
 msgid "Descend folders in tree view"
 msgstr "Разгортваць тэчкі ў праглядзе дрэва"
 
-#: .././src/preferences.c:1191
+#: .././src/preferences.c:1187
 msgid "In place renaming"
 msgstr "Перайменаванне на месцы"
 
-#: .././src/preferences.c:1194
+#: .././src/preferences.c:1190
 msgid "Navigation"
 msgstr "Прагляд"
 
-#: .././src/preferences.c:1196
+#: .././src/preferences.c:1192
 msgid "Progressive keyboard scrolling"
 msgstr "Прагрэсіўнае змяненне памераў клавіятурай"
 
-#: .././src/preferences.c:1198
+#: .././src/preferences.c:1194
 msgid "Mouse wheel scrolls image"
 msgstr "Кола мышы пракручвае выявы"
 
-#: .././src/preferences.c:1201
+#: .././src/preferences.c:1197
 msgid "Miscellaneous"
 msgstr "Разнастайнае"
 
-#: .././src/preferences.c:1203
+#: .././src/preferences.c:1199
 msgid "Store keywords and comments local to source images"
 msgstr "Трымаць ключавыя словы і каментары побач з выявамі"
 
-#: .././src/preferences.c:1206
+#: .././src/preferences.c:1202
 msgid "Custom similarity threshold:"
 msgstr "Іншы парог падабенства:"
 
-#: .././src/preferences.c:1209
+#: .././src/preferences.c:1205
 msgid "Offscreen cache size (Mb per image):"
 msgstr "Памер кэшу па-за экранам (Mb на выяву):"
 
-#: .././src/preferences.c:1212
+#: .././src/preferences.c:1208
 #, fuzzy
 msgid "Color profiles"
 msgstr "Усе файлы"
 
-#: .././src/preferences.c:1220
+#: .././src/preferences.c:1216
 msgid "Type"
 msgstr ""
 
-#: .././src/preferences.c:1226
+#: .././src/preferences.c:1222
 #, fuzzy
 msgid "File"
 msgstr "Файл:"
 
-#: .././src/preferences.c:1248 .././src/preferences.c:1259
+#: .././src/preferences.c:1244 .././src/preferences.c:1255
 #, fuzzy
 msgid "Select color profile"
 msgstr "Вылучыце тэчку"
 
-#: .././src/preferences.c:1256
+#: .././src/preferences.c:1252
 #, fuzzy
 msgid "Screen:"
 msgstr "Экран"
 
-#: .././src/preferences.c:1339
+#: .././src/preferences.c:1335
 msgid "About - GQview"
 msgstr "Аб праграме - GQview"
 
-#: .././src/preferences.c:1352
+#: .././src/preferences.c:1348
 #, c-format
 msgid ""
 "GQview %s\n"
@@ -2239,7 +2236,7 @@ msgstr ""
 "\n"
 "Выдана пад Універсальнай Грамадскай Ліцэнзіяй GNU (GPL)"
 
-#: .././src/preferences.c:1370
+#: .././src/preferences.c:1366
 msgid "Credits..."
 msgstr "Заслугі..."
 
@@ -2538,7 +2535,7 @@ msgstr "DPI:"
 msgid "Remember print settings"
 msgstr "Запомніць наладкі друку"
 
-#: .././src/rcfile.c:185
+#: .././src/rcfile.c:184
 #, c-format
 msgid "error saving config file: %s\n"
 msgstr "памылка захоўвання файла канфігурацыі: %s\n"
@@ -2674,7 +2671,7 @@ msgstr "% падобна да"
 msgid "Rank"
 msgstr "Ранг"
 
-#: .././src/thumb.c:375
+#: .././src/thumb.c:364
 msgid "Thumbnail image in cache failed to load, trying to recreate.\n"
 msgstr "Памылка загрузкі мініяцюры выявы з кэшу, спроба перастварыць.\n"
 

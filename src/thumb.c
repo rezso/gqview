@@ -26,7 +26,6 @@ static void thumb_loader_error_cb(ImageLoader *il, gpointer data);
 static void thumb_loader_setup(ThumbLoader *tl, gchar *path);
 
 static gint normalize_thumb(gint *width, gint *height, gint max_w, gint max_h);
-static GdkPixbuf *get_xv_thumbnail(gchar *thumb_filename, gint max_w, gint max_h);
 
 
 /*
@@ -345,16 +344,6 @@ gint thumb_loader_start(ThumbLoader *tl, const gchar *path)
 			}
 		}
 
-	if (!cache_path && use_xvpics_thumbnails)
-		{
-		tl->pixbuf = get_xv_thumbnail(tl->path, tl->max_w, tl->max_h);
-		if (tl->pixbuf)
-			{
-			thumb_loader_delay_done(tl);
-			return TRUE;
-			}
-		}
-
 	if (cache_path)
 		{
 		thumb_loader_setup(tl, cache_path);
@@ -476,58 +465,6 @@ void thumb_loader_free(ThumbLoader *tl)
 	g_free(tl);
 }
 
-
-/*
- *-----------------------------------------------------------------------------
- * xvpics thumbnail support, read-only (private)
- *-----------------------------------------------------------------------------
- */
-
-/*
- * xvpics code originally supplied by:
- * "Diederen Damien" <D.Diederen@student.ulg.ac.be>
- *
- * Note: Code has been modified to fit the style of the other code, and to use
- *       a few more glib-isms.
- * 08-28-2000: Updated to return a gdk_pixbuf, Imlib is dieing a death here.
- */
-
-#define XV_BUFFER 2048
-static guchar *load_xv_thumbnail(gchar *filename, gint *widthp, gint *heightp)
-{
-	FILE *file;
-	gchar buffer[XV_BUFFER];
-	guchar *data;
-	gint width, height, depth;
-
-	file = fopen(filename, "rt");
-	if(!file) return NULL;
-
-	fgets(buffer, XV_BUFFER, file);
-	if(strncmp(buffer, "P7 332", 6) != 0)
-		{
-		fclose(file);
-		return NULL;
-		}
-
-	while(fgets(buffer, XV_BUFFER, file) && buffer[0] == '#') /* do_nothing() */;
-
-	if(sscanf(buffer, "%d %d %d", &width, &height, &depth) != 3)
-		{
-		fclose(file);
-		return NULL;
-		}
-
-	data = g_new(guchar, width * height);
-	fread(data, 1, width * height, file);
-
-	fclose(file);
-	*widthp = width;
-	*heightp = height;
-	return data;
-}
-#undef XV_BUFFER
-
 static gint normalize_thumb(gint *width, gint *height, gint max_w, gint max_h)
 {
 	gdouble scale;
@@ -550,57 +487,5 @@ static gint normalize_thumb(gint *width, gint *height, gint max_w, gint max_h)
 static void free_rgb_buffer(guchar *pixels, gpointer data)
 {
 	g_free(pixels);
-}
-
-static GdkPixbuf *get_xv_thumbnail(gchar *thumb_filename, gint max_w, gint max_h)
-{
-	gint width, height;
-	gchar *thumb_name;
-	gchar *tmp_string;
-	gchar *last_slash;
-	guchar *packed_data;
-
-	tmp_string = path_from_utf8(thumb_filename);
-	last_slash = strrchr(tmp_string, '/');
-	if(!last_slash)	return NULL;
-	*last_slash++ = '\0';
-
-	thumb_name = g_strconcat(tmp_string, "/.xvpics/", last_slash, NULL);
-	packed_data = load_xv_thumbnail(thumb_name, &width, &height);
-	g_free(tmp_string);
-	g_free(thumb_name);
-
-	if(packed_data)
-		{
-		guchar *rgb_data;
-		GdkPixbuf *pixbuf;
-		gint i;
-
-		rgb_data = g_new(guchar, width * height * 3);
-		for(i = 0; i < width * height; i++)
-			{
-			rgb_data[i * 3 + 0] = (packed_data[i] >> 5) * 36;
-			rgb_data[i * 3 + 1] = ((packed_data[i] & 28) >> 2) * 36;
-			rgb_data[i * 3 + 2] = (packed_data[i] & 3) * 85;
-			}
-		g_free(packed_data);
-
-		pixbuf = gdk_pixbuf_new_from_data(rgb_data, GDK_COLORSPACE_RGB, FALSE, 8,
-						  width, height, 3 * width, free_rgb_buffer, NULL);
-
-		if (normalize_thumb(&width, &height, max_w, max_h))
-			{
-			/* scale */
-			GdkPixbuf *tmp;
-
-			tmp = pixbuf;
-			pixbuf = gdk_pixbuf_scale_simple(tmp, width, height, GDK_INTERP_NEAREST);
-			g_object_unref(tmp);
-			}
-	
-		return pixbuf;
-		}
-
-	return NULL;
 }
 

@@ -7,10 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gqview-2.1.2-eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-12 09:51+0100\n"
+"POT-Creation-Date: 2014-07-05 10:32+0200\n"
 "PO-Revision-Date: 2006-10-14 23:08+0200\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: librezale <librezale@librezale.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -94,7 +95,7 @@ msgstr "Gorde iruzkina orain"
 msgid "Tag"
 msgstr "Etiketa"
 
-#: .././src/bar_exif.c:437 .././src/dupe.c:2589 .././src/dupe.c:3112
+#: .././src/bar_exif.c:437 .././src/dupe.c:2589 .././src/dupe.c:3115
 #: .././src/print.c:3188 .././src/search.c:2728 .././src/utilops.c:2779
 #: .././src/view_file_list.c:1625
 msgid "Name"
@@ -112,7 +113,7 @@ msgstr "Formatua"
 msgid "Elements"
 msgstr "Elementuak"
 
-#: .././src/bar_exif.c:441 .././src/preferences.c:1022
+#: .././src/bar_exif.c:441 .././src/preferences.c:1018
 msgid "Description"
 msgstr "Azalpena"
 
@@ -264,7 +265,7 @@ msgstr "Argazkitxoak sortu"
 msgid "S_tart"
 msgstr "Ha_si"
 
-#: .././src/cache_maint.c:841 .././src/preferences.c:1159
+#: .././src/cache_maint.c:841 .././src/preferences.c:1155
 msgid "Folder:"
 msgstr "Karpeta:"
 
@@ -319,7 +320,7 @@ msgstr "GQview argazkitxo katxea"
 
 #: .././src/cache_maint.c:1178 .././src/cache_maint.c:1198
 #: .././src/cache_maint.c:1226 .././src/pan-view.c:1427
-#: .././src/pan-view.c:2251 .././src/preferences.c:1136
+#: .././src/pan-view.c:2251 .././src/preferences.c:1132
 #: .././src/utilops.c:1571
 msgid "Location:"
 msgstr "Kokalekua:"
@@ -551,23 +552,23 @@ msgstr "Bikoi_ztuak bilatu..."
 msgid "Print..."
 msgstr "Inprimatu..."
 
-#: .././src/collect-table.c:1969 .././src/dupe.c:3300 .././src/img-view.c:1411
+#: .././src/collect-table.c:1969 .././src/dupe.c:3303 .././src/img-view.c:1411
 msgid "Dropped list includes folders."
 msgstr "Mugitutako zerrendak karpetak ditu."
 
-#: .././src/collect-table.c:1971 .././src/dupe.c:3302 .././src/img-view.c:1413
+#: .././src/collect-table.c:1971 .././src/dupe.c:3305 .././src/img-view.c:1413
 msgid "_Add contents"
 msgstr "_Edukiak gehitu"
 
-#: .././src/collect-table.c:1973 .././src/dupe.c:3303 .././src/img-view.c:1414
+#: .././src/collect-table.c:1973 .././src/dupe.c:3306 .././src/img-view.c:1414
 msgid "Add contents _recursive"
 msgstr "Edukiak e_rrekurtsiboki gehitu"
 
-#: .././src/collect-table.c:1975 .././src/dupe.c:3304 .././src/img-view.c:1415
+#: .././src/collect-table.c:1975 .././src/dupe.c:3307 .././src/img-view.c:1415
 msgid "_Skip folders"
 msgstr "_Saltatu karpetak"
 
-#: .././src/collect-table.c:1978 .././src/dupe.c:3306 .././src/img-view.c:1417
+#: .././src/collect-table.c:1978 .././src/dupe.c:3309 .././src/img-view.c:1417
 #: .././src/view_dir_list.c:214 .././src/view_dir_tree.c:306
 #: .././src/view_dir_icons.c:218
 msgid "Cancel"
@@ -636,18 +637,18 @@ msgstr "_Leiho itxi"
 msgid "%d files (set 2)"
 msgstr "%d fitxategiak (2 sorta)"
 
-#: .././src/dupe.c:2590 .././src/dupe.c:3113 .././src/preferences.c:941
+#: .././src/dupe.c:2590 .././src/dupe.c:3116 .././src/preferences.c:937
 #: .././src/print.c:3192 .././src/search.c:2729 .././src/view_file_list.c:1626
 msgid "Size"
 msgstr "Tamaina"
 
-#: .././src/dupe.c:2591 .././src/dupe.c:3114 .././src/exif.c:296
+#: .././src/dupe.c:2591 .././src/dupe.c:3117 .././src/exif.c:296
 #: .././src/exif.c:417 .././src/print.c:3190 .././src/search.c:2730
 #: .././src/view_file_list.c:1627
 msgid "Date"
 msgstr "Data"
 
-#: .././src/dupe.c:2592 .././src/dupe.c:3115 .././src/print.c:3194
+#: .././src/dupe.c:2592 .././src/dupe.c:3118 .././src/print.c:3194
 #: .././src/search.c:2731
 msgid "Dimensions"
 msgstr "Neurriak"
@@ -656,7 +657,7 @@ msgstr "Neurriak"
 msgid "Checksum"
 msgstr "Egiaztapena"
 
-#: .././src/dupe.c:2594 .././src/dupe.c:3116 .././src/search.c:2732
+#: .././src/dupe.c:2594 .././src/dupe.c:3119 .././src/search.c:2732
 msgid "Path"
 msgstr "Bidea"
 
@@ -676,23 +677,23 @@ msgstr "Antzekotasuna (txikia)"
 msgid "Similarity (custom)"
 msgstr "Antzekotasuna (pertsonalizatua)"
 
-#: .././src/dupe.c:3076
+#: .././src/dupe.c:3079
 msgid "Find duplicates - GQview"
 msgstr "Bokiztuak bilatu - GQview"
 
-#: .././src/dupe.c:3148
+#: .././src/dupe.c:3151
 msgid "Compare to:"
 msgstr "Honekin parekatu:"
 
-#: .././src/dupe.c:3161
+#: .././src/dupe.c:3164
 msgid "Compare by:"
 msgstr "Honela parekatu:"
 
-#: .././src/dupe.c:3169 .././src/preferences.c:837 .././src/search.c:2745
+#: .././src/dupe.c:3172 .././src/preferences.c:836 .././src/search.c:2745
 msgid "Thumbnails"
 msgstr "Argazkitxoak"
 
-#: .././src/dupe.c:3176
+#: .././src/dupe.c:3179
 msgid "Compare two file sets"
 msgstr "Bi fitxategi taldeak parekatu"
 
@@ -1140,7 +1141,7 @@ msgstr "Jabea:"
 msgid "Group:"
 msgstr "Taldea:"
 
-#: .././src/info.c:380 .././src/preferences.c:818
+#: .././src/info.c:380 .././src/preferences.c:817
 msgid "General"
 msgstr "Orokorra"
 
@@ -1240,7 +1241,7 @@ msgstr "Tresnak"
 msgid "Files"
 msgstr "Fitxategiak"
 
-#: .././src/layout_config.c:57 .././src/preferences.c:878 .././src/print.c:114
+#: .././src/layout_config.c:57 .././src/preferences.c:874 .././src/print.c:114
 msgid "Image"
 msgstr "Irudia"
 
@@ -1463,7 +1464,7 @@ msgstr "Zooma handiagotu"
 msgid "Zoom out"
 msgstr "Zooma txikiagotu"
 
-#: .././src/layout_util.c:1107 .././src/preferences.c:904
+#: .././src/layout_util.c:1107 .././src/preferences.c:900
 msgid "Fit image to window"
 msgstr "Doitu irudia leihora"
 
@@ -1729,7 +1730,7 @@ msgstr "Irudiak ordenatzen..."
 msgid "Date:"
 msgstr "Data:"
 
-#: .././src/pan-view.c:1431 .././src/preferences.c:840 .././src/print.c:3199
+#: .././src/pan-view.c:1431 .././src/preferences.c:839 .././src/print.c:3199
 #: .././src/print.c:3401
 msgid "Size:"
 msgstr "Tamaina:"
@@ -1843,11 +1844,11 @@ msgstr ""
 "Pan ikuspegian argazkintxo errendimentua hobetzeko aukera hauek gaitu "
 "daitezke. Kontutan izan biak gaitu behar direla aldaketa nabaritzeko."
 
-#: .././src/pan-view.c:2464 .././src/preferences.c:843
+#: .././src/pan-view.c:2464 .././src/preferences.c:842
 msgid "Cache thumbnails"
 msgstr "Argazkitxoen katxea egin"
 
-#: .././src/pan-view.c:2466 .././src/preferences.c:849
+#: .././src/pan-view.c:2466 .././src/preferences.c:848
 msgid "Use shared thumbnail cache"
 msgstr "Partekatutako argazkitxo katxea erabili"
 
@@ -1878,31 +1879,31 @@ msgstr "Bat ere ez"
 msgid "_Full size"
 msgstr "Tamaina osoa"
 
-#: .././src/preferences.c:408
+#: .././src/preferences.c:407
 msgid "Nearest (worst, but fastest)"
 msgstr "Gertuen (okerro baina azkarrena)"
 
-#: .././src/preferences.c:410
+#: .././src/preferences.c:409
 msgid "Tiles"
 msgstr "Mosaikoak"
 
-#: .././src/preferences.c:412
+#: .././src/preferences.c:411
 msgid "Bilinear"
 msgstr "Bilineala"
 
-#: .././src/preferences.c:414
+#: .././src/preferences.c:413
 msgid "Hyper (best, but slowest)"
 msgstr "Hiper (onena, baina geldoena)"
 
-#: .././src/preferences.c:495 .././src/print.c:369
+#: .././src/preferences.c:494 .././src/print.c:369
 msgid "Custom"
 msgstr "Pertsonalizatua"
 
-#: .././src/preferences.c:659 .././src/preferences.c:662
+#: .././src/preferences.c:658 .././src/preferences.c:661
 msgid "Reset filters"
 msgstr "Iragazkiak berezarri"
 
-#: .././src/preferences.c:663
+#: .././src/preferences.c:662
 msgid ""
 "This will reset the file filters to the defaults.\n"
 "Continue?"
@@ -1910,11 +1911,11 @@ msgstr ""
 "Honek iragazkiak lehentsietara berezarriko ditu.\n"
 "Jarraitu?"
 
-#: .././src/preferences.c:696 .././src/preferences.c:699
+#: .././src/preferences.c:695 .././src/preferences.c:698
 msgid "Reset editors"
 msgstr "Editoreak berezarri"
 
-#: .././src/preferences.c:700
+#: .././src/preferences.c:699
 msgid ""
 "This will reset the edit commands to the defaults.\n"
 "Continue?"
@@ -1922,303 +1923,299 @@ msgstr ""
 "Edizio komandoak lehenetsietara berezarri.\n"
 "Jarraitu?"
 
-#: .././src/preferences.c:724 .././src/preferences.c:727
+#: .././src/preferences.c:723 .././src/preferences.c:726
 msgid "Clear trash"
 msgstr "Zakarrontzia hustu"
 
-#: .././src/preferences.c:728
+#: .././src/preferences.c:727
 msgid "This will remove the trash contents."
 msgstr "Honek zakarrotziko edukia ezabatuko du."
 
-#: .././src/preferences.c:767
+#: .././src/preferences.c:766
 msgid "GQview Preferences"
 msgstr "GQview Hobespenak"
 
-#: .././src/preferences.c:821
+#: .././src/preferences.c:820
 msgid "Startup"
 msgstr "Abioa"
 
-#: .././src/preferences.c:823
+#: .././src/preferences.c:822
 msgid "Change to folder:"
 msgstr "Karpeta honetara aldatu:"
 
-#: .././src/preferences.c:834
+#: .././src/preferences.c:833
 msgid "Use current"
 msgstr "Erabili unekoa"
 
-#: .././src/preferences.c:841 .././src/preferences.c:884
+#: .././src/preferences.c:840 .././src/preferences.c:880
 msgid "Quality:"
 msgstr "Kalitatea:"
 
-#: .././src/preferences.c:855
-msgid "Cache thumbnails into .thumbnails"
-msgstr "Argazkitxo katxeak .thumbnails fitxategietan egin"
-
-#: .././src/preferences.c:858
+#: .././src/preferences.c:854
 msgid "Faster jpeg thumbnailing (may reduce quality)"
 msgstr "Jpeg argazkitxo egite azkarra (kalitatea gutxitzen du)"
 
-#: .././src/preferences.c:861
+#: .././src/preferences.c:857
 msgid "Slide show"
 msgstr "Aurkezpena"
 
-#: .././src/preferences.c:864
+#: .././src/preferences.c:860
 msgid "Delay between image change:"
 msgstr "Irudien arteko denbora tartea:"
 
-#: .././src/preferences.c:864
+#: .././src/preferences.c:860
 msgid "seconds"
 msgstr "segundu"
 
-#: .././src/preferences.c:870
+#: .././src/preferences.c:866
 msgid "Random"
 msgstr "Ausazkoa"
 
-#: .././src/preferences.c:871
+#: .././src/preferences.c:867
 msgid "Repeat"
 msgstr "Errepikatu"
 
-#: .././src/preferences.c:881
+#: .././src/preferences.c:877
 msgid "Zoom"
 msgstr "Zooma"
 
-#: .././src/preferences.c:886
+#: .././src/preferences.c:882
 msgid "Two pass zooming"
 msgstr "Bi pasatzeko zoom-a"
 
-#: .././src/preferences.c:889
+#: .././src/preferences.c:885
 msgid "Allow enlargement of image for zoom to fit"
 msgstr "Onartu - - nori"
 
-#: .././src/preferences.c:893
+#: .././src/preferences.c:889
 msgid "Zoom increment:"
 msgstr "Zoom handitzea:"
 
-#: .././src/preferences.c:898
+#: .././src/preferences.c:894
 msgid "When new image is selected:"
 msgstr "Irudia aukeratzerakoan:"
 
-#: .././src/preferences.c:901
+#: .././src/preferences.c:897
 msgid "Zoom to original size"
 msgstr "Zoom-a jatorrziko tamainan"
 
-#: .././src/preferences.c:907
+#: .././src/preferences.c:903
 msgid "Leave Zoom at previous setting"
 msgstr "Zooma dagoen bezala utzi"
 
-#: .././src/preferences.c:911
+#: .././src/preferences.c:907
 msgid "Appearance"
 msgstr "Itxura"
 
-#: .././src/preferences.c:913
+#: .././src/preferences.c:909
 msgid "Black background"
 msgstr "Atzeko plano beltza"
 
-#: .././src/preferences.c:916
+#: .././src/preferences.c:912
 msgid "Convenience"
 msgstr "Egokiera"
 
-#: .././src/preferences.c:918
+#: .././src/preferences.c:914
 msgid "Refresh on file change"
 msgstr "Fitxategia aldatzerakoan freskatu"
 
-#: .././src/preferences.c:920
+#: .././src/preferences.c:916
 msgid "Preload next image"
 msgstr "Hurrengo irudia aurrekargatu"
 
-#: .././src/preferences.c:922
+#: .././src/preferences.c:918
 msgid "Auto rotate image using Exif information"
 msgstr "Exif argibideen arabera irudia automatikoki biratu"
 
-#: .././src/preferences.c:931
+#: .././src/preferences.c:927
 msgid "Windows"
 msgstr "Leihoak"
 
-#: .././src/preferences.c:934
+#: .././src/preferences.c:930
 msgid "State"
 msgstr "Egoera"
 
-#: .././src/preferences.c:936
+#: .././src/preferences.c:932
 msgid "Remember window positions"
 msgstr "Leiho kokalekua gogoratu"
 
-#: .././src/preferences.c:938
+#: .././src/preferences.c:934
 msgid "Remember tool state (float/hidden)"
 msgstr "Tresna egoera gogoratu (ezkutuan/mugikorra)"
 
-#: .././src/preferences.c:943
+#: .././src/preferences.c:939
 msgid "Fit window to image when tools are hidden/floating"
 msgstr "Doitu leihoa irudira tresnak mugikorrak badira edo ezkutuan badaude"
 
-#: .././src/preferences.c:947
+#: .././src/preferences.c:943
 msgid "Limit size when auto-sizing window (%):"
 msgstr "Mugatu tamaina leihoaren tamaina automatikoarekin (%):"
 
-#: .././src/preferences.c:954 .././src/print.c:3349 .././src/print.c:3356
+#: .././src/preferences.c:950 .././src/print.c:3349 .././src/print.c:3356
 msgid "Layout"
 msgstr "Diseinua"
 
-#: .././src/preferences.c:967
+#: .././src/preferences.c:963
 msgid "Filtering"
 msgstr "Iragazkiak"
 
-#: .././src/preferences.c:972
+#: .././src/preferences.c:968
 msgid "Show entries that begin with a dot"
 msgstr "Puntu batez haste diren sarrerak erakutsi"
 
-#: .././src/preferences.c:974
+#: .././src/preferences.c:970
 msgid "Case sensitive sort"
 msgstr "Larri/xeheak bereiziz ordenatu"
 
-#: .././src/preferences.c:977
+#: .././src/preferences.c:973
 msgid "Disable File Filtering"
 msgstr "Fitxategi Iragaztea Ezgaitu"
 
-#: .././src/preferences.c:980
+#: .././src/preferences.c:976
 msgid "File types"
 msgstr "Fitxategi motak"
 
-#: .././src/preferences.c:1002
+#: .././src/preferences.c:998
 msgid "Filter"
 msgstr "Iragazkia"
 
-#: .././src/preferences.c:1039 .././src/preferences.c:1103
+#: .././src/preferences.c:1035 .././src/preferences.c:1099
 msgid "Defaults"
 msgstr "Lehenespenak"
 
-#: .././src/preferences.c:1060
+#: .././src/preferences.c:1056
 msgid "Editors"
 msgstr "Editoreak"
 
-#: .././src/preferences.c:1066
+#: .././src/preferences.c:1062
 msgid "#"
 msgstr "#"
 
-#: .././src/preferences.c:1069 .././src/preferences.c:1223
+#: .././src/preferences.c:1065 .././src/preferences.c:1219
 msgid "Menu name"
 msgstr "Menu izena"
 
-#: .././src/preferences.c:1072
+#: .././src/preferences.c:1068
 msgid "Command Line"
 msgstr "Komando-lerroa"
 
-#: .././src/preferences.c:1119
+#: .././src/preferences.c:1115
 msgid "Advanced"
 msgstr "Aurreratua"
 
-#: .././src/preferences.c:1132
+#: .././src/preferences.c:1128
 msgid "Full screen"
 msgstr "Pantaila osoa"
 
-#: .././src/preferences.c:1140
+#: .././src/preferences.c:1136
 msgid "Smooth image flip"
 msgstr "Irudi iraulketa leuna"
 
-#: .././src/preferences.c:1142
+#: .././src/preferences.c:1138
 msgid "Disable screen saver"
 msgstr "Pantaila babeslea ezgaitu"
 
-#: .././src/preferences.c:1145
+#: .././src/preferences.c:1141
 msgid "Delete"
 msgstr "Ezabatu"
 
-#: .././src/preferences.c:1147
+#: .././src/preferences.c:1143
 msgid "Confirm file delete"
 msgstr "Berretsi fitxategi ezabatzea"
 
-#: .././src/preferences.c:1149
+#: .././src/preferences.c:1145
 msgid "Enable Delete key"
 msgstr "Gaitu Ezabatu tekla"
 
-#: .././src/preferences.c:1152
+#: .././src/preferences.c:1148
 msgid "Safe delete"
 msgstr "Ezabatze ziurra"
 
-#: .././src/preferences.c:1170
+#: .././src/preferences.c:1166
 msgid "Maximum size:"
 msgstr "Gehienezko tamaina:"
 
-#: .././src/preferences.c:1170
+#: .././src/preferences.c:1166
 msgid "MB"
 msgstr "MB"
 
-#: .././src/preferences.c:1173
+#: .././src/preferences.c:1169
 msgid "View"
 msgstr "Ikusi"
 
-#: .././src/preferences.c:1183
+#: .././src/preferences.c:1179
 msgid "Behavior"
 msgstr "Portaera"
 
-#: .././src/preferences.c:1185
+#: .././src/preferences.c:1181
 msgid "Rectangular selection in icon view"
 msgstr "Hautapen karratua ikono ikuspegian"
 
-#: .././src/preferences.c:1188
+#: .././src/preferences.c:1184
 msgid "Descend folders in tree view"
 msgstr "Karpetak jesiten joan zuhaitz ikuspegian"
 
-#: .././src/preferences.c:1191
+#: .././src/preferences.c:1187
 msgid "In place renaming"
 msgstr "Geratzen den lekuan"
 
-#: .././src/preferences.c:1194
+#: .././src/preferences.c:1190
 msgid "Navigation"
 msgstr "Nabigazioa"
 
-#: .././src/preferences.c:1196
+#: .././src/preferences.c:1192
 msgid "Progressive keyboard scrolling"
 msgstr "Teklatu korritze progresiboa"
 
-#: .././src/preferences.c:1198
+#: .././src/preferences.c:1194
 msgid "Mouse wheel scrolls image"
 msgstr "Saguaren gurpilak irudia korritzen du"
 
-#: .././src/preferences.c:1201
+#: .././src/preferences.c:1197
 msgid "Miscellaneous"
 msgstr "Bestelakoak"
 
-#: .././src/preferences.c:1203
+#: .././src/preferences.c:1199
 msgid "Store keywords and comments local to source images"
 msgstr "Gako-hitz eta iruzkin lokalak jatorrizko irudietan gorde"
 
-#: .././src/preferences.c:1206
+#: .././src/preferences.c:1202
 msgid "Custom similarity threshold:"
 msgstr "Antzekotasun muga pertsonalizatua:"
 
-#: .././src/preferences.c:1209
+#: .././src/preferences.c:1205
 msgid "Offscreen cache size (Mb per image):"
 msgstr "Pantailaz kanpoko katxe tamaina (Mb argazki bakoitzeko):"
 
-#: .././src/preferences.c:1212
+#: .././src/preferences.c:1208
 #, fuzzy
 msgid "Color profiles"
 msgstr "Fitxategi guztiak"
 
-#: .././src/preferences.c:1220
+#: .././src/preferences.c:1216
 msgid "Type"
 msgstr ""
 
-#: .././src/preferences.c:1226
+#: .././src/preferences.c:1222
 #, fuzzy
 msgid "File"
 msgstr "Fitxategia:"
 
-#: .././src/preferences.c:1248 .././src/preferences.c:1259
+#: .././src/preferences.c:1244 .././src/preferences.c:1255
 #, fuzzy
 msgid "Select color profile"
 msgstr "Hautatu karpeta"
 
-#: .././src/preferences.c:1256
+#: .././src/preferences.c:1252
 #, fuzzy
 msgid "Screen:"
 msgstr "Pantaila"
 
-#: .././src/preferences.c:1339
+#: .././src/preferences.c:1335
 msgid "About - GQview"
 msgstr "Honi buruz - GQview"
 
-#: .././src/preferences.c:1352
+#: .././src/preferences.c:1348
 #, c-format
 msgid ""
 "GQview %s\n"
@@ -2237,7 +2234,7 @@ msgstr ""
 "\n"
 "GNU Lizentzi Publiko Ororkorraz argitaraturik"
 
-#: .././src/preferences.c:1370
+#: .././src/preferences.c:1366
 msgid "Credits..."
 msgstr "Kredituak..."
 
@@ -2536,7 +2533,7 @@ msgstr "DPI:"
 msgid "Remember print settings"
 msgstr "Inprimatze ezarpenak gogoratu"
 
-#: .././src/rcfile.c:185
+#: .././src/rcfile.c:184
 #, c-format
 msgid "error saving config file: %s\n"
 msgstr "erreoa konfigurazio fitxategia gordetzerakoan: %s\n"
@@ -2672,7 +2669,7 @@ msgstr "% antzekotasuna"
 msgid "Rank"
 msgstr "Sailkapena"
 
-#: .././src/thumb.c:375
+#: .././src/thumb.c:364
 msgid "Thumbnail image in cache failed to load, trying to recreate.\n"
 msgstr ""
 "Huts katxeko irudiaren argazkitxoa kargatzerakoan, birsortzen saiatzen.\n"

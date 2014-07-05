@@ -136,7 +136,6 @@ extern gint thumb_max_height;
 extern gint enable_thumb_caching;
 extern gint enable_thumb_dirs;
 extern gint thumbnail_fast;
-extern gint use_xvpics_thumbnails;
 extern gint thumbnail_spec_standard;
 extern gint enable_metadata_dirs;
 extern gint show_dot_files;
