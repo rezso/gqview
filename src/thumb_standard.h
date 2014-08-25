@@ -13,9 +13,13 @@
 #ifndef THUMB_STANDARD_H
 #define THUMB_STANDARD_H
 
-
+#if GLIB_CHECK_VERSION (2, 34, 0)
+#define THUMB_FOLDER_GLOBAL ".cache/thumbnails"
+#define THUMB_FOLDER_LOCAL  ".cache/thumblocal"
+#else
 #define THUMB_FOLDER_GLOBAL ".thumbnails"
 #define THUMB_FOLDER_LOCAL  ".thumblocal"
+#endif
 #define THUMB_FOLDER_NORMAL "normal"
 #define THUMB_FOLDER_LARGE  "large"
 #define THUMB_FOLDER_FAIL   "fail/gqview-1.0"
