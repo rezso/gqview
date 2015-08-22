@@ -41,7 +41,7 @@
 #include <math.h>
 
 
-#define DUPE_DEF_WIDTH 600
+#define DUPE_DEF_WIDTH 1000
 #define DUPE_DEF_HEIGHT 400
 
 /* column assignment order (simply change them here) */
@@ -3057,7 +3057,7 @@ DupeWindow *dupe_window_new(DupeMatchType match_mask)
 	dw->list = NULL;
 	dw->dupes = NULL;
 	dw->match_mask = match_mask;
-	dw->show_thumbs = FALSE;
+	dw->show_thumbs = TRUE;
 
 	dw->idle_id = -1;
 
@@ -3078,7 +3078,7 @@ DupeWindow *dupe_window_new(DupeMatchType match_mask)
 	gtk_window_set_resizable(GTK_WINDOW(dw->window), TRUE);
 	gtk_window_set_title(GTK_WINDOW(dw->window), _("Find duplicates - GQview"));
         gtk_window_set_wmclass(GTK_WINDOW(dw->window), "dupe", "GQview");
-        gtk_container_set_border_width (GTK_CONTAINER (dw->window), 0);
+        gtk_container_set_border_width (GTK_CONTAINER (dw->window), 4);
 
         g_signal_connect(G_OBJECT(dw->window), "delete_event",
 			 G_CALLBACK(dupe_window_delete), dw);
