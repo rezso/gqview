@@ -1,3 +1,16 @@
+Sun Oct  4 2014  Páder Rezső  <rezso@rezso.net>
+
+	* change dupe window defaults
+	* fix thumbnail handling
+	* update translations
+	* Release 2.1.10
+
+Tue Aug  26 2014  Páder Rezső  <rezso@rezso.net>
+
+	* src/thumb_standard.h: fix thumbnail dir
+	* bump required gtk+ version to 2.10.0
+	* Release 2.1.9
+
 Sat Jul  5 2014  Páder Rezső  <rezso@rezso.net>
 
 	* thumbnail path depends on glib

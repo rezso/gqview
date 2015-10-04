@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-05 10:32+0200\n"
+"POT-Creation-Date: 2015-10-04 18:31+0200\n"
 "PO-Revision-Date: 2005-05-07 17:31+0200\n"
 "Last-Translator: Jan Raska <jan.raska@tiscali.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -112,7 +112,7 @@ msgstr "Formát"
 msgid "Elements"
 msgstr "Prvky"
 
-#: .././src/bar_exif.c:441 .././src/preferences.c:1018
+#: .././src/bar_exif.c:441 .././src/preferences.c:1022
 msgid "Description"
 msgstr "Popis"
 
@@ -266,7 +266,7 @@ msgstr "Vytvořit náhledy"
 msgid "S_tart"
 msgstr "Spustit"
 
-#: .././src/cache_maint.c:841 .././src/preferences.c:1155
+#: .././src/cache_maint.c:841 .././src/preferences.c:1159
 msgid "Folder:"
 msgstr "Adresář:"
 
@@ -321,8 +321,7 @@ msgstr "Cache náhledů GQview"
 
 #: .././src/cache_maint.c:1178 .././src/cache_maint.c:1198
 #: .././src/cache_maint.c:1226 .././src/pan-view.c:1427
-#: .././src/pan-view.c:2251 .././src/preferences.c:1132
-#: .././src/utilops.c:1571
+#: .././src/pan-view.c:2251 .././src/preferences.c:1136 .././src/utilops.c:1571
 msgid "Location:"
 msgstr "Umístění:"
 
@@ -468,8 +467,8 @@ msgstr "_Zobrazit"
 
 #: .././src/collect-table.c:775 .././src/dupe.c:2189 .././src/dupe.c:2499
 #: .././src/img-view.c:1251 .././src/layout_image.c:725
-#: .././src/pan-view.c:2667 .././src/search.c:971
-#: .././src/view_file_icon.c:287 .././src/view_file_list.c:398
+#: .././src/pan-view.c:2667 .././src/search.c:971 .././src/view_file_icon.c:287
+#: .././src/view_file_list.c:398
 msgid "View in _new window"
 msgstr "_Zobrazit v novém okně"
 
@@ -498,22 +497,22 @@ msgstr "Zrušit výběr"
 
 #: .././src/collect-table.c:796 .././src/dupe.c:2203 .././src/img-view.c:1249
 #: .././src/layout_image.c:722 .././src/layout_util.c:809
-#: .././src/pan-view.c:2664 .././src/search.c:981
-#: .././src/view_file_icon.c:284 .././src/view_file_list.c:396
+#: .././src/pan-view.c:2664 .././src/search.c:981 .././src/view_file_icon.c:284
+#: .././src/view_file_list.c:396
 msgid "_Properties"
 msgstr "_Vlastnosti"
 
 #: .././src/collect-table.c:799 .././src/dupe.c:2210 .././src/img-view.c:1254
 #: .././src/layout_image.c:730 .././src/layout_util.c:786
-#: .././src/pan-view.c:2671 .././src/search.c:988
-#: .././src/view_file_icon.c:291 .././src/view_file_list.c:402
+#: .././src/pan-view.c:2671 .././src/search.c:988 .././src/view_file_icon.c:291
+#: .././src/view_file_list.c:402
 msgid "_Copy..."
 msgstr "Ko_pírovat..."
 
 #: .././src/collect-table.c:801 .././src/dupe.c:2212 .././src/img-view.c:1255
 #: .././src/layout_image.c:732 .././src/layout_util.c:787
-#: .././src/pan-view.c:2673 .././src/search.c:990
-#: .././src/view_file_icon.c:293 .././src/view_file_list.c:404
+#: .././src/pan-view.c:2673 .././src/search.c:990 .././src/view_file_icon.c:293
+#: .././src/view_file_list.c:404
 msgid "_Move..."
 msgstr "Pře_sunout..."
 
@@ -638,7 +637,7 @@ msgstr "_Zavřít okno"
 msgid "%d files (set 2)"
 msgstr "souborů: %d"
 
-#: .././src/dupe.c:2590 .././src/dupe.c:3116 .././src/preferences.c:937
+#: .././src/dupe.c:2590 .././src/dupe.c:3116 .././src/preferences.c:941
 #: .././src/print.c:3192 .././src/search.c:2729 .././src/view_file_list.c:1626
 msgid "Size"
 msgstr "Velikost"
@@ -690,7 +689,7 @@ msgstr "Porovnat s:"
 msgid "Compare by:"
 msgstr "Porovnat:"
 
-#: .././src/dupe.c:3172 .././src/preferences.c:836 .././src/search.c:2745
+#: .././src/dupe.c:3172 .././src/preferences.c:837 .././src/search.c:2745
 msgid "Thumbnails"
 msgstr "Náhledy"
 
@@ -1107,8 +1106,7 @@ msgstr "U_končit zobrazení na celou obrazovku"
 msgid "_Full screen"
 msgstr "Ce_lá obrazovka"
 
-#: .././src/img-view.c:1293 .././src/layout_util.c:790
-#: .././src/pan-view.c:2731
+#: .././src/img-view.c:1293 .././src/layout_util.c:790 .././src/pan-view.c:2731
 msgid "C_lose window"
 msgstr "_Zavřít okno"
 
@@ -1144,7 +1142,7 @@ msgstr "Vlastník:"
 msgid "Group:"
 msgstr "Skupina:"
 
-#: .././src/info.c:380 .././src/preferences.c:817
+#: .././src/info.c:380 .././src/preferences.c:818
 msgid "General"
 msgstr "Všeobecné"
 
@@ -1244,7 +1242,7 @@ msgstr "Nástroje"
 msgid "Files"
 msgstr "Soubory"
 
-#: .././src/layout_config.c:57 .././src/preferences.c:874 .././src/print.c:114
+#: .././src/layout_config.c:57 .././src/preferences.c:878 .././src/print.c:114
 msgid "Image"
 msgstr "Obrázek"
 
@@ -1468,7 +1466,7 @@ msgstr "Zvětšit"
 msgid "Zoom out"
 msgstr "Zmenšit"
 
-#: .././src/layout_util.c:1107 .././src/preferences.c:900
+#: .././src/layout_util.c:1107 .././src/preferences.c:904
 msgid "Fit image to window"
 msgstr "Přizpůsobit velikosti okna"
 
@@ -1740,7 +1738,7 @@ msgstr "Třídím..."
 msgid "Date:"
 msgstr "Datum"
 
-#: .././src/pan-view.c:1431 .././src/preferences.c:839 .././src/print.c:3199
+#: .././src/pan-view.c:1431 .././src/preferences.c:840 .././src/print.c:3199
 #: .././src/print.c:3401
 msgid "Size:"
 msgstr "Velikost:"
@@ -1864,11 +1862,11 @@ msgid ""
 "performance."
 msgstr ""
 
-#: .././src/pan-view.c:2464 .././src/preferences.c:842
+#: .././src/pan-view.c:2464 .././src/preferences.c:843
 msgid "Cache thumbnails"
 msgstr "Cache náhledů"
 
-#: .././src/pan-view.c:2466 .././src/preferences.c:848
+#: .././src/pan-view.c:2466 .././src/preferences.c:849
 msgid "Use shared thumbnail cache"
 msgstr "Používat sdílenou cache náhledů"
 
@@ -1900,31 +1898,31 @@ msgstr "Žádná"
 msgid "_Full size"
 msgstr "Plná velikost"
 
-#: .././src/preferences.c:407
+#: .././src/preferences.c:408
 msgid "Nearest (worst, but fastest)"
 msgstr "Nejbližší (nejhorší, ale nejrychlejší)"
 
-#: .././src/preferences.c:409
+#: .././src/preferences.c:410
 msgid "Tiles"
 msgstr "Dlaždice"
 
-#: .././src/preferences.c:411
+#: .././src/preferences.c:412
 msgid "Bilinear"
 msgstr "Bilineárně"
 
-#: .././src/preferences.c:413
+#: .././src/preferences.c:414
 msgid "Hyper (best, but slowest)"
 msgstr "Hyper (nejlepší, ale nejpomalejší)"
 
-#: .././src/preferences.c:494 .././src/print.c:369
+#: .././src/preferences.c:495 .././src/print.c:369
 msgid "Custom"
 msgstr "Volitelný"
 
-#: .././src/preferences.c:658 .././src/preferences.c:661
+#: .././src/preferences.c:659 .././src/preferences.c:662
 msgid "Reset filters"
 msgstr "Vynulovat filtry"
 
-#: .././src/preferences.c:662
+#: .././src/preferences.c:663
 msgid ""
 "This will reset the file filters to the defaults.\n"
 "Continue?"
@@ -1932,11 +1930,11 @@ msgstr ""
 "Hodláte obnovit filtry souborů na výchozí hodnoty.\n"
 "Chcete pokračovat?"
 
-#: .././src/preferences.c:695 .././src/preferences.c:698
+#: .././src/preferences.c:696 .././src/preferences.c:699
 msgid "Reset editors"
 msgstr "Obnovit editory"
 
-#: .././src/preferences.c:699
+#: .././src/preferences.c:700
 msgid ""
 "This will reset the edit commands to the defaults.\n"
 "Continue?"
@@ -1944,300 +1942,304 @@ msgstr ""
 "Hodláte nastavit editační příkazy na výchozí hodnoty.\n"
 "Chcete pokračovat?"
 
-#: .././src/preferences.c:723 .././src/preferences.c:726
+#: .././src/preferences.c:724 .././src/preferences.c:727
 msgid "Clear trash"
 msgstr "Vysypat koš"
 
-#: .././src/preferences.c:727
+#: .././src/preferences.c:728
 msgid "This will remove the trash contents."
 msgstr "Toto odstraní obsah z koše."
 
-#: .././src/preferences.c:766
+#: .././src/preferences.c:767
 msgid "GQview Preferences"
 msgstr "Nastavení GQview "
 
-#: .././src/preferences.c:820
+#: .././src/preferences.c:821
 msgid "Startup"
 msgstr "Po spuštění"
 
-#: .././src/preferences.c:822
+#: .././src/preferences.c:823
 msgid "Change to folder:"
 msgstr "Změnit adresář na:"
 
-#: .././src/preferences.c:833
+#: .././src/preferences.c:834
 msgid "Use current"
 msgstr "Použít aktuální"
 
-#: .././src/preferences.c:840 .././src/preferences.c:880
+#: .././src/preferences.c:841 .././src/preferences.c:884
 msgid "Quality:"
 msgstr "Kvalita:"
 
-#: .././src/preferences.c:854
+#: .././src/preferences.c:855
+msgid "Cache thumbnails into .cache/thumbnails or .thumbnails"
+msgstr ""
+
+#: .././src/preferences.c:858
 msgid "Faster jpeg thumbnailing (may reduce quality)"
 msgstr ""
 
-#: .././src/preferences.c:857
+#: .././src/preferences.c:861
 msgid "Slide show"
 msgstr "Slideshow"
 
-#: .././src/preferences.c:860
+#: .././src/preferences.c:864
 msgid "Delay between image change:"
 msgstr "Počkat mezi změnami obrázků:"
 
-#: .././src/preferences.c:860
+#: .././src/preferences.c:864
 msgid "seconds"
 msgstr "sekund"
 
-#: .././src/preferences.c:866
+#: .././src/preferences.c:870
 msgid "Random"
 msgstr "Náhodně"
 
-#: .././src/preferences.c:867
+#: .././src/preferences.c:871
 msgid "Repeat"
 msgstr "Opakovat"
 
-#: .././src/preferences.c:877
+#: .././src/preferences.c:881
 msgid "Zoom"
 msgstr "Zvětšit"
 
-#: .././src/preferences.c:882
+#: .././src/preferences.c:886
 msgid "Two pass zooming"
 msgstr "Zvětšení na dva průchody"
 
-#: .././src/preferences.c:885
+#: .././src/preferences.c:889
 msgid "Allow enlargement of image for zoom to fit"
 msgstr "Povolit zvětšení obrázku na velikost okna"
 
-#: .././src/preferences.c:889
+#: .././src/preferences.c:893
 msgid "Zoom increment:"
 msgstr "Krok zvětšení:"
 
-#: .././src/preferences.c:894
+#: .././src/preferences.c:898
 msgid "When new image is selected:"
 msgstr "Pokud je vybrán nový obrázek:"
 
-#: .././src/preferences.c:897
+#: .././src/preferences.c:901
 msgid "Zoom to original size"
 msgstr "Zobrazit v původní velikosti"
 
-#: .././src/preferences.c:903
+#: .././src/preferences.c:907
 msgid "Leave Zoom at previous setting"
 msgstr "Ponechat zvětšení na předchozím nastavení"
 
-#: .././src/preferences.c:907
+#: .././src/preferences.c:911
 msgid "Appearance"
 msgstr "Vzhled"
 
-#: .././src/preferences.c:909
+#: .././src/preferences.c:913
 msgid "Black background"
 msgstr "Černé pozadí"
 
-#: .././src/preferences.c:912
+#: .././src/preferences.c:916
 msgid "Convenience"
 msgstr "Vymoženost"
 
-#: .././src/preferences.c:914
+#: .././src/preferences.c:918
 msgid "Refresh on file change"
 msgstr "Obnovit změnu v souboru"
 
-#: .././src/preferences.c:916
+#: .././src/preferences.c:920
 msgid "Preload next image"
 msgstr "Předčítat další obrázek"
 
-#: .././src/preferences.c:918
+#: .././src/preferences.c:922
 msgid "Auto rotate image using Exif information"
 msgstr "Automaticky otočit obrázek podle údaje z Exif"
 
-#: .././src/preferences.c:927
+#: .././src/preferences.c:931
 msgid "Windows"
 msgstr "Okna"
 
-#: .././src/preferences.c:930
+#: .././src/preferences.c:934
 msgid "State"
 msgstr "Stav"
 
-#: .././src/preferences.c:932
+#: .././src/preferences.c:936
 msgid "Remember window positions"
 msgstr "Zapamatovat si pozice oken"
 
-#: .././src/preferences.c:934
+#: .././src/preferences.c:938
 msgid "Remember tool state (float/hidden)"
 msgstr "Zapamatovat si stav nástrojů (plovoucí/skryté)"
 
-#: .././src/preferences.c:939
+#: .././src/preferences.c:943
 msgid "Fit window to image when tools are hidden/floating"
 msgstr "Přizpůsobit okno obrázku, pokud jsou nástroje skryté/plovoucí"
 
-#: .././src/preferences.c:943
+#: .././src/preferences.c:947
 msgid "Limit size when auto-sizing window (%):"
 msgstr "Omezit velikost, pokud se okno automaticky přizpůsobuje (%):"
 
-#: .././src/preferences.c:950 .././src/print.c:3349 .././src/print.c:3356
+#: .././src/preferences.c:954 .././src/print.c:3349 .././src/print.c:3356
 msgid "Layout"
 msgstr "Rozvržení"
 
-#: .././src/preferences.c:963
+#: .././src/preferences.c:967
 msgid "Filtering"
 msgstr "Filtrování"
 
-#: .././src/preferences.c:968
+#: .././src/preferences.c:972
 msgid "Show entries that begin with a dot"
 msgstr "Zobrazit položky začínající tečkou"
 
-#: .././src/preferences.c:970
+#: .././src/preferences.c:974
 msgid "Case sensitive sort"
 msgstr "Při třídění rozlišovat velikost písmem"
 
-#: .././src/preferences.c:973
+#: .././src/preferences.c:977
 msgid "Disable File Filtering"
 msgstr "Vypnout filtrování souborů"
 
-#: .././src/preferences.c:976
+#: .././src/preferences.c:980
 msgid "File types"
 msgstr "Typ souboru"
 
-#: .././src/preferences.c:998
+#: .././src/preferences.c:1002
 msgid "Filter"
 msgstr "Maska"
 
-#: .././src/preferences.c:1035 .././src/preferences.c:1099
+#: .././src/preferences.c:1039 .././src/preferences.c:1103
 msgid "Defaults"
 msgstr "Výchozí"
 
-#: .././src/preferences.c:1056
+#: .././src/preferences.c:1060
 msgid "Editors"
 msgstr "Editory"
 
-#: .././src/preferences.c:1062
+#: .././src/preferences.c:1066
 msgid "#"
 msgstr "#"
 
-#: .././src/preferences.c:1065 .././src/preferences.c:1219
+#: .././src/preferences.c:1069 .././src/preferences.c:1223
 msgid "Menu name"
 msgstr "Název menu"
 
-#: .././src/preferences.c:1068
+#: .././src/preferences.c:1072
 #, fuzzy
 msgid "Command Line"
 msgstr "Příkazový řádek"
 
-#: .././src/preferences.c:1115
+#: .././src/preferences.c:1119
 msgid "Advanced"
 msgstr "Rozšířené"
 
-#: .././src/preferences.c:1128
+#: .././src/preferences.c:1132
 msgid "Full screen"
 msgstr "Celá obrazovka"
 
-#: .././src/preferences.c:1136
+#: .././src/preferences.c:1140
 msgid "Smooth image flip"
 msgstr "Vyhladit otočený obrázek"
 
-#: .././src/preferences.c:1138
+#: .././src/preferences.c:1142
 msgid "Disable screen saver"
 msgstr "Zakázat spořič obrazovky"
 
-#: .././src/preferences.c:1141
+#: .././src/preferences.c:1145
 msgid "Delete"
 msgstr "Odstranit"
 
-#: .././src/preferences.c:1143
+#: .././src/preferences.c:1147
 msgid "Confirm file delete"
 msgstr "Potvrdit odstranění souboru"
 
-#: .././src/preferences.c:1145
+#: .././src/preferences.c:1149
 msgid "Enable Delete key"
 msgstr "Povolit klávesu Delete"
 
-#: .././src/preferences.c:1148
+#: .././src/preferences.c:1152
 msgid "Safe delete"
 msgstr "Bezpečné mazání"
 
-#: .././src/preferences.c:1166
+#: .././src/preferences.c:1170
 msgid "Maximum size:"
 msgstr "Maximální velikost:"
 
-#: .././src/preferences.c:1166
+#: .././src/preferences.c:1170
 msgid "MB"
 msgstr "MB"
 
-#: .././src/preferences.c:1169
+#: .././src/preferences.c:1173
 msgid "View"
 msgstr "Zobrazení"
 
-#: .././src/preferences.c:1179
+#: .././src/preferences.c:1183
 msgid "Behavior"
 msgstr "Chování"
 
-#: .././src/preferences.c:1181
+#: .././src/preferences.c:1185
 msgid "Rectangular selection in icon view"
 msgstr "Obdélníkový výběr při zobrazování ikon"
 
-#: .././src/preferences.c:1184
+#: .././src/preferences.c:1188
 msgid "Descend folders in tree view"
 msgstr "Zobrazit adresáře ve stromu"
 
-#: .././src/preferences.c:1187
+#: .././src/preferences.c:1191
 msgid "In place renaming"
 msgstr "Přejmenovat na místě"
 
-#: .././src/preferences.c:1190
+#: .././src/preferences.c:1194
 msgid "Navigation"
 msgstr "Posouvání"
 
-#: .././src/preferences.c:1192
+#: .././src/preferences.c:1196
 msgid "Progressive keyboard scrolling"
 msgstr "Postupné posouvání klávesnicí"
 
-#: .././src/preferences.c:1194
+#: .././src/preferences.c:1198
 msgid "Mouse wheel scrolls image"
 msgstr "Kolečko myši posouvá obrázek"
 
-#: .././src/preferences.c:1197
+#: .././src/preferences.c:1201
 msgid "Miscellaneous"
 msgstr "Různé"
 
-#: .././src/preferences.c:1199
+#: .././src/preferences.c:1203
 msgid "Store keywords and comments local to source images"
 msgstr "Uložit klíčová slova a poznámky do zdrojových obrázků"
 
-#: .././src/preferences.c:1202
+#: .././src/preferences.c:1206
 msgid "Custom similarity threshold:"
 msgstr "Uživatelský práh podobnosti:"
 
-#: .././src/preferences.c:1205
+#: .././src/preferences.c:1209
 msgid "Offscreen cache size (Mb per image):"
 msgstr "Velikost mimoobrazovkové cache (MB na obrázek):"
 
-#: .././src/preferences.c:1208
+#: .././src/preferences.c:1212
 #, fuzzy
 msgid "Color profiles"
 msgstr "Všechny soubory"
 
-#: .././src/preferences.c:1216
+#: .././src/preferences.c:1220
 msgid "Type"
 msgstr ""
 
-#: .././src/preferences.c:1222
+#: .././src/preferences.c:1226
 #, fuzzy
 msgid "File"
 msgstr "Soubor:"
 
-#: .././src/preferences.c:1244 .././src/preferences.c:1255
+#: .././src/preferences.c:1248 .././src/preferences.c:1259
 #, fuzzy
 msgid "Select color profile"
 msgstr "Vybrat adresář"
 
-#: .././src/preferences.c:1252
+#: .././src/preferences.c:1256
 #, fuzzy
 msgid "Screen:"
 msgstr "Obrazovka"
 
-#: .././src/preferences.c:1335
+#: .././src/preferences.c:1339
 msgid "About - GQview"
 msgstr "O programu - GQview"
 
-#: .././src/preferences.c:1348
+#: .././src/preferences.c:1352
 #, c-format
 msgid ""
 "GQview %s\n"
@@ -2256,7 +2258,7 @@ msgstr ""
 "\n"
 "Šířeno pod Všeobecnou veřejnou licencí GNU"
 
-#: .././src/preferences.c:1366
+#: .././src/preferences.c:1370
 msgid "Credits..."
 msgstr "Kredity..."
 

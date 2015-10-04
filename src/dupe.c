@@ -3057,7 +3057,7 @@ DupeWindow *dupe_window_new(DupeMatchType match_mask)
 	dw->list = NULL;
 	dw->dupes = NULL;
 	dw->match_mask = match_mask;
-	dw->show_thumbs = TRUE;
+	dw->show_thumbs = FALSE;
 
 	dw->idle_id = -1;
 
