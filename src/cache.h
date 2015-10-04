@@ -20,13 +20,8 @@
 #define GQVIEW_CACHE_RC_THUMB       GQVIEW_RC_DIR"/thumbnails"
 #define GQVIEW_CACHE_RC_METADATA    GQVIEW_RC_DIR"/metadata"
 
-#if GLIB_CHECK_VERSION (2, 34, 0)
-#define GQVIEW_CACHE_LOCAL_THUMB    ".cache/thumbnails"
-#define GQVIEW_CACHE_LOCAL_METADATA ".cache/metadata"
-#else
 #define GQVIEW_CACHE_LOCAL_THUMB    ".thumbnails"
 #define GQVIEW_CACHE_LOCAL_METADATA ".metadata"
-#endif
 
 #define GQVIEW_CACHE_EXT_THUMB      ".png"
 #define GQVIEW_CACHE_EXT_SIM        ".sim"

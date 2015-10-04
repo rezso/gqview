@@ -852,7 +852,7 @@ static void config_window_create(void)
 	subgroup = pref_box_new(subgroup, FALSE, GTK_ORIENTATION_VERTICAL, PREF_PAD_GAP);
 	pref_checkbox_link_sensitivity_swap(button, subgroup);
 
-	pref_checkbox_new_int(subgroup, _("Cache thumbnails into .cache/thumbnails or .thumbnails"),
+	pref_checkbox_new_int(subgroup, _("Cache thumbnails into ~/.gqview/thumbnails"),
 			      enable_thumb_dirs, &enable_thumb_dirs_c);
 
 	pref_checkbox_new_int(group, _("Faster jpeg thumbnailing (may reduce quality)"),
